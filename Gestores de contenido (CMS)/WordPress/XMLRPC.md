@@ -22,7 +22,7 @@ Si este archivo está habilitado y accesible, representa un vector de ataque imp
 ----
 ## Ejemplo de explotación
 
-Si quisiéramos aplicar fuerza bruta en un [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Gestores de contenido (CMS) 🌐/WordPress/WordPress|WordPress]], tras haber detectado al archivo **xmlrpc.php** como accesible, del mismo modo que lo hace [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Gestores de contenido (CMS) 🌐/WordPress/Wpscan|Wpscan]] pero de forma manual para descubrir credenciales válidas. Sería necesario tramitar una petición por el método POST al archivo **xmlrpc.php**[^1] tramitando una estructura XML como se muestra a continuación:
+Si quisiéramos aplicar fuerza bruta en un [[Documento Hacker/Gestores de contenido (CMS)/WordPress/WordPress|WordPress]], tras haber detectado al archivo **xmlrpc.php** como accesible, del mismo modo que lo hace [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Gestores de contenido (CMS) 🌐/WordPress/Wpscan|Wpscan]] pero de forma manual para descubrir credenciales válidas. Sería necesario tramitar una petición por el método POST al archivo **xmlrpc.php**[^1] tramitando una estructura XML como se muestra a continuación:
 
 ```xml
 POST /xmlrpc.php HTTP/1.1
