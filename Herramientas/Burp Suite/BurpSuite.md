@@ -79,13 +79,13 @@ Sigue los siguientes pasos:
 
 ![Captura de pantalla](./imagenes/9_cargar_certificado.png)
 
-![Captura de pantalla](.//imagenes/10_importar_certificado.png)
+![Captura de pantalla](./imagenes/10_importar_certificado.png)
 
 **Nota:** En Chrome se busca desde "Administrar certificados".
 
 8. Tenemos que señalar 'Confiar en esta CA para identificar sitios web' y darle a aceptar.
 
-![Captura de pantalla](.//imagenes/11_confianza_web.png)
+![Captura de pantalla](./imagenes/11_confianza_web.png)
 
 9. Con estos pasos, deberíamos tener instalado el certificado HTTPS de BurpSuite, el cual nos permite interceptar tráfico HTTPS.
 
@@ -119,4 +119,6 @@ En las siguientes imágenes podemos ver la secuencia completa del proceso mencio
 
 **Configurar Token**. Poder arrastrar el token añadiendo `Authoriation: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzUwMDE4ODAwLCJpYXQiOjE3NDkzMjc2MDAsInN1YiI6IjIiLCJpc19zdXBlcnVzZXIiOmZhbHNlLCJndWlkIjoiOGFiOTgxN2MtZWM1OC00NDlhLThhMTctZmRmNjhjY2M4ZTZjIn0.s4eezZua1Wq-bhrxZ9T8HjK4K67hgQj3ad6_ketbYkE`
 
-![[burpsuite_config_token 1.png]]
+![Captura de pantalla](./imagenes/burpsuite_config_token1.png)
+
+
