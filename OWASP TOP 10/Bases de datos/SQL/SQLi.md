@@ -9,7 +9,7 @@ La inyección [SQLi](SQLi.md) es una vulnerabilidad que permite a un atacante ma
 Algunos métodos para identificar si una aplicación es vulnerable a SQLi incluyen:
 - **Pruebas manuales:** Insertar caracteres especiales (`'`, `"`, `;`, `--`, `#`, etc.) en los campos de entrada y observar errores.
 - **Errores de la base de datos:** Mensajes como `syntax error` pueden indicar una vulnerabilidad.
-- **Automatización:** Uso de herramientas como **[[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Git-Profile/PayloadsAllTheThings/SQL Injection/SQLmap|SQLmap]]** para detectar y explotar SQLi.
+- **Automatización:** Uso de herramientas como [SQLmap](SQLmap.md) para detectar y explotar SQLi.
 
 ---
 
