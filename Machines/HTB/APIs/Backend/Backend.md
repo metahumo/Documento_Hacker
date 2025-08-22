@@ -10,7 +10,7 @@
 
 **Target:** 10.10.11.161
 
-**Herramientas**: [Postman](../../../../Herramientas/Postman/Postman.md), [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Cocina/Nmap/Nmap|Nmap]], [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Comandos/Curl|Curl]], [[Wfuzz]] 
+**Herramientas**: [Postman](../../../../Herramientas/Postman/Postman.md), **Nmap**, **cURL**, **Wfuzz**
 
 
 ---
@@ -65,9 +65,9 @@ Explicación: encontramos una ruta que confirma la existencia de una API, si fuz
 
 *Resultado del navegador para las rutas encontrada*
 
-![Captura de pantalla](./web_1.png)
+![Captura de pantalla](./Imágenes/web_1.png)
 
-![Captura de pantalla](./web_2.png)
+![Captura de pantalla](./Imágenes/web_2.png)
 
 ## Paso 3 - WFUZZ
 
@@ -99,7 +99,7 @@ Resultado:
 
 Explicación: probando vemos que solo tenemos acceso al `/user/1` que coincide con ser el único que indica que tiene 141 caracteres y no 4 como los demás
 
-![Captura de pantalla](./web_4.png)
+![Captura de pantalla](./Imágenes/web_4.png)
 
 
 Acción: 
@@ -216,7 +216,7 @@ Resultado:
 ```
 
 
-![Captura de pantalla](./postmane_2.png)
+![Captura de pantalla](./Imágenes/postmane_2.png)
 
 En *Postman* espera datos tipo formulario (application/x-www-form-urlencoded).
 
@@ -329,15 +329,15 @@ Resultado:
 
 Configuramos [Burp Suite](../../Herramientas/Burp%20Suite/BurpSuite.md) para arrastrar el token en las solicitudes del navegador
 
-![Captura de pantalla](./burpsuite_config_token.png)
+![Captura de pantalla](./Imágenes/burpsuite_config_token.png)
 
 Vemos que al interceptar tenemos la cabecera `Authorization` tal y como la configuramos, al darle a forward obtendremos la respuesta al igual que con cURL y Postman
 
-![Captura de pantalla](./burpsuite_2.png)
+![Captura de pantalla](./Imágenes/burpsuite_2.png)
 
 **Endpoint clave** en el que tenemos acceso con el token, vemos un endpoint para una flag y el método a usar que es `PUT`
 
-![Captura de pantalla](./web_5.png)
+![Captura de pantalla](./Imágenes/web_5.png)
 
 Acción:
 
@@ -357,9 +357,9 @@ Explicación: en este endpoint logramos obtener la flag de esta máquina. Para e
 
 Vemos lo mismo usando [Burp Suite](../../Herramientas/Burp%20Suite/BurpSuite.md)
 
-![Captura de pantalla](./burpsuite_3.png)
+![Captura de pantalla](./Imágenes/burpsuite_3.png)
 
-Vemos lo mismo usando [[Postman]]
+Vemos lo mismo usando [Postman](../../Herramientas/Postman/Postman.md)
 
 ![Captura de pantalla](./Imágenes/postman_8.png)
 
