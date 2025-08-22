@@ -128,7 +128,7 @@ Explicación:
 
 Acción: desde [Postman](../../Herramientas/Postman/Postman.md) accedemos al endpoint encontrado con [[Wfuzz]] (usando el método **POST**, ya que en el navegador solo permite hacer peticiones *GET*)
 
-![Captura de pantalla](.Imágenes/postman_1.png)
+![Captura de pantalla](./Imágenes/postman_1.png)
 
 Acción: método **curl**
 
@@ -265,7 +265,7 @@ Resultado:
 Explicación: *primero* vimos que por el método POST y usando (application/x-www-form-urlencoded) nos daba error. *Segundo* probamos usando un método **json**, donde obtenemos una respuesta `{}`, que donde *tercero*, corroboramos que hemos creado un usuario válido
 
 
-![Captura de pantalla](.Imágenes/postman_3.png)
+![Captura de pantalla](./Imágenes/postman_3.png)
 
 
 ![Captura de pantalla](./Imágenes/postman_4.png)
