@@ -207,7 +207,7 @@ El servidor interpreta hasta el %00 como final de cadena.
 
 Y carga `/etc/passwd` en vez de `/etc/passwd.php`
 
-⚠️ Esto ya no suele funcionar en versiones modernas de PHP, porque desde PHP 5.3.4 y otros lenguajes se ha corregido esta vulnerabilidad (ya no se interpreta %00 como \0).
+- Esto ya no suele funcionar en versiones modernas de PHP, porque desde PHP 5.3.4 y otros lenguajes se ha corregido esta vulnerabilidad (ya no se interpreta %00 como \0).
 
 
 ## Iniciar laboratorio
