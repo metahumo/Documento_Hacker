@@ -116,14 +116,14 @@ Cuando un administrador lo consulta en otra página, la inyección se ejecuta.
 
 ---
 
-## 🛡️ Cómo prevenir la inyección SQL
-✅ **Usar consultas preparadas** con `?` o `bind_param()`:
+##  Cómo prevenir la inyección SQL
+**Usar consultas preparadas** con `?` o `bind_param()`:
 ```sql
 SELECT * FROM usuarios WHERE usuario = ? AND clave = ?;
 ```
-✅ **Validar y sanitizar entradas del usuario.**
-✅ **Principio de menor privilegio:** No usar cuentas con permisos excesivos.
-✅ **Firewalls de aplicaciones web (WAF).**
+**Validar y sanitizar entradas del usuario.**
+**Principio de menor privilegio:** No usar cuentas con permisos excesivos.
+**Firewalls de aplicaciones web (WAF).**
 
 ---
 **Conclusión:** La inyección SQL sigue siendo una de las vulnerabilidades más peligrosas, pero con buenas prácticas y medidas de seguridad adecuadas, se puede mitigar el riesgo de ataque.
