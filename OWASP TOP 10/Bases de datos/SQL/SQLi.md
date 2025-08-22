@@ -1,7 +1,7 @@
 # Inyecciones SQLi (SQL Injection)
 
 ## ¿Qué es la inyección SQL?
-La inyección [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10/Bases de datos db/SQL/SQL|SQL]](SQLi) es una vulnerabilidad que permite a un atacante manipular las consultas SQL de una aplicación para acceder, modificar o eliminar datos en una base de datos. Se produce cuando la entrada del usuario no se valida ni se sanitiza correctamente, permitiendo la ejecución de código SQL malicioso.
+La inyección [SQLi](SQLi.md) es una vulnerabilidad que permite a un atacante manipular las consultas SQL de una aplicación para acceder, modificar o eliminar datos en una base de datos. Se produce cuando la entrada del usuario no se valida ni se sanitiza correctamente, permitiendo la ejecución de código SQL malicioso.
 
 ---
 
