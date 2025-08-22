@@ -29,20 +29,17 @@ Conectado a la red Wi-Fi interna desde el parking de la empresa (la contraseña 
 ## Preparación del entorno
 
 ### 0º - Creación de estructura de carpetas
-**Acción:** Ejecutamos script `mkt` para crear estructura:
+**Acción:** 
+
+```
+	mkdir {nmap,content,exploits}
+```
+
 ```bash
 nmap/
 content/
 exploits/
 ````
-
-`which mkt`:
-
-```lua
-mkt () {
-	mkdir {nmap,content,exploits}
-}
-```
 
  **Extra:** 
 
@@ -53,13 +50,13 @@ mkt () {
  Resultado:
 
  ```bash
- Interface: ens33, type: EN10MB, MAC: 00:0c:29:ab:85:69, IPv4: 192.168.1.66
+Interface: ens33, type: EN10MB, MAC: XX:XX:XX:XX:XX:XX, IPv4: 192.168.X.XX
 Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
-192.168.1.1	2c:96:82:b4:4f:3e	(Unknown)
-192.168.1.54	00:0c:29:bb:46:53	VMware, Inc.
-192.168.1.65	94:bb:43:12:76:2c	(Unknown)
-192.168.1.59	2a:1a:3b:1f:b5:2c	(Unknown: locally administered)
-192.168.1.200	28:f5:d1:d6:67:d4	ARRIS Group, Inc.
+192.168.1.1     XX:XX:XX:XX:XX:XX   (Unknown)
+192.168.1.54    XX:XX:XX:XX:XX:XX   VMware, Inc.
+192.168.1.65    XX:XX:XX:XX:XX:XX   (Unknown)
+192.168.1.59    XX:XX:XX:XX:XX:XX   (Unknown: locally administered)
+192.168.1.200   XX:XX:XX:XX:XX:XX   ARRIS Group, Inc.
 ```
 
   Explicación: comprobamos que tenemos acceso a una máquina 'VMware' que no sea la IP  de nuestra máquina atacante también en VMware
@@ -77,27 +74,6 @@ nmap -p- --open -sS -vvv -n -Pn 192.168.1.53 -oG allPorts
 ```
 
 **Explicación:** Escaneo completo de puertos para detectar servicios.
-
-**Extra:** Uso del script `extractPorts` para identificar los puertos abiertos rápidamente.
-
-`which extractPorts`:
-
-```lua
-extractPorts () {
-	file="$1" 
-	ports="$(grep -oP '\d{1,5}/open' "$file" | awk -F '/' '{print $1}' | xargs | tr ' ' ',')" 
-	ip_address="$(grep -oP '^Host: .* \(\)' "$file" | head -n 1 | awk '{print $2}')" 
-	{
-		echo -e "\n[*] Extracting information...\n"
-		echo -e "\t[*] IP Address: $ip_address"
-		echo -e "\t[*] Open ports: $ports\n"
-	} > extractPorts.tmp
-	echo "$ports" | tr -d '\n' | xclip -sel clip
-	echo -e "[*] Ports copied to clipboard\n" >> extractPorts.tmp
-	cat extractPorts.tmp
-	rm extractPorts.tmp
-}
-```
 
 ---
 
