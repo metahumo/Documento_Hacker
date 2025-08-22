@@ -10,7 +10,7 @@
 
 **Target:** 10.10.11.161
 
-**Herramientas**: [Postman](../../Herramientas/Postman/Postman.md), [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Cocina/Nmap/Nmap|Nmap]], [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Comandos/Curl|Curl]], [[Wfuzz]] 
+**Herramientas**: [Postman](~/Herramientas/Postman/Postman.md), [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Cocina/Nmap/Nmap|Nmap]], [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Comandos/Curl|Curl]], [[Wfuzz]] 
 
 
 ---
