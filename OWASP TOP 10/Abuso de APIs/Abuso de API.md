@@ -21,7 +21,7 @@ La API nos facilita esta integración proporcionando un conjunto de funciones y 
 
 ## Herramientas útiles: Postman
 
-Durante el desarrollo, podemos utilizar herramientas como [[Postman]] para probar y depurar la API. Con Postman podemos:
+Durante el desarrollo, podemos utilizar herramientas como [Postman](../../../Herramientas/Postman/Postman.md) para probar y depurar la API. Con Postman podemos:
 
 - Enviar solicitudes GET, POST, PUT, DELETE, etc.
 - Ver las respuestas del servidor.
@@ -116,7 +116,7 @@ Acción: en el navegador señalamos en el DevTools la opción de filtrado `XHR`
 
 ![Captura de pantalla](./imágenes/devtool.png)
 
-Acción: desde [[Postman]] podemos ir enumerando la API para trabajar organizadamente
+Acción: desde [Postman](../../../Herramientas/Postman/Postman.md) podemos ir enumerando la API para trabajar organizadamente
 
 ---
 
