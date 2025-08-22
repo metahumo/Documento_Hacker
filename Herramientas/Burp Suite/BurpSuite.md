@@ -45,7 +45,7 @@ Sigue los siguientes pasos:
 
 2. Configura, desde la pestaña de 'Proxy', los ajustes tal y como se ve en la imagen. Por defecto, debería venir configurado con su IP local y el puerto estándar de BurpSuite (8080). Esta misma configuración (IP:Puerto) deberá replicarla en 'FoxyProxy'.
 
-![[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Herramientas/BurpSuite/imagenes/3_configurar_proxu_burp.png]]
+![Captura de pantalla](./imagenes/3_configurar_proxu_burp.png]]
 
 3. Confirmada la configuración 'Proxy' de BurpSuite, procedemos a configurar las 'opciones/settings' de FoxyProxy. Para ello, acceda a su extensión y acceda a opciones como se muestra en la imagen:
 
