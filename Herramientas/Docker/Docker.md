@@ -6,16 +6,12 @@
 1. [Introducción](#introducción)
 2. [¿Qué es Docker?](#qué-es-docker)
 3. [¿Por qué usar Docker?](#por-qué-usar-docker)
-4. [Dockerfile](#dockerfile)
-5. [Imágenes y Contenedores](#imágenes-y-contenedores)
-6. [Uso Básico de Docker](#uso-básico-de-docker)
-7. [Creación de Imágenes Personalizadas](#creación-de-imágenes-personalizadas)
-8. [Instalación de Herramientas y Recursos](#instalación-de-herramientas-y-recursos)
-9. [Persistencia de Instalaciones](#persistencia-de-instalaciones)
-10. [Configuración de Dependencias en el Dockerfile](#configuración-de-dependencias-en-el-dockerfile)
-11. [Lista de Comandos Útiles](#lista-de-comandos-útiles)
-12. [Flujo Básico de Docker](#flujo-básico-de-docker)
-13. [Consideraciones Éticas](#consideraciones-éticas)
+4. [Qué es un Dockerfile](#qué-es-un-dockerfile)
+5. [Cómo usar Docker](#cómo-usar-docker)
+6. [Cómo crear una imagen personalizada de Docker](#cómo-crear-una-imagen-personalizada-de-docker)
+7. [Cómo instalar herramientas y recursos en Docker](#cómo-instalar-herramientas-y-recursos-en-docker)
+8. [Persistencia de Instalaciones en Docker](#persistencia-de-instalaciones-en-docker)
+9. [Flujo básico de Docker](#flujo-básico-de-docker)
 
 ## Introducción
 
