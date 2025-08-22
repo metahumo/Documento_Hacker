@@ -78,7 +78,7 @@ Si la respuesta es `200 OK`, significa que la condición es verdadera, lo que no
 
 ## Automatización con Python
 
-Este método nos permite desarrollar un **script en [Python](Python)** que realice múltiples peticiones, probando diferentes valores y analizando las respuestas. De esta manera, podemos extraer datos como nombres de usuario o contraseñas de la base de datos basándonos en los códigos de respuesta HTTP.
+Este método nos permite desarrollar un **script en [Python](./Python)** que realice múltiples peticiones, probando diferentes valores y analizando las respuestas. De esta manera, podemos extraer datos como nombres de usuario o contraseñas de la base de datos basándonos en los códigos de respuesta HTTP.
 
 ---
 
