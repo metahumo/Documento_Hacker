@@ -88,7 +88,7 @@ Resultado:
 attacker  docker-compose.yml  image_attacker  image_mysql  image_www
 ```
 
-Explicación:  descargamos a nuestra máquina local este laboratorio, descomprimimos y accedemos a la carpeta descargada para iniciar el [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Gestores de contenido (CMS)/WordPress/Docker|Docker]] 
+Explicación:  descargamos a nuestra máquina local este laboratorio, descomprimimos y accedemos a la carpeta descargada para iniciar el [Docker](../../Herramientas/Docker/Docker.md) 
 
 ## Paso 2 -
 
