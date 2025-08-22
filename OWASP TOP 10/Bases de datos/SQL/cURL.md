@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Este documento describe cómo utilizar `curl` para realizar [[SQLi]] a ciegas, basándonos en los códigos de estado HTTP devueltos por el servidor. En un entorno real, este tipo de pruebas se llevarían a cabo sobre aplicaciones web vulnerables que no muestran directamente los resultados de las consultas [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10/Bases de datos db/SQL/SQL|SQL]], pero cuyos códigos de respuesta pueden revelar información útil.
+Este documento describe cómo utilizar `curl` para realizar [SQLi](SQLi.md) a ciegas, basándonos en los códigos de estado HTTP devueltos por el servidor. En un entorno real, este tipo de pruebas se llevarían a cabo sobre aplicaciones web vulnerables que no muestran directamente los resultados de las consultas [SQL](SQL.md), pero cuyos códigos de respuesta pueden revelar información útil.
 
 El entorno de pruebas está basado en un servidor local con un script PHP vulnerable llamado `searchUsers.php`. Su funcionamiento es el siguiente:
 
@@ -78,7 +78,7 @@ Si la respuesta es `200 OK`, significa que la condición es verdadera, lo que no
 
 ## Automatización con Python
 
-Este método nos permite desarrollar un **script en [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10/Bases de datos db/SQL/Python|Python]]** que realice múltiples peticiones, probando diferentes valores y analizando las respuestas. De esta manera, podemos extraer datos como nombres de usuario o contraseñas de la base de datos basándonos en los códigos de respuesta HTTP.
+Este método nos permite desarrollar un **script en [Python](Python)** que realice múltiples peticiones, probando diferentes valores y analizando las respuestas. De esta manera, podemos extraer datos como nombres de usuario o contraseñas de la base de datos basándonos en los códigos de respuesta HTTP.
 
 ---
 
