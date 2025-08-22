@@ -126,7 +126,7 @@ Explicación:
 
 ## Paso 4 - Postman y cURL
 
-Acción: desde [Postman](../../Herramientas/Postman/Postman.md) accedemos al endpoint encontrado con [[Wfuzz]] (usando el método **POST**, ya que en el navegador solo permite hacer peticiones *GET*)
+Acción: desde [Postman](../../../../Herramientas/Postman/Postman.md) accedemos al endpoint encontrado con [[Wfuzz]] (usando el método **POST**, ya que en el navegador solo permite hacer peticiones *GET*)
 
 ![Captura de pantalla](./Imágenes/postman_1.png)
 
@@ -327,7 +327,7 @@ Resultado:
 
 ![Captura de pantalla](./Imágenes/postman_7.png)
 
-Configuramos [Burp Suite](../../Herramientas/Burp%20Suite/BurpSuite.md) para arrastrar el token en las solicitudes del navegador
+Configuramos [Burp Suite](../../../../Herramientas/Burp%20Suite/BurpSuite.md) para arrastrar el token en las solicitudes del navegador
 
 ![Captura de pantalla](./Imágenes/burpsuite_config_token.png)
 
@@ -355,11 +355,11 @@ Resultado:
 
 Explicación: en este endpoint logramos obtener la flag de esta máquina. Para ello hemos necesitado registrar un usuario con el método POST y luego loguernos con él para obtener su JWT y añadirlo a la solicitud de este endpoint `/docs` que mostraba la información que necesitabamos
 
-Vemos lo mismo usando [Burp Suite](../../Herramientas/Burp%20Suite/BurpSuite.md)
+Vemos lo mismo usando [Burp Suite](../../../../Herramientas/Burp%20Suite/BurpSuite.md)
 
 ![Captura de pantalla](./Imágenes/burpsuite_3.png)
 
-Vemos lo mismo usando [Postman](../../Herramientas/Postman/Postman.md)
+Vemos lo mismo usando [Postman](../../../../Herramientas/Postman/Postman.md)
 
 ![Captura de pantalla](./Imágenes/postman_8.png)
 
