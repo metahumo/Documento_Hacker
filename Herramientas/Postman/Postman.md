@@ -1,4 +1,3 @@
----
 
 Para un ejemplo de uso ver: **Backend**
 
