@@ -298,7 +298,7 @@ apt install iputils-ping -y
 
 ---
 
-##Persistencia de Instalaciones en Docker
+## Persistencia de Instalaciones en Docker
 
 Las instalaciones **no** se guardan en la imagen original. Cuando ejecutamos un contenedor basado en una imagen y realizamos instalaciones manuales con `apt install`, estos cambios solo existen dentro de **ese contenedor específico** mientras esté en ejecución.
 
@@ -421,7 +421,7 @@ docker rmi $(docker ps -a -q)
 
 ---
 
-## # Flujo básico de Docker
+## Flujo básico de Docker
 
 ## 1. Dockerfile → Imagen
 Un **Dockerfile** es un archivo de configuración que define cómo se construye una **imagen**.
