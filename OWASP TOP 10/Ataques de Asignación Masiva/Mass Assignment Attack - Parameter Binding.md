@@ -1,7 +1,3 @@
-
----
-- Tags: #web #vulnerabilidad 
----
 # Ataques de Asignación Masiva (Mass Assignment Attack) / Parameter Binding
 
 En ciberseguridad, los ataques de asignación masiva consisten en manipular los parámetros que enviamos en una solicitud HTTP para modificar campos en la aplicación que no deberían estar accesibles para nosotros. No se trata solo de agregar datos nuevos, sino de aprovechar cómo la aplicación procesa esos datos para cambiar valores que normalmente estarían protegidos.
@@ -82,7 +78,7 @@ Explicación: este contenedor corre por el puerto 3000 de nuestro localhost
 
 ---
 
-Acción: Vamos a la pestaña de 'Login' y le damos a crear nuevo usuario/registrarse. La petición de registro de usuario que vayamos a enviar la interceptamos con [Burp Suite](../../../../BurpSuite) y la enviamos desde el 'Repeat'
+Acción: Vamos a la pestaña de 'Login' y le damos a crear nuevo usuario/registrarse. La petición de registro de usuario que vayamos a enviar la interceptamos con [Burp Suite](../../../BurpSuite) y la enviamos desde el 'Repeat'
 
 ![Captura de pantalla](./Imágenes/web_2.png)
 
