@@ -1,6 +1,6 @@
 # Hoja de trucos de inyección SQL
 
-Esta hoja de trucos de [[SQLi]] contiene ejemplos de sintaxis útil que puede usar para realizar una variedad de tareas que a menudo surgen al realizar ataques de inyección [SQL](SQL).
+Esta hoja de trucos de [[SQLi]] contiene ejemplos de sintaxis útil que puede usar para realizar una variedad de tareas que a menudo surgen al realizar ataques de inyección [SQL](SQL.md).
 
 [Hoja de trucos - Portswigger](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
