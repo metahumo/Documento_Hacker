@@ -30,7 +30,7 @@ Una de sus grandes ventajas es la posibilidad de trabajar con **colecciones reut
 **Segundo** al darle a 'New' usamos la opción 'HTTP' 
 
 
-![Captura de pantalla](./imágenes/postman_2.png)
+![Captura de pantalla](./imágenes/Postman_2.png)
 
 **Tercero** copiamos la ruta del endpoint al que hace la solicitud la API al loguearnos y la registramos en Postman (cambiando el método a POST ya que es el método utilizado en la solicitud que vemos en DevTools)
 
