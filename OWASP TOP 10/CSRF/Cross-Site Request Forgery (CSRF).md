@@ -88,7 +88,7 @@ Resultado:
 attacker  docker-compose.yml  image_attacker  image_mysql  image_www
 ```
 
-Explicación:  descargamos a nuestra máquina local este laboratorio, descomprimimos y accedemos a la carpeta descargada para iniciar el [Docker](../../Herramientas/Docker/Docker.md) 
+Explicación:  descargamos a nuestra máquina local este laboratorio, descomprimimos y accedemos a la carpeta descargada para iniciar el [Docker](../../Herramientas/Docker) 
 
 ## Paso 2 -
 
