@@ -62,7 +62,7 @@ Podemos acudir al recurso web [jwt.io](https://jwt.io/) para visualizar los valo
 
 Para poder crear un JWT válido en un servidor que los utiliza para validar a los usuarios y sus permisos. Se requiere de un *signature* el cual coincide con la tercera parte de las 3 que conforma un JWT. Esta sirve para validar la estructura del JWT, sin él no podemos crear un JWT completo válido. 
 
-![[jwt_1.png]]
+![Captura](./Imágenes/jwt_1.png)
 
 Sin embargo, existe una mala configuración en los JWT que puede permitir saltarse esta validación del 'signature'. Para ello en el apartado del algoritmo de cifrado `"alg": "HS256` podemos cambiar el valor del tipo de cifrado por `NONE` y tratar así de ignorar la parte del 'signature'. Las dos primeras partes están compuestas por codificación en `base64` por lo que podemos crear manualmente dicha estructura del siguiente modo:
 
@@ -109,20 +109,20 @@ Confirmamos que esta web permite el ataque de JWT a través del valor *NONE* que
 
 En el laboratorio 2 tenemos ahora la práctica con un servidor que si valida el apartado de 'signature' ya que requerimos del valor 'secrets' para crear una estructura válida de JWT
 
-![[web2_1.png]]
+![Captura](./Imágenes/web2_1.png)
 
 Explicación: por `localhost:5000` tenemos este laboratorio montado (hay que detener con `ctrl+c` el laboratorio anterior e instalar e iniciar este laboratorio con `npm`
 
 
 Acción: probamos los mismos pasos que en el ejercicio anterior
 
-![[web2_2.png]]
+![Captura](./Imágenes/web2_2.png)
 
 
-![[web2_3.png]]
+![Captura](./Imágenes/web2_3.png)
 
 
-![[web2_4.png]]
+![Captura](./Imágenes/web2_4.png)
 
 
 Explicación: vemos que tenemos una estructura igual a la anterior, podríamos probar la misma técnica de usar `NONE` en el algoritmo, pero en este caso no va a funcionar
@@ -146,7 +146,7 @@ Acción:
 pip install --upgrade pyjwt
 ```
 
-**Tercero** creamos un [[Script JWT]] 
+**Tercero** creamos un [Script JWT](Script%20JWT.md) 
 
 Script: 
 
@@ -196,7 +196,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzQ5ODI5MTgyLCJleHAiOjE
 
 Explicación: con este **JWT creado manualmente con python** podemos tratar de hacer lo mismo que en el ejercicio anterior, modificar la cookie desde el `DevTools` y ver si accedemos como usuario 2
 
-![[web2_5.png]]
+![Captura](./Imágenes/web2_5.png)
 
 Confirmamos el acceso y concluimos la demostración de como explotar un JWT donde se requiere del parámetro 'signature' o 'secreto' para conformar una estructura válida. Señalar que esto es posible solo si la validación del servidor ocurre tan solo con estos parámetros como la cookie de un JWT. Lo cual no siempre es así y suele validarse con otros campos adicionales, como la verificación del token en el servidor, controles de expiración, listas de revocación, o mecanismos complementarios de autenticación que dificultan este tipo de ataques.
 
