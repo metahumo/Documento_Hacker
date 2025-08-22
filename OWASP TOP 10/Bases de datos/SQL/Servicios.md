@@ -1,7 +1,3 @@
-
----
-- Tags: #web #configuración 
----
 # Iniciar y Detener  Servicios de Apache2 y MariaDB
 
 ## Iniciar los Servicios
