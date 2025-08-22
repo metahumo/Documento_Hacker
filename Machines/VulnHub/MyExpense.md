@@ -1,7 +1,7 @@
 # MyExpense - VulnHub
 
 ## Contexto: Descripción
-**MyExpense** es una aplicación web deliberadamente vulnerable que permite entrenar en la detección y explotación de múltiples vulnerabilidades. A diferencia de otras apps tipo "CTF" más lineales, MyExpense contiene varias fallas que deben explotarse para completar el escenario. [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10 ⚠️/XSS 💀/Cross-Site Scripting (XSS)|Cross-Site Scripting (XSS)]] y [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10 ⚠️/Bases de datos db 🗃️/SQL/SQL|SQL]]
+**MyExpense** es una aplicación web deliberadamente vulnerable que permite entrenar en la detección y explotación de múltiples vulnerabilidades. A diferencia de otras apps tipo "CTF" más lineales, MyExpense contiene varias fallas que deben explotarse para completar el escenario. **XSS** y **SQL**
 
 ### Escenario
 Eres **Samuel Lamotte** y acabas de ser despedido de la empresa *Furtura Business Informatique*. Te deben un reembolso de 750 € por tu último viaje, pero temes que no lo vayan a procesar.
@@ -11,7 +11,7 @@ Conectado a la red Wi-Fi interna desde el parking de la empresa (la contraseña 
 - **Contraseña:** `fzghn4lw`
 
 
-## 🧰 Técnicas de Pentesting Aplicadas
+## Técnicas de Pentesting Aplicadas
 
 | Fase                       | Técnica o Herramienta                | Descripción                                                                                                                               |
 | -------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ Conectado a la red Wi-Fi interna desde el parking de la empresa (la contraseña 
 
 ---
 
-## 🧰 Preparación del entorno
+## Preparación del entorno
 
 ### 0º - Creación de estructura de carpetas
 **Acción:** Ejecutamos script `mkt` para crear estructura:
@@ -66,7 +66,7 @@ Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
   
 ---
 
-## 🕵️‍♂️ Enumeración y reconocimiento
+## Enumeración y reconocimiento
 
 ### 1º - Escaneo de puertos
 
@@ -161,7 +161,7 @@ scrot -d 5 captura.png
 
 ---
 
-## 🧪 Explotación
+## Explotación
 
 ### 8º - Modificación del HTML para activar botón deshabilitado
 
