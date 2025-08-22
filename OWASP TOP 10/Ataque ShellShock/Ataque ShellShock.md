@@ -105,7 +105,7 @@ Resultado:
 
 Explicación: nuevo directorio, que si acudimos al navegador vemos lo siguiente
 
-![[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10/Ataque ShellShock/Imágenes/web_1.png]]
+![Captura de pantalla](./Imágenes/web_1.png)
 
 **Nota:** si recargamos la página vemos que el parámetro 'uptime' se actualiza en tiempo real
 
@@ -239,7 +239,7 @@ Explicación: hemos logrado acceso a la máquina víctima.
 
 **Nota:** en caso de no funcionar el binario, probar en la ruta `/usr/bin/bash`
 
-**Script:** esta acción la podemos ejecutar con un [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/OWASP TOP 10/Ataque ShellShock/Script|Script]]
+**Script:** esta acción la podemos ejecutar con un [script](Script.md)
 
 ---
 
