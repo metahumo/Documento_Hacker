@@ -1,7 +1,7 @@
 # Ejemplos Prácticos de Inyección SQLi
 
 ## Listar contenido oculto
-Una forma común de probar la [SQLi](SQLi) es modificar una URL para extraer datos que normalmente estarían ocultos.
+Una forma común de probar la [SQLi](SQLi.md) es modificar una URL para extraer datos que normalmente estarían ocultos.
 
 ```url
 https://web-security-academy.net/filter?category=Pets%27+OR+1=1--
