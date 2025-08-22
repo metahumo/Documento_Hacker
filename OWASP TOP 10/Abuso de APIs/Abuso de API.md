@@ -21,7 +21,7 @@ La API nos facilita esta integración proporcionando un conjunto de funciones y 
 
 ## Herramientas útiles: Postman
 
-Durante el desarrollo, podemos utilizar herramientas como [Postman](../../../Herramientas/Postman/Postman.md) para probar y depurar la API. Con Postman podemos:
+Durante el desarrollo, podemos utilizar herramientas como [Postman](../../Herramientas/Postman/Postman.md) para probar y depurar la API. Con Postman podemos:
 
 - Enviar solicitudes GET, POST, PUT, DELETE, etc.
 - Ver las respuestas del servidor.
