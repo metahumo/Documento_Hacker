@@ -78,7 +78,7 @@ Explicación: este contenedor corre por el puerto 3000 de nuestro localhost
 
 ---
 
-Acción: Vamos a la pestaña de 'Login' y le damos a crear nuevo usuario/registrarse. La petición de registro de usuario que vayamos a enviar la interceptamos con [Burp Suite](../../../../Herramientas/Burp%20Suite/BurpSuite.md) y la enviamos desde el 'Repeat'
+Acción: Vamos a la pestaña de 'Login' y le damos a crear nuevo usuario/registrarse. La petición de registro de usuario que vayamos a enviar la interceptamos con [Burp Suite](../../Herramientas/Burp%20Suite/BurpSuite.md) y la enviamos desde el 'Repeat'
 
 ![Captura de pantalla](./Imágenes/web_2.png)
 
