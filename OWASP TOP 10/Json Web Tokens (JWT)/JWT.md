@@ -1,5 +1,3 @@
-
----
 # Enumeración y explotación de JSON Web Tokens (JWT)
 
 Los JSON Web Tokens (JWT) son un mecanismo comúnmente utilizado para autenticar y autorizar usuarios en aplicaciones web modernas. Como equipo que realiza tareas ofensivas de ciberseguridad, debemos entender cómo se generan, validan y qué vulnerabilidades pueden presentar.
@@ -23,7 +21,8 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbWFzIiwicm9sZSI6InVzZXI
 ```
 
 1. Decodificamos el token (sin necesidad de la clave):
-   ```bash
+
+```bash
    echo "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" | base64 -d
    echo "eyJ1c2VybmFtZSI6InRvbWFzIiwicm9sZSI6InVzZXIifQ" | base64 -d
 ```
