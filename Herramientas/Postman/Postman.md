@@ -1,6 +1,7 @@
 ---
 
-Para un ejemplo de uso ver: [[Backend]]
+Para un ejemplo de uso ver: **Backend**
+
 # ¿Qué es Postman y para qué se utiliza?
 
 **Postman** es una herramienta ampliamente utilizada en desarrollo web y ciberseguridad para interactuar, probar y documentar APIs (Interfaces de Programación de Aplicaciones).
