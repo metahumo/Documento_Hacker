@@ -2,7 +2,7 @@
 
 ## ¿Qué es?
 
-> El abuso de subidas de archivos es una vulnerabilidad presente en muchas aplicaciones web que permite a un atacante subir archivos maliciosos al servidor. Si no > se implementan controles adecuados, esto puede llevar a consecuencias graves como la ejecución remota de comandos.
+> El abuso de subidas de archivos es una vulnerabilidad presente en muchas aplicaciones web que permite a un atacante subir archivos maliciosos al servidor. Si no se implementan controles adecuados, esto puede llevar a consecuencias graves como la ejecución remota de comandos.
 
 Cuando una aplicación permite que los usuarios suban archivos (por ejemplo, imágenes de perfil o documentos), debemos asegurarnos de que estos archivos sean seguros. Si un atacante logra subir un archivo ejecutable, como un script PHP, y este se guarda en una carpeta accesible desde la web, podría ejecutarlo y tomar el control del servidor.
 
