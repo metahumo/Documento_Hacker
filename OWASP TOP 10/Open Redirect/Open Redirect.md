@@ -24,7 +24,7 @@ http://vulnerable-app.com/login?redirect=http://malicious-site.com/phishing
 
 Si la aplicación permite esta redirección sin validación, estaríamos frente a un caso de redirección abierta.
 
-En nuestras prácticas, vamos a desplegar y analizar estas tres versiones del laboratorio:
+Para practicar puede desplegar y analizar estas tres versiones del laboratorio:
 
 - [Open Redirect 1](https://github.com/blabla1337/skf-labs/tree/master/nodeJs/Url-redirection)
     
@@ -33,7 +33,7 @@ En nuestras prácticas, vamos a desplegar y analizar estas tres versiones del la
 - [Open Redirect 3](https://github.com/blabla1337/skf-labs/tree/master/nodeJs/Url-redirection-harder2)
     
 
-En ellos, vamos a explorar desde los casos más simples hasta implementaciones que ya incluyen restricciones más avanzadas que debemos aprender a analizar y evadir.
+En ellos, explorará desde los casos más simples hasta implementaciones que ya incluyen restricciones más avanzadas que debemos aprender a analizar y evadir.
 
 ## Ejemplo real
 
