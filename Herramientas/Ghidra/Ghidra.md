@@ -3,7 +3,7 @@
 
 ## ¿Qué es Ghidra?
 
-**Ghidra** es una herramienta de ingeniería inversa desarrollada por la **NSA** (Agencia de Seguridad Nacional de EE. UU.). Permite **analizar binarios compilados** de diferentes arquitecturas y plataformas, desensamblarlos y descompilarlos a un lenguaje de más alto nivel.
+> **Ghidra** es una herramienta de ingeniería inversa desarrollada por la **NSA** (Agencia de Seguridad Nacional de EE. UU.). Permite **analizar binarios compilados** de diferentes arquitecturas y plataformas, desensamblarlos y descompilarlos a un lenguaje de más alto nivel.
 
 Ghidra es útil para tareas como:
 
