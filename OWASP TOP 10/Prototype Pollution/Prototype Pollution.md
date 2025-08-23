@@ -375,7 +375,7 @@ Acción: mandamos el siguiente payload para contaminar el prototipo y setearnos 
 
 Resultado:
 
-![[burpsuite_1.png]]
+![Captura](./Imágenes/burpsuite_1.png)
 
 ![Captura](./Imágenes/burpsuite_2.png)
 
