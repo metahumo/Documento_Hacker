@@ -368,7 +368,7 @@ Explicación: escribimos el oneliner clásico para obtener una *Shell Reverse* m
 
 ## Paso 5 - TTY
 
-Acción: tratamiento de la [[TTY Interactiva]] para obtener una Shell mejorada
+Acción: tratamiento de la [TTY interactiva](../../Técnicas/Tratamiento%20de%20la%20TTY/TTY%20Interactiva.md) para obtener una Shell mejorada
 
 ```Shell
 script /dev/null -c bash
