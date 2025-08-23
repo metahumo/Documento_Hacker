@@ -1,7 +1,6 @@
 
 ---
-- Tags: #web #vulnerabilidad 
----
+
 **OWASP:** Server-Side  Request Forgery (SSRF)
 
 **Plataforma:** Hack4u.io
