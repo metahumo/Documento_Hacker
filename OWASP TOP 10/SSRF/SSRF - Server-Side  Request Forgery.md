@@ -144,7 +144,7 @@ Este archivo analiza un fragmento de código PHP vulnerable a **File Inclusion**
 | `if(isset($_GET['url'])){` | Verifica si se ha enviado el parámetro `url`.              |
 | `$url = $_GET['url'];`     | Almacena el valor del parámetro en una variable.           |
 | `echo "...";`              | Muestra un mensaje indicando qué archivo se está listando. |
-| `include($url);`           | 🚨 Incluye y ejecuta el archivo indicado por el usuario.   |
+| `include($url);`           | Incluye y ejecuta el archivo indicado por el usuario.   |
 | `} else {`                 | Si no se proporciona el parámetro.                         |
 | `echo "...";`              | Muestra mensaje de error.                                  |
 | `}`                        | Cierre del bloque `if`.                                    |
