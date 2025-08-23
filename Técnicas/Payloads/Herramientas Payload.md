@@ -1,10 +1,7 @@
 
----
-- tags: #herramientas #acceso #payload #explotación #vulnerabilidades 
----
 # Msfvenom
 
-> **Msfvenom** es una herramienta de [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Herramientas/Metaesploit/Metasploit|Metasploit]] que permite generar y personalizar [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Herramientas/Metaesploit/Payload 📦/Payload|Payload]] para exploits.
+> **Msfvenom** es una herramienta de [Metasploit](../../Herramientas/Metasploit) que permite generar y personalizar [Payloads](Payload.md) para exploits.
 
 ## Instalación
 
