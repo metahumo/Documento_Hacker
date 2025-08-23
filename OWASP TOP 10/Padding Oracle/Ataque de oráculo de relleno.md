@@ -54,7 +54,7 @@ Error: Invalid padding
 
 Sabemos que el relleno es incorrecto. Modificamos el byte de nuevo y volvemos a enviar la petición. Cuando el error cambia (por ejemplo, recibimos un "200 OK" o un error diferente), deducimos que hemos logrado un **relleno válido**, lo que implica que ese byte del texto plano **tiene un valor conocido**. Repetimos el proceso para cada byte del bloque.
 
-### Herramienta: [[Padbuster]]
+### Herramienta: [PadBuster](../../Herramientas/Padbuster/Padbuster.md)
 
 [PadBuster](https://github.com/GDSSecurity/PadBuster) automatiza este proceso:
 
