@@ -1,8 +1,4 @@
 
----
-- tags: #acceso #explotación #vulnerabilidades 
----
-
 # Definición
 
 
