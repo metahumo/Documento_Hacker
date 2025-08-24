@@ -424,7 +424,7 @@ Mediante `nc`, escuchamos la conexión de la reverse shell que es lanzada por el
 
 ### Paso 3: Mejora de la shell (tty)
 
-#### Acción: [TTY Interactiva](../../../Técnicas/Tratamiento%20de%20la%20TTY/TTY%20Interactiva)
+#### Acción: [TTY Interactiva](../../../Técnicas/Tratamiento%20de%20la%20TTY/TTY%20Interactiva.md)
 
 Mejoramos la shell con los siguientes comandos para obtener una shell más estable y funcional.
 
