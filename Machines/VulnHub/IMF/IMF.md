@@ -331,7 +331,7 @@ bash: no job control in this shell
 www-data@imf:/var/www/html/imfadministrator/uploads$ 
 ```
 
-Ahora podemos hacer un tratamiento de la tty para tener una [TTY Interactiva](../../Técnicas/Tratamiento%20de%20la%20TTY/TTY%20Interactiva.md)
+Ahora podemos hacer un tratamiento de la tty para tener una [TTY Interactiva](../../../Técnicas/Tratamiento%20de%20la%20TTY/TTY%20Interactiva.md)
 
 ---
 
@@ -426,13 +426,13 @@ Explicación: Al conectarnos con `nc` al puerto 7788, se inicia el servicio `age
 
 Tras lanzar la conexión con redirección a `/dev/null`, y observar los procesos nuevamente, vemos que se genera un nuevo proceso **`agent` ejecutado por root**. Esto confirma que **cada conexión al puerto lanza un proceso independiente como root**, lo que representa una **superficie de ataque crítica**, especialmente si el binario es vulnerable (por ejemplo, a un Buffer Overflow). Como el proceso está ligado a una entrada controlada (el Agent ID), podríamos intentar enviar un payload malicioso a través de esa entrada para escalar privilegios
 
-Acción: usamos la herramienta [Ghidra](../../Herramientas/Ghidra) para aplicar ingeniería inversa hacía el binario encontrado
+Acción: usamos la herramienta [Ghidra](../../../Herramientas/Ghidra) para aplicar ingeniería inversa hacía el binario encontrado
 
 ```bash
 ./ghidraRun
 ```
 
-Resultado: ver [Dependencias](../../Herramientas/Ghidra/Dependencias.md)
+Resultado: ver [Dependencias](../../../Herramientas/Ghidra/Dependencias.md)
 
 ```bash
 ******************************************************************
@@ -459,7 +459,7 @@ connect to [192.168.1.66] from (UNKNOWN) [192.168.1.67] 47758
 agent
 ```
 
-Explicación: nos transferimos el binario en local para poder analizarlo con [Ghidra](../../Herramientas/Ghidra)
+Explicación: nos transferimos el binario en local para poder analizarlo con [Ghidra](../../../Herramientas/Ghidra)
 
 ---
 
@@ -551,7 +551,7 @@ Acción: abrimos Ghidra y seguimos los siguientes pasos:
 
 ## Buffer Overflow con PEDA
 
-Para saber más sobre GBD-PEDA, ver [Instalación GDB-PEDA](../../Herramientas/GDB-PEDA/Instalación%20GDB-PEDA.md)
+Para saber más sobre GBD-PEDA, ver [Instalación GDB-PEDA](../../../Herramientas/GDB-PEDA/Instalación%20GDB-PEDA.md)
 
 ### Secuencia de explotación de BOF con PEDA
 
