@@ -207,7 +207,7 @@ Finalmente obtenemos la siguiente información:
 
 Tenemos las diferentes rutas/pestañas que veíamos en la página web, pero además vemos una más `tutorials-incomplete`
 
-![Captura](./Imágenes/iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Machines/VulnHub/IMF/Imágenes/web_6.png)
+![Captura](./Imágenes/web_6.png)
 
 Vemos un endpoint oculto, y muestra un QR por lo que podemos probar a explotarlo
 
