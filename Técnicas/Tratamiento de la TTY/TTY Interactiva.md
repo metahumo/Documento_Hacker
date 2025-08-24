@@ -145,7 +145,7 @@ Con todos estos pasos, tendrás una shell mucho más funcional, con:
     /bin/sh
     ```
     
-- En shells muy limitadas (`sh`, `dash`...), algunos comandos pueden no estar disponibles.
+- En shells muy limitadas (`sh`, `bash`...), algunos comandos pueden no estar disponibles.
     
 
 ---
