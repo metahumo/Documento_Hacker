@@ -1,6 +1,6 @@
 
 ---
-# Evaluación de SQL Injection para Inlanefreight
+# Guía paso a paso de SQL Injection para Inlanefreight
 
 **Contexto**:
 
