@@ -1,7 +1,6 @@
 
 ---
-- Tags: #web #machine #HTB 
----
+
 **Máquina:** Backend
 
 **Plataforma:** Hack The Box
