@@ -408,7 +408,7 @@ AAAAAhakacking  6b350ab604ed7b2332c69e73e01f97f7
 
 
 **Resultado:**  
-Tenemos usuarios y contraseñas → ahora podremos probar a loguearnos como uno de ellos, preferiblemente alguien del departamento de finanzas → tramitar el pago y dar por finalizado el ejercicio: flag{H4CKY0URL1F3}.
+Tenemos usuarios y contraseñas → ahora podremos probar a loguearnos como uno de ellos, preferiblemente alguien del departamento de finanzas → tramitar el pago y dar por finalizado el ejercicio: flag{H4CKY0*****}.
 
 ---
 
