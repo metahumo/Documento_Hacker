@@ -2,7 +2,7 @@
 ---
 # Laboratorio: PATH Hijacking para escalada de privilegios
 
-**Nota:** para un ejemplo en una máquina de *Hack The Box* ver [Previse](../../../Machines/HTB/CommandInjection/Previse.md)
+**Nota:** para un ejemplo en una máquina de *Hack The Box* ver [Previse](../../Machines/HTB/CommandInjection/Previse.md)
 
 ---
 
