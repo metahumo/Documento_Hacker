@@ -144,8 +144,8 @@ linenum.sh
 linpeas.sh
 ```
 
-- [LinEnum](../LinEnum.md)
-- [LinPEAS](../LinPEAS.md)
+- [LinEnum](LinEnum.md)
+- [LinPEAS](LinPEAS.md)
 - [Metasploit](../../../../Herramientas/Metasploit.md.md)
 
 ---
