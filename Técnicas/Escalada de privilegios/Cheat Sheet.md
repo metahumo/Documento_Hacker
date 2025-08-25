@@ -144,8 +144,8 @@ linenum.sh
 linpeas.sh
 ```
 
-- [LinEnum](../../../../Técnicas/Escalada%20de%20privilegios//Recursos%20escalada/LinEnum.md)
-- [LinPEAS](../../../../Técnicas/Escalada%20de%20privilegios//Recursos%20escalada/LinPEAS.md)
+- [LinEnum](./LinEnum.md)
+- [LinPEAS](./LinPEAS.md)
 - [Metasploit](../../../../Herramientas/Metasploit.md.md)
 
 ---
