@@ -1,17 +1,13 @@
+
+---
+
 # Metasploit Framework - Explotación de Nibbleblog
-
-### Exención de responsabilidad
-
-Este contenido tiene fines educativos y está diseñado para ser utilizado únicamente en entornos controlados y con permisos explícitos.
-Hack The Box y otras plataformas similares proporcionan entornos de práctica legalmente autorizados, y se debe asegurar que se cuenta con los permisos adecuados antes de realizar cualquier prueba de penetración o hacking ético.
-
-El autor de esta publicación no se responsabiliza por el uso indebido de las técnicas y herramientas descritas fuera de los entornos legales y éticos correspondientes.
 
 ---
 
 ## Usos y consideraciones de Metasploit Framework
 
-Metasploit es una herramienta de código abierto utilizada por profesionales de seguridad para probar la robustez de las redes y sistemas mediante la explotación de vulnerabilidades conocidas.
+> Metasploit es una herramienta de código abierto utilizada por profesionales de seguridad para probar la robustez de las redes y sistemas mediante la explotación de vulnerabilidades conocidas.
 
 ---
 
@@ -61,7 +57,7 @@ msfconsole
 
 Esto debe de abrir la consola interactiva de Metasploit (msfconsole), donde puedes empezar a usar la herramienta.
 
-![Captura de pantalla](herramientas/metaesploit/imágenes/msfconsole.png)
+![Captura de pantalla](./Imágenes/msfconsole.png)
 
 #### 2.2. Buscar módulos de exploits
 
@@ -75,7 +71,7 @@ search Wordpress
 search Nibbleblog
 ```
 
-![Captura de pantalla](herramientas/metaesploit/imágenes/search.png)
+![Captura de pantalla](./Imágenes/search.png)
 
 #### 2.3. Seleccionar un exploit
 
@@ -90,7 +86,7 @@ use exploit/multi/http/nibbleblog_file_upload
 ```
 Dos formas válidas de seleccionar un exploit (el nº 0 hace referencia al índice del exploit, miestras que la segunda forma es nombrando la ruta absoluta del exploit)
 
-![Captura de pantalla](herramientas/metaesploit/imágenes/use.png)
+![Captura de pantalla](./Imágenes/use.png)
 
 #### 2.4. Ver los parámetros del exploit
 
@@ -108,7 +104,7 @@ Cuando seleccionas un exploit, tienes que ver los parámetros necesarios (como l
 show options
 ```
 
-![Captura de pantalla](herramientas/metaesploit/imágenes/show_options.png)
+![Captura de pantalla](./Imágenes/show_options.png)
 	
 #### 2.5. Configurar los parámetros del exploit
 
@@ -156,7 +152,7 @@ Cada exploit requiere de un payload, para ver los disponibles podemos usar el co
 show payloads
 ```
 
-![Captura de pantalla](herramientas/metaesploit/imágenes/show_payloads.png)
+![Captura de pantalla](./Imágenes/show_payloads.png)
 
 #### 2.7. Seleccionar un payload
 
