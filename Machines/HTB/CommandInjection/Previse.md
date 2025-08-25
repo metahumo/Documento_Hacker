@@ -222,7 +222,7 @@ Ahora sería cuestión de escalar privilegios para pasar del usuario `www-data` 
 # PATH Hijacking
 ## Escalada de privilegios
 
-**Nota:** para un tratamiento de la TTY que permita hacer `ctrl+c`, `ctrl+l`, y otras utilidades de una bash funcional, visitar [TTY Interactiva](../../../Técnicas/Tratamiento%20de%20la%TTY/TTY%20Interactiva.md)
+**Nota:** para un tratamiento de la TTY que permita hacer `ctrl+c`, `ctrl+l`, y otras utilidades de una bash funcional, visitar [TTY Interactiva](../../../../Técnicas/Tratamiento%20de%20la%TTY/TTY%20Interactiva.md)
 
 Acción: desde la máquina comprometida seguimos la siguiente secuencia. Recordemos el plan, como hemos ganado acceso, ahora tratamos de obtener credenciales desde la base de datos MySQL
 
