@@ -41,25 +41,9 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 
 ---
 
-## Recomendaciones para mejorar la navegación y mantenibilidad
-- Añadimos un `README.md` dentro de cada carpeta con:
-  - Objetivos de la carpeta.
-  - Índice de los archivos más relevantes.
-  - Etiquetas de dificultad (Principiante / Intermedio / Avanzado).
-- Normalizamos nombres de archivos y caminos (usar `-` o `_`, evitar espacios si lo preferimos).
-- Añadimos una tabla de contenidos automática en los `README.md` principales con anclas.
-- Comprobamos enlaces relativos y corregimos los que fallen.
-- Añadimos metadatos en la cabecera de los documentos (fecha, autor, estado: borrador/revisado).
-
----
-
 ## Buenas prácticas y seguridad
 - Nunca ejecutar exploits contra sistemas reales sin permiso escrito. Practicamos en entornos controlados.
-- Redactamos y borramos credenciales/IPS sensibles antes de publicar.
-- Añadimos una licencia y una nota legal/ética en el root:
-  - Licencia (por ejemplo MIT) si queremos compartir el contenido.
-  - Disclaimer legal: uso educativo, no nos responsabilizamos por usos indebidos.
-
+- 
 ---
 
 ## Cómo contribuir
@@ -70,11 +54,6 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
   - Pruebas o capturas si aplica.
 - Revisiones: asignamos etiquetas `needs-review`, `approved`.
 
----
-
-## Contacto y planificación de estudio
-- Podemos añadir un `ROADMAP.md` con rutas de aprendizaje (p. ej. Reconocimiento → Explotación → Post-explotación → Forense).
-- Sugerimos incluir ejercicios con tiempo estimado y material requerido para jornadas intensivas de estudio.
 
 ---
 
@@ -82,6 +61,3 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 Nos comprometemos a usar este repositorio con fines educativos. No usamos técnicas aquí descritas contra sistemas sin autorización expresa. Si dudas sobre si un ejercicio o script puede ser ilegal en tu jurisdicción, consultamos antes.
 
 ---
-
-**Última nota**  
-Este índice está pensado para orientarnos y facilitar la navegación. Si quieres, generamos ahora los `README.md` individuales para cada carpeta con un índice más detallado y sugerencias de ejercicios por nivel.
