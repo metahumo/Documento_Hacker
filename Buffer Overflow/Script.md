@@ -89,7 +89,7 @@ except:
 
 ```
 
-Con esta información podemos empezar a construir nuestro script. Uno que empiece con el [[Fuzzing ENP]]
+Con esta información podemos empezar a construir nuestro script. Uno que empiece con el [Fuzzing ENP](Fuzzing_ENP.md)
 
 ```python
 #!/usr/bin/env python3
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     exploit()
 ```
 
-Hacemos una prueba/traza mostrando el banner que veíamos al conectarnos por `telnet` ([[SLMail]])
+Hacemos una prueba/traza mostrando el banner que veíamos al conectarnos por `telnet` (SLMail)
 
 Resultado: python3 exploit.py
 
@@ -286,7 +286,7 @@ Al enviar esto, lo que veremos en [Immunity Debugger](Immunity%20Debugger.md) es
 
 ![[ID_7.png]]
 
-Entonces con ese "código" podemos extraer el offset con otra herramienta de [Metasploit](../../Herramientas/Metasploit/Metasploit.md)
+Entonces con ese "código" podemos extraer el offset con otra herramienta de [Metasploit](../../../Herramientas/Metasploit/Metasploit.md)
 
 ```bash
 /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q 0x7A46317A
