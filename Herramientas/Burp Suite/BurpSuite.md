@@ -2,7 +2,7 @@
 
 ## ¿Qué es BurpSuite Community Edition?
 
-Es la versión gratuita de esta plataforma, que viene incluida por defecto en sistemas operativos como Parrot Security y Kali Linux. Su función principal es desempeñar el papel de proxy HTTP para la aplicación, facilitando la realización de pruebas de penetración.
+> Es la versión gratuita de esta plataforma, que viene incluida por defecto en sistemas operativos como Parrot Security y Kali Linux. Su función principal es desempeñar el papel de proxy HTTP para la aplicación, facilitando la realización de pruebas de penetración.
 
 [#] Puedes descargar BurpSuite Community Edition desde su web oficial: https://portswigger.net/burp/communitydownload
 
@@ -10,7 +10,7 @@ Es la versión gratuita de esta plataforma, que viene incluida por defecto en si
 
 ## ¿Qué es un proxy HTTP?
 
-Un proxy HTTP es un filtro de contenido de alto rendimiento, ampliamente usado en el hacking con el fin de interceptar el tráfico de red. Esto permite analizar, modificar, aceptar o rechazar todas las solicitudes y respuestas de la aplicación que se esté auditando.
+> Un proxy HTTP es un filtro de contenido de alto rendimiento, ampliamente usado en el hacking con el fin de interceptar el tráfico de red. Esto permite analizar, modificar, aceptar o rechazar todas las solicitudes y respuestas de la aplicación que se esté auditando.
 
 Un proxy HTTP actúa como intermediario entre el navegador y el servidor web, lo que permite interceptar y analizar todo el tráfico que fluye entre ellos. En pruebas de penetración, esta función es clave para detectar vulnerabilidades como inyecciones, autenticaciones incorrectas, y más.
 
