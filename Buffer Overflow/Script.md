@@ -286,7 +286,7 @@ Al enviar esto, lo que veremos en [Immunity Debugger](Immunity%20Debugger.md) es
 
 ![[ID_7.png]]
 
-Entonces con ese "código" podemos extraer el offset con otra herramienta de [Metasploit](../../../Herramientas/Metasploit/Metasploit.md)
+Entonces con ese "código" podemos extraer el offset con otra herramienta de [Metasploit](../Herramientas/Metasploit/Metasploit.md)
 
 ```bash
 /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q 0x7A46317A
