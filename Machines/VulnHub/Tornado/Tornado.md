@@ -261,6 +261,6 @@ whoami
 www-data
 ```
 
-Explicación: ganamos acceso a la máquina víctima. Para un tratamiento de la TTY seguir este apartado: [[TTY Interactiva)
+Explicación: ganamos acceso a la máquina víctima. Para un tratamiento de la TTY seguir este apartado: [TTY Interactiva](../../../Técnicas/Tratamiento%20de%20la%20TTY/TTY%20Interactiva.md)
 
 ---
