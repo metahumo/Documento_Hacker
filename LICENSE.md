@@ -16,7 +16,7 @@ Nosotros publicamos el contenido de este repositorio con fines **exclusivamente 
 
 ## Cómo atribuir correctamente (ejemplos)
 - Si reutilizamos un documento:  
-  `Título del documento — Autor: Metahumo — Fuente: https://github.com/Metahumo/Documento_Hacker — Licencia: CC BY-NC-SA 4.0`
+  `Título del documento — Autor: Metahumo — Fuente: https://github.com/metahumo/Documento_Hacker — Licencia: CC BY-NC-SA 4.0`
 - Si adaptamos y traducimos: indicar además `Adaptado de: Título original (enlace) — Cambios: traducción al español, actualización de comandos`.
 
 ## Notas importantes
