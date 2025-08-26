@@ -592,7 +592,7 @@ Para que el script quede listo necesitamos saber la dirección que nos permitir�
 
 En [Immunity Debugger](Immunity%20Debugger.md) `!mona modules` y seleccionamos cualquiera que no tenga ninguno de los primeros 5 valores de `True/False` en True, como el que seleccionamos en la imagen
 
-![[ID_18.png]]
+![Captura](./Imágenes/ID_18.png)
 
 ### Secuencia para Obtener el Opcode de `JMP ESP`
 
@@ -722,28 +722,28 @@ if __name__ == '__main__':
 
 Antes de lanzar el script, creamos un brakpoint en Immunity Debugger como se ve en las imágenes
 
-![[ID_21.png]]
+![Captura](./Imágenes/ID_21.png)
 
 **Nota:** puede no lanzarse bien a la primera, darle de nuevo si no aparece el mismo código que **jmp esp**
 
-![[ID_22.png]]
+![Captura](./Imágenes/ID_22.png)
 
 Creado el breakpoint, vamos a mostrar el 'Toggle' para ver si el flujo del programa pasa por la dirección **EIP**** que se muestra `5F4C4D13`
 
-![[ID_23.png]]
+![Captura](./Imágenes/ID_23.png)
 
 
-![[ID_24.png]]
+![Captura](./Imágenes/ID_24.png)
 
 Lanzamos el script y el resultado es efectivamente la EIP **5F4C4D13**
 
-![[ID_25.png]]
+![Captura](./Imágenes/ID_25.png)
 
 Al hacer de nuevo 'Follow in Dump' en el ESP vemos que se nos muestra nuestro shellcode creado con msfvenom
 
 **Nota:** para avanzar en el breakpoint, usamos la pestaña que se indica en la imagen (la segunda desde el play)
 
-![[ID_26.png]]
+![Captura](./Imágenes/ID_26.png)
 
 Una vez apuntamos `EIP` al `JMP ESP`, podemos tener dos problemas: el procesador salta antes de que el shellcode esté listo o no hay espacio suficiente en la pila. Para dar tiempo al payload usamos un “NOP sled” (serie de NOPs) antes de la shellcode, que ralentiza la ejecución hasta llegar al código útil. Y para asegurar espacio, ajustamos `ESP` (por ejemplo con `sub esp, 0x10`) y reservamos memoria. Con esto, nuestra shellcode se ejecuta confiablemente tras el overflow.
 
