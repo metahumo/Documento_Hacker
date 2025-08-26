@@ -89,7 +89,7 @@ except:
 
 ```
 
-Con esta información podemos empezar a construir nuestro script. Uno que empiece con el [Fuzzing ENP](Fuzzing_ENP.md)
+Con esta información podemos empezar a construir nuestro script. Uno que empiece con el [Fuzzing ENP](Fuzzing%20ENP.md)
 
 ```python
 #!/usr/bin/env python3
