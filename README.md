@@ -43,7 +43,7 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 
 ## Buenas prácticas y seguridad
 - Nunca ejecutar exploits contra sistemas reales sin permiso escrito. Practicamos en entornos controlados.
-- 
+  
 ---
 
 ## Cómo contribuir
