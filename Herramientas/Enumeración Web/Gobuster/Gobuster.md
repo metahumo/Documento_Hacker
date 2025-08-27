@@ -142,6 +142,14 @@ gobuster dir -u https://www.20min.ch/ -w /usr/share/wordlists/dirb/common.txt -x
   Desactiva el blacklist por defecto de Gobuster (que normalmente oculta los `404`).
   Al dejarlo vacío, nos aseguramos de que Gobuster solo muestre los códigos definidos en `-s`.
 
+Otro parámetro que podemos añadir es el siguiente:
+
+```bash
+--delay 200ms
+```
+
+Con esta instrucción, indicamos a gobuster que esparcie en el tiempo las solicitudes para evitar limitaciones de solicitudes. En este caso mete 1 petición cada 0.2 segundos, mucho menos ruidoso.
+
 ---
 
 ## Resumen
