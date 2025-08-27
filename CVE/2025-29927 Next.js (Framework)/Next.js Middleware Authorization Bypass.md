@@ -15,6 +15,18 @@ El bug permite a un atacante **bypasear el middleware** insertando un header HTT
 
 Esto hace que la aplicación ignore las comprobaciones de seguridad implementadas en el middleware, incluyendo autenticación y autorización, y responda con contenido protegido aunque no estemos logueados.
 
+---
+
+## ¿Qué es Next.js?
+
+> Next.js es un **framework de desarrollo web basado en React** que permite crear aplicaciones modernas de manera eficiente:
+
+- Es un **framework de JavaScript** que se ejecuta sobre **Node.js**.
+    
+- Está construido sobre **React**, así que hereda toda la filosofía de componentes de React.
+    
+- Facilita la creación de **aplicaciones web completas**, tanto del lado del cliente (frontend) como del lado del servidor (backend).
+
 ## ¿Qué es `x-middleware-subrequest`?
 
 > `x-middleware-subrequest` es un **encabezado (header) interno** que utiliza Next.js para manejar llamadas recursivas al middleware, evitando bucles infinitos durante solicitudes internas. Su propósito legítimo es gestionar internamente rutas que vuelven a invocar el middleware. Lo esencial es que fue pensado para uso interno del framework, **no para aceptar valores externos** de usuarios o atacantes.
