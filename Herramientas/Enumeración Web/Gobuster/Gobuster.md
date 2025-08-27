@@ -99,7 +99,56 @@ En este caso:
 - Mostramos solo respuestas relevantes (`200`, `204`, `301`, `302`).
     
 - Utilizamos 20 hilos para acelerar el escaneo.
-    
+
+---
+
+## Fuzzing de redirecciones
+
+Comando utilizado:
+
+```bash
+gobuster dir -u https://www.20min.ch/ -w /usr/share/wordlists/dirb/common.txt -x php,html,js -s 301,302,308 --status-codes-blacklist ""
+````
+
+### Desglose de parámetros
+
+* **`gobuster dir`**
+  Ejecuta Gobuster en modo **fuerza bruta de directorios/rutas**.
+
+* **`-u https://URL/`**
+  URL objetivo donde se realizará la enumeración de directorios.
+
+* **`-w /usr/share/wordlists/dirb/common.txt`**
+  Indica la wordlist a utilizar. En este caso, la lista común de directorios que viene con *dirb*.
+
+* **`-x php,html,js`**
+  Añade extensiones de archivos a probar para cada entrada del diccionario.
+  Ejemplo: si en la lista está `admin`, se probarán:
+
+  * `/admin.php`
+  * `/admin.html`
+  * `/admin.js`
+
+* **`-s 301,302,308`**
+  Filtra y muestra únicamente las respuestas HTTP con esos códigos de estado:
+
+  * **301** → redirección permanente
+  * **302** → redirección temporal
+  * **308** → redirección permanente que conserva método y body
+
+  Son respuestas muy útiles porque suelen indicar rutas reales protegidas o gestionadas por el servidor.
+
+* **`--status-codes-blacklist ""`**
+  Desactiva el blacklist por defecto de Gobuster (que normalmente oculta los `404`).
+  Al dejarlo vacío, nos aseguramos de que Gobuster solo muestre los códigos definidos en `-s`.
+
+---
+
+## Resumen
+
+Este comando busca rutas en el sitio indicado utilizando la wordlist `common.txt`, probando extensiones `.php`, `.html` y `.js`.
+De los resultados, **solo se mostrarán las rutas que devuelvan códigos de redirección (301, 302, 308)**, lo que nos ayuda a identificar directorios o páginas que existen pero que requieren login u otras condiciones de acceso.
+
 
 ---
 
