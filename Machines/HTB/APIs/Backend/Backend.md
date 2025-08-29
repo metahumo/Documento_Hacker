@@ -125,7 +125,7 @@ Explicación:
 
 ## Paso 4 - Postman y cURL
 
-Acción: desde [Postman](../../../../Herramientas/Postman/Postman.md) accedemos al endpoint encontrado con [[Wfuzz]] (usando el método **POST**, ya que en el navegador solo permite hacer peticiones *GET*)
+Acción: desde [Postman](../../../../Herramientas/Postman/Postman.md) accedemos al endpoint encontrado con [Wfuzz](../../../../Herramientas/Enumeración%20Web/Wfuzz) (usando el método **POST**, ya que en el navegador solo permite hacer peticiones *GET*)
 
 ![Captura de pantalla](./Imágenes/postman_1.png)
 
