@@ -8,7 +8,7 @@
 > 
 > Aprender a explotar WordPress es fundamental para los profesionales de la ciberseguridad, ya que permite identificar y mitigar vulnerabilidades antes de que los atacantes las utilicen. Además, entender las debilidades de WordPress proporciona una visión valiosa de cómo proteger otros sistemas y plataformas web.
 > 
-> La explotación de WordPress en pruebas de penetración[^1] generalmente involucra la identificación de vulnerabilidades conocidas, la explotación de plugin o temas inseguros, y la explotación de configuraciones incorrectas en el servidor web. A través de estas técnicas, los profesionales de la seguridad pueden simular ataques y reforzar las defensas de los sistemas web.
+> La explotación de WordPress en pruebas de penetración generalmente involucra la identificación de vulnerabilidades conocidas, la explotación de plugin o temas inseguros, y la explotación de configuraciones incorrectas en el servidor web. A través de estas técnicas, los profesionales de la seguridad pueden simular ataques y reforzar las defensas de los sistemas web.
 
 ---
 ## Enumeración manual
