@@ -124,7 +124,3 @@ Content-Type: application/xml
 ```
 
 ---
-
-
-¿Quieres que te lo prepare también en **formato tabla de referencia rápida** (Payload → Objetivo → Ejemplo) para que lo tengas todo en una sola vista compacta?
-```
