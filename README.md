@@ -46,6 +46,22 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 
 ---
 
+## Créditos
+
+El contenido y los scripts de este repositorio están inspirados y extraídos de materiales creados por la comunidad de ciberseguridad.  
+Todo el mérito corresponde a sus autores originales.  
+
+- [s4vitar](https://github.com/s4vitar)  
+- [Hack The Box](https://www.hackthebox.com)  
+- [PentesterLab](https://pentesterlab.com)  
+- [PayloadsAllTheThings (by swisskyrepo)](https://github.com/swisskyrepo/PayloadsAllTheThings)  
+- [HackTricks Wiki](https://github.com/HackTricks-wiki/hacktricks)  
+- [PayloadBox XSS Payload List](https://github.com/payloadbox/xss-payload-list)  
+
+Este repositorio no pretende apropiarse del trabajo de terceros, sino centralizar y reutilizar material educativo con fines de aprendizaje.
+
+---
+
 ## Buenas prácticas y seguridad
 - Nunca ejecutar exploits contra sistemas reales sin permiso escrito. Practicamos en entornos controlados.
   
@@ -66,3 +82,4 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 Nos comprometemos a usar este repositorio con fines educativos. No usamos técnicas aquí descritas contra sistemas sin autorización expresa. Si dudas sobre si un ejercicio o script puede ser ilegal en tu jurisdicción, consultamos antes.
 
 ---
+
