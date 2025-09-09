@@ -118,4 +118,3 @@ check_user(args.username)
 ```
 
 ---
-
