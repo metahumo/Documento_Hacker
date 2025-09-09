@@ -49,7 +49,8 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 ## Créditos
 
 El contenido y los scripts de este repositorio están inspirados y extraídos de materiales creados por la comunidad de ciberseguridad.  
-Todo el mérito corresponde a sus autores originales.  
+
+**Todo el mérito corresponde a sus autores originales.**
 
 - [s4vitar](https://github.com/s4vitar)  
 - [Hack The Box](https://www.hackthebox.com)  
