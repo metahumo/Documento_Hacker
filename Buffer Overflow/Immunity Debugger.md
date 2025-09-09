@@ -124,7 +124,7 @@ Podemos mejorar su visualización. Click derecho --> Apperance --> Font (all) --
 
 ---
 
-### ### Bytearrays y uso con `!mona bytearray`
+### Bytearrays y uso con `!mona bytearray`
 
 Un `bytearray` en Python es una lista mutable de valores de byte que permite construir y modificar payloads dinámicamente. Con el comando `!mona bytearray` en Immunity Debugger generamos automáticamente una secuencia de bytes (0x00–0xFF) para detectar badchars al observar cuáles se corrompen durante el overflow.
 
