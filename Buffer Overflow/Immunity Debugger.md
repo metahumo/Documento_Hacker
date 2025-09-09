@@ -147,7 +147,7 @@ Podemos ver en la ruta que creamos la carpeta ' Analysis' el documento
 ![Captura](./Imágenes/CP_1.png)
 
 
-Como es recomendable no usar el carácter `null byte \x00` podemos usar este otor comando de **mona** para obtener un bytearray
+Como es recomendable no usar el carácter `null byte \x00` podemos usar este otro comando de **mona** para obtener un bytearray
 
 ```txt
 !mona bytearray -cpb "\x00"
