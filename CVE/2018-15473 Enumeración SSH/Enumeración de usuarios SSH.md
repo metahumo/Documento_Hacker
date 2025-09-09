@@ -40,9 +40,9 @@ Ejemplo:
 python3 ssh_enum.py 192.168.1.74 -p 22 root
 ```
 
-- Si el usuario existe → `[+] root es un usuario válido
+- Si el usuario existe → `[+] root es un usuario válido`
     
-- Si el usuario no existe → `[-] root no es un usuario válido
+- Si el usuario no existe → `[-] root no es un usuario válido`
 
 ---
 
