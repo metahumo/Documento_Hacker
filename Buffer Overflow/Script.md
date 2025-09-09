@@ -1,7 +1,9 @@
 
 ---
 
-Script obtenido de @s4vitar
+## Créditos
+
+El script presentado en este repositorio ha sido extraído del material proporcionado por [s4vitar](https://github.com/s4vitar).
 
 ---
 
