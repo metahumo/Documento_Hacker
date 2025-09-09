@@ -1,6 +1,11 @@
 
 ---
 
+Script obtenido de @s4vitar
+
+---
+
+
 Para crear un script operativo que aplique un buffer overflow, lo primero que podemos hacer es buscar con **searchsploit** posibles exploits.
 
 Acción:
