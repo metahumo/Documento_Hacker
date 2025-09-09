@@ -152,4 +152,4 @@ Estos payloads representan los escenarios más comunes de explotación XXE.
 La práctica en laboratorios como **PortSwigger Academy** es fundamental para afianzar estas técnicas.
 Siempre debemos recordar que en entornos reales, el uso ofensivo sin autorización es ilegal: lo aplicamos solo en entornos de pruebas controladas.
 
-```
+---
