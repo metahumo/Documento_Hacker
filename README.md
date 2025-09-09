@@ -14,25 +14,30 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 1. **Buffer Overflow**  
    Contiene materiales sobre explotación de desbordamientos de pila/heap, ejemplos paso a paso, PoC en C/Python y técnicas de mitigación (ASLR, NX, PIE). Ideal para practicar con máquinas de laboratorio y ejercicios de reversing.
 
-2. **Gestores de contenido (CMS)**  
+2. **CVE**
+
+   Contiene documentación de vulnerabilidades conocidas (Common Vulnerabilities and Exposures), con su identificación oficial, explicación pedagógica y exploits asociados. Cada CVE incluye descripción del fallo, impacto, PoC adaptada a Python 3 cuando sea necesario, y pasos de explotación. Es un apartado clave para practicar con exploits públicos y comprender cómo aprovechar vulnerabilidades reportadas en entornos reales.
+
+3. **Gestores de contenido (CMS)**  
    Guías y casos prácticos sobre explotación en CMS populares (WordPress, Joomla, Drupal...), incluyendo enumeración, plugins vulnerables, escalada y hardening. Recomendado para entender vectores web reales.
 
-3. **Herramientas**  
+4. **Herramientas**  
    Documentación y tutoriales sobre las herramientas que utilizamos: Burp Suite, Nmap, Gobuster, ffuf, ffprobe, Hashcat, Metasploit, etc. Incluye configuraciones, ejemplos de uso y capturas de pantalla.
 
-4. **Machines**  
+5. **Machines**  
    Resoluciones y guías paso a paso de máquinas que hemos resuelto en plataformas como Hack The Box, VulnHub y PentesterLab. Cada máquina suele incluir enumeración, explotación y post-explotación.
 
-5. **OWASP TOP 10**  
+6. **OWASP TOP 10**  
    Explicaciones, payloads y ejercicios relacionados con las categorías del OWASP Top 10 y vulnerabilidades web frecuentes (SQLi, XSS, RCE, SSRF, etc.). Incluye ejemplos prácticos y scripts de prueba.
 
-6. **Técnicas**  
+7. **Técnicas**  
    Cheatsheets y técnicas transversales: enumeración, escalada de privilegios, pivoting, persistence, forense básico, manipulación de archivos, fuzzing, etc. Es la sección más "operativa".
 
 ---
 
 ## Índice rápido (enlaces a las carpetas)
 - [Buffer Overflow](./Buffer%20Overflow/)
+- [CVE](./CVE/)
 - [Gestores de contenido (CMS)](./Gestores%20de%20contenido%20(CMS)/)
 - [Herramientas](./Herramientas/)
 - [Machines](./Machines/)
