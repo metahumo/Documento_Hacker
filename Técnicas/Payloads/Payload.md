@@ -40,4 +40,4 @@ Los payloads **non-staged** son monolíticos y contienen todo el código necesar
 ---
 ### Sugerencias
 
-- [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Payload 📦/Herramientas Payload]] 
+- [Herramientas Payload](../Payload/Herramientas%20Payload.md) 
