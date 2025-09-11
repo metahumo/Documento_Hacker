@@ -1,23 +1,23 @@
-# Basic Usage Examples for Pentesting Libraries
+# Ejemplos básicos de uso para bibliotecas de Pentesting
 
-## Library 1: Example Library
-
-```python
-# Basic usage example for Example Library
-
-import example_library
-
-# Example usage code here
-```
-
-## Library 2: Another Library
+## Biblioteca 1: Biblioteca de ejemplo
 
 ```python
-# Basic usage example for Another Library
+# Ejemplo básico de uso para Biblioteca de ejemplo
 
-import another_library
+import biblioteca_ejemplo
 
-# Example usage code here
+# Código de ejemplo aquí
+biblioteca_ejemplo.realizar_ataque('objetivo.com')
 ```
 
-# Expand this section with more libraries and examples as necessary.
+## Biblioteca 2: Otra biblioteca
+
+```python
+# Ejemplo básico de uso para Otra biblioteca
+
+import otra_biblioteca
+
+# Código de ejemplo aquí
+otra_biblioteca.escanear_puertos('192.168.1.1')
+```
