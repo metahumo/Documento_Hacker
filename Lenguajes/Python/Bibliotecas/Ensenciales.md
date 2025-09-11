@@ -138,6 +138,5 @@ pip install shodan
 
 ## Conclusión
 Estas bibliotecas son herramientas clave que podemos emplear para realizar actividades de pentesting ofensivo. Cada una tiene aplicaciones específicas y nos ayudan a automatizar tareas, analizar redes y explotar vulnerabilidades. Es importante utilizarlas de manera responsable y siempre con autorización explícita.
-```
 
 ---
