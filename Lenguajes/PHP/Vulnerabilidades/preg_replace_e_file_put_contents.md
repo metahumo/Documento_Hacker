@@ -9,6 +9,8 @@ Hemos explotado una API vulnerable que nos permitía modificar el contenido de l
 
 El ataque consistió en enviar una petición `PATCH` a la API con un payload malicioso que aprovechaba esta vulnerabilidad para ejecutar código en el servidor.
 
+**Nota:** para este ejemplo nos servimos de la explotación realizada en la [Máquina Symfonos 6.1](https://www.vulnhub.com/entry/symfonos-61,458/)
+
 ## Código vulnerable
 
 ```php
