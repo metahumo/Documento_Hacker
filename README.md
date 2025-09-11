@@ -27,10 +27,13 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 5. **Machines**  
    Resoluciones y guías paso a paso de máquinas que hemos resuelto en plataformas como Hack The Box, VulnHub y PentesterLab. Cada máquina suele incluir enumeración, explotación y post-explotación.
 
-6. **OWASP TOP 10**  
+6. **Lenguajes**  
+   Recopilación de vulnerabilidades, funciones peligrosas y malas prácticas específicas de distintos lenguajes de programación. Cada subapartado se centra en un lenguaje (PHP, Python, C, etc.) y documenta ejemplos de explotación reales, fragmentos de código vulnerable y su análisis. También incluye PoCs, payloads y notas sobre mitigación. El objetivo es entender cómo ciertas construcciones de código pueden derivar en fallos de seguridad y cómo se pueden aprovechar en un contexto ofensivo.
+
+7. **OWASP TOP 10**  
    Explicaciones, payloads y ejercicios relacionados con las categorías del OWASP Top 10 y vulnerabilidades web frecuentes (SQLi, XSS, RCE, SSRF, etc.). Incluye ejemplos prácticos y scripts de prueba.
 
-7. **Técnicas**  
+8. **Técnicas**  
    Cheatsheets y técnicas transversales: enumeración, escalada de privilegios, pivoting, persistence, forense básico, manipulación de archivos, fuzzing, etc. Es la sección más "operativa".
 
 ---
@@ -40,6 +43,7 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 - [CVE](./CVE/)
 - [Gestores de contenido (CMS)](./Gestores%20de%20contenido%20(CMS)/)
 - [Herramientas](./Herramientas/)
+- [Lenguajes](./Lenguajes/)
 - [Machines](./Machines/)
 - [OWASP TOP 10](./OWASP%20TOP%2010/)
 - [Técnicas](./Técnicas/)
