@@ -1,1 +1,0 @@
-Contenido original de Ensenciales.md en el commit 39ada5ac28eb73053b9cc67d1014882d9ec95998
