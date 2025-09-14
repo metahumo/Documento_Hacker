@@ -6,6 +6,9 @@
 En este documento, recopilamos y describimos las principales bibliotecas de Python que podemos utilizar para realizar actividades de pentesting ofensivo. Estas herramientas son esenciales para realizar pruebas de penetración y evaluar la seguridad de diferentes sistemas.
 
 ## 1. **Scapy**
+
+[Repositorio Scapy](../Scapy/)
+
 Scapy es una biblioteca poderosa para manipular y analizar paquetes de red. Nos permite crear, enviar, recibir y modificar paquetes personalizados para evaluar la seguridad de redes y sistemas.
 
 ```bash
