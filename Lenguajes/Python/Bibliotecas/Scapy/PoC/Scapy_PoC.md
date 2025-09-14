@@ -7,7 +7,7 @@
 
 Pequeña guía práctica (PoC) de Scapy orientada a uso en pruebas de seguridad y aprendizaje. Incluye instalación, ejemplos básicos de captura (`sniff`), creación y envío de paquetes (`send`, `sr`, `sr1`), parsing de respuestas y ejemplos típicos de uso en ciberseguridad (escaneo básico, manipulación de cabeceras, consultas DNS). 
 
-[Ver tutorial sobre DNS_spoofing.py](../../../../Utilidades&20Ofensivas/DNS%20Spoofing/dns_spoofing_tutorial.md) 
+[Ver tutorial sobre DNS_spoofing.py](../../../Utilidades%20Ofensivas/DNS%20Spoofing/dns_spoofing_tutorial.md)
 
 ---
 
