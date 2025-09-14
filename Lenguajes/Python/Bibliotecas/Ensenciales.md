@@ -51,6 +51,9 @@ pip install impacket
 ---
 
 ## 4. **Socket**
+
+[Repositorio Socket](./Socket/)
+
 La biblioteca estándar `socket` de Python es una herramienta básica y fundamental para trabajar con redes. Nos permite crear conexiones y enviar/recibir datos mediante protocolos como TCP y UDP.
 
 **Características:**
