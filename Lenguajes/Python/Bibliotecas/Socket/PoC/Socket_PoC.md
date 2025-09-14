@@ -38,7 +38,7 @@ Si vas a usar raw sockets o captura avanzada, ejecuta con `sudo` en Linux o usa 
 
 ## 1) Cliente TCP básico (conexión y envío)
 
-[socket_client.py:](../Scripts/socket_client.md) y [socket_client_2.py:](../Scripts/socket_client_2.md)
+Ver [socket_client.py](../Scripts/socket_client.md) y [socket_client_2.py](../Scripts/socket_client_2.md)
 
 `tcp_client_simple.py`:
 
