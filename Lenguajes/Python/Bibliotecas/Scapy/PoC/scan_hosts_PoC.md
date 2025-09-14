@@ -172,16 +172,6 @@ De forma práctica, cada línea te da el par **IP ←→ MAC** detectado en la r
 
 ---
 
-## Recomendaciones y mejoras
-
-* **Mostrar salida en formato tabular o JSON** para integrar mejor con otras herramientas (parseo automático).
-* **Aumentar `timeout`** si la red es lenta, o lanzar múltiples intentos por host para mayor fiabilidad.
-* **Soporte de rangos cortos** (`192.168.1.1-100`) parseando la entrada para iterar IPs sin usar CIDR.
-* **Ejecutar con privilegios**: en la mayoría de sistemas enviar paquetes en capa 2 requiere permisos (ejecutar con `sudo` o privilegios adecuados).
-* **Respetar entornos**: usar siempre en redes de laboratorio o con autorización explícita.
-
----
-
 En resumen, `scan_hosts.py` es un PoC claro y compacto para **descubrir hosts activos en una LAN vía ARP** usando Scapy, y la salida `summary()` proporciona rápidamente los pares IP–MAC útiles para fases posteriores de reconocimiento y pruebas en entornos controlados.
 
 ---
