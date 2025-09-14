@@ -33,7 +33,7 @@ pip install scapy
 
 ## 1) Import básico y funciones principales
 
-[sniff_icmp.py:](./sniff_icmp.md)
+[sniff_icmp.py:](../Scripts/sniff_icmp.md)
 
 ```python
 from scapy.all import *
@@ -75,7 +75,7 @@ Con esos valores puedo registrar resultados, estimar RTT midiendo tiempo antes/d
 
 Capturar paquetes en una interfaz determinada y filtrar por BPF (p.ej. sólo ICMP).
 
-[sniffing_basic.py:](./sniffing_basic.md)
+[sniffing_basic.py:](../Scripts/sniffing_basic.md)
 
 ```python
 from scapy.all import sniff
@@ -94,7 +94,7 @@ También es posible usar una función callback para procesar paquetes en tiempo 
 
 Ejemplo que envía SYN y analiza respuestas para detectar puertos abiertos/CLOSED.
 
-[scan_tcp_basic.py:](./scan_tcp_basic.md)
+[scan_tcp_basic.py:](../Scripts/scan_tcp_basic.md)
 
 ```python
 from scapy.all import IP, TCP, sr
@@ -115,7 +115,7 @@ if __name__ == '__main__':
 
 ## 4) ARP discovery (búsqueda de hosts en LAN)
 
-[scan_hosts_basic.py:](./scan_hosts_basic.md)
+[scan_hosts_basic.py:](../Scripts/scan_hosts_basic.md)
 
 ```python
 from scapy.all import ARP, Ether, srp
