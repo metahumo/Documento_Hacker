@@ -69,7 +69,7 @@ finally:
 
 ## 2) Servidor TCP sencillo (bind / listen / accept)
 
-[socket_client.py:](../Scripts/socket_client.md)
+[socket_tcp.py:](../Scripts/socket_tcp.md)
 
 `tcp_server_simple.py`:
 
