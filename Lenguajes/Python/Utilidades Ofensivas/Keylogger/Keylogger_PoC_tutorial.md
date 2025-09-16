@@ -37,6 +37,12 @@ De esta forma aíslas dependencias y evitas conflictos con librerías del sistem
 
 ---
 
+## Créditos
+
+El script presentado en este repositorio ha sido extraído del material proporcionado por [s4vitar](https://github.com/s4vitar).
+
+---
+
 ## 1) Versión 1 — Script mínimo (prototipo)
 
 **Archivo:** `keylogger_v1.py`
