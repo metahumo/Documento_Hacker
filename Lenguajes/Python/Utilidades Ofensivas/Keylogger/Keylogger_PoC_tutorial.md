@@ -225,6 +225,8 @@ if __name__ == '__main__':
 
 > **Nota:** se han **redactado datos sensibles** (email y contraseña de aplicación). [Ver Cómo obtener una contraseña de aplicación](./C%C3%B3mo%20obtener%20una%20contrase%C3%B1a%20de%20aplicaci%C3%B3n.md)
 
+**Nota:** [Recurso donde ampliar información sobre el uso de smtplib](https://mailtrap.io/es/blog/python-send-email-gmail/)
+
 ```python
 #!/usr/bin/env python3
 import pynput.keyboard
