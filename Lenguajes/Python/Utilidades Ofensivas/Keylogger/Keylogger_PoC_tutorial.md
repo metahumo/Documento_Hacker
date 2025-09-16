@@ -223,7 +223,7 @@ if __name__ == '__main__':
 
 **Archivo:** `keylogger_v4.py`
 
-> **Nota:** se han **redactado datos sensibles** (email y contraseña de aplicación). [Ver Cómo obtener una contraseña de aplicación](./Cómo€26obtener€26una€26contraseña€26de€26aplicación.md)
+> **Nota:** se han **redactado datos sensibles** (email y contraseña de aplicación). [Ver Cómo obtener una contraseña de aplicación](Cómo€26obtener€26una€26contraseña€26de€26aplicación.md)
 
 ```python
 #!/usr/bin/env python3
