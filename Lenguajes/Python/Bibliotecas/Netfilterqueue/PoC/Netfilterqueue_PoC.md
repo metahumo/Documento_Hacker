@@ -151,7 +151,7 @@ sudo sysctl -w net.ipv4.ip_forward=1
 
 2. Inserta las reglas iptables para enviar UDP/53 a NFQUEUE (ver sección más arriba).
     
-3. Arranca el PoC: `sudo python3 dns_spoof_nfqueue.py --target-ip <IP_objetivo> --domain <dominio/web>
+3. Arranca el PoC: `sudo python3 dns_spoof_nfqueue.py --target-ip <IP_objetivo> --domain <dominio/web>`
     
 4. Desde una máquina víctima, realiza una consulta DNS al dominio objetivo y observa en el PoC las detecciones y el resultado final.
     
