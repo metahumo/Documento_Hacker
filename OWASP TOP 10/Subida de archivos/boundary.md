@@ -7,7 +7,7 @@ En un pentest web, entender el funcionamiento de `boundary` en formularios con `
 
 ## ¿Qué es el `boundary`?
 
-- **Definición**: Es una cadena única que separa las distintas partes de un cuerpo de solicitud `multipart/form-data`. Actúa como delimitador entre campos y archivos en una solicitud HTTP.
+> **Definición**: Es una cadena única que separa las distintas partes de un cuerpo de solicitud `multipart/form-data`. Actúa como delimitador entre campos y archivos en una solicitud HTTP.
   
 - **Ejemplo de uso**:
   ```http
