@@ -3,7 +3,7 @@
 
 # ¿Qué es el `boundary` en `multipart/form-data`?
 
-En un pentest web, entender el funcionamiento de `boundary` en formularios con `enctype="multipart/form-data"` es esencial para manipular correctamente las cargas de archivos y formularios complejos.
+En un pentest web, entender el funcionamiento de `boundary` en formularios con `Content-Type="multipart/form-data"` es esencial para manipular correctamente las cargas de archivos y formularios complejos.
 
 ## ¿Qué es el `boundary`?
 
