@@ -593,6 +593,6 @@ main()
 1. **v2.3:** Subdominios opcionales, impresión básica, Ctrl+C seguro.
 2. **v2.4:** Añadido `-t` para retrasos entre requests y evitar detección.
 3. **v2.4-v3:** Recursividad, wordlist combinada `-w`, filtrado de duplicados, resumen final ordenado, soporte completo de endpoints y subdominios.
-4. **v4 (prototipo final):** Añade control de profundidad, headers realistas, logging a archivo, métodos HTTP adicionales, filtrado avanzado de falsos positivos, modularidad y robustez para pentesting. [Ver Fuzzer parte 3](./Fuzzer_PoC_tutorial_parte_3.md)
+4. **v3.2 (prototipo final):** Añade control de profundidad, headers realistas, logging a archivo, métodos HTTP adicionales, filtrado avanzado de falsos positivos, modularidad y robustez para pentesting. [Ver Fuzzer parte 3](./Fuzzer_PoC_tutorial_parte_3.md)
 
 ---
