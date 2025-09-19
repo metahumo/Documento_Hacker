@@ -1,9 +1,10 @@
 
 ---
 
-# Fuzzer — PoC / Prototipos (v2.x → v3.3)
+# Fuzzer — PoC - Tutorial 
 
-Repositorio con la evolución de un **fuzzer** para descubrimiento de endpoints y subdominios (PoC educativo).  
+Repositorio con la evolución de un **fuzzer** para descubrimiento de endpoints y subdominios (PoC educativo). 
+
 El objetivo ha sido construir paso a paso un prototipo que vaya incorporando funcionalidades útiles para pentesting web: wordlists, subdominios, recursividad, control de ruido, filtros anti-falsos positivos, múltiples métodos HTTP, headers personalizados y logging.
 
 > **Estado:** Prototipos finalizados hasta `v4` (script `fuzzer.py`).  
