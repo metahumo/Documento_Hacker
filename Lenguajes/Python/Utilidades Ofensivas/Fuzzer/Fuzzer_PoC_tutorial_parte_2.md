@@ -3,7 +3,7 @@
 
 # Fuzzer PoC Tutorial 2
 
-Este documento describe la evolución del **fuzzer de endpoints y subdominios**, partiendo del PoC anterior (`fuzzer_v4.py`) y mostrando cómo se fueron añadiendo mejoras progresivas. El objetivo es que un principiante pueda comprender la ejecución y los cambios introducidos.
+Este documento describe la evolución del **fuzzer de endpoints y subdominios**, partiendo del PoC anterior (`fuzzer_v1.4.py`) y mostrando cómo se fueron añadiendo mejoras progresivas. El objetivo es que un principiante pueda comprender la ejecución y los cambios introducidos.
 
 ---
 
