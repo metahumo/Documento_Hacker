@@ -1,6 +1,3 @@
-
----
-
 ```python
 #!/usr/bin/env python3
 # CVE-2018-15473 SSH User Enumeration by Leap Security (@LeapSecurity) https://leapsecurity.io
