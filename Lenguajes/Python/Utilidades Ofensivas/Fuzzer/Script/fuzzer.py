@@ -127,7 +127,7 @@ def fuzzer_subdomains(url, wordlist, delay=0, recursive=True, max_depth=2, depth
                     continue
 
 def main():
-    parser = argparse.ArgumentParser(description="Fuzzer Prototipo v3.3 - Pentesting Web Avanzado")
+    parser = argparse.ArgumentParser(description="Fuzzer Prototipo v4 (c) 2025 Metahumo - Pentesting Web Avanzado")
     parser.add_argument("url", help="URL objetivo, ej: http://objetivo.com")
     parser.add_argument("-e", "--endpoints", dest="endpoints", help="Wordlist de endpoints")
     parser.add_argument("-s", "--subdomains", dest="subdomains", help="Wordlist de subdominios")
