@@ -9,7 +9,7 @@ Este documento describe la evolución del **fuzzer de endpoints y subdominios**,
 
 ## Referencia inicial
 
-El fuzzer anterior (`fuzzer_v4.py`) permitía: [Ver Fuzzer parte 1](./Fuzzer_PoC_tutorial_parte_1.md)
+El fuzzer anterior (`fuzzer_v1.4.py`) permitía: [Ver Fuzzer parte 1](./Fuzzer_PoC_tutorial_parte_1.md)
 
 - Probar endpoints de una URL base usando una **wordlist**.
 - Filtrar las respuestas para mostrar solo códigos HTTP "interesantes" (200, 301, 302, 403).
