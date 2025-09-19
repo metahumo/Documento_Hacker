@@ -12,6 +12,8 @@ La vulnerabilidad explotada corresponde a **CVE-2018-15473**, presente en versio
 
 Este script usa **Python 3** y la librería **Paramiko**.
 
+Para más información sobre Paramiko, consulta [la biblioteca](../../Bibliotecas/Paramiko).
+
 Podemos obtener el script desde el repositorio:
 
 ```bash
