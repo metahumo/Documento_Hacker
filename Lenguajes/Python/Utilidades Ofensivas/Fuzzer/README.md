@@ -33,6 +33,8 @@ Se incluyen (entre otros) los siguientes scripts/prototipos que documentan la ev
 
 Este script usa Python 3 y la librería `requests`.
 
+Para más información sobre [Requests, consulta la biblioteca](../../Bibliotecas/Requests)
+
 1. Clona el repositorio (o descarga el archivo `fuzzer.py`):
 
 ```bash
