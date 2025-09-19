@@ -8,7 +8,7 @@ A lo largo de las diferentes versiones, hemos construido un fuzzer básico que p
 
 ---
 
-### Primer script: fuzzer_v1.py — Petición básica con input()
+### Primer script: fuzzer_v1.1.py — Petición básica con input()
 
 ```python
 #!/usr/bin/env python3
@@ -39,7 +39,7 @@ print(f"Codigo de respuesta: {resp.status_code}")
 
 ---
 
-### Segundo script: fuzzer_v2.py — Uso de argparse y función
+### Segundo script: fuzzer_v1.2.py — Uso de argparse y función
 
 ```python
 #!/usr/bin/env python3
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     main()
 ```
 
-**¿Qué añade respecto a v1?**
+**¿Qué añade respecto a v1.1?**
 
 - Introduce `argparse` para pasar la URL como argumento de línea de comandos.
     
@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
 ---
 
-### Tercer script: fuzzer_v3.py — Wordlist y validación de archivo
+### Tercer script: fuzzer_v1.3.py — Wordlist y validación de archivo
 
 ```python
 #!/usr/bin/env python3
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     main()
 ```
 
-**¿Qué añade respecto a v2?**
+**¿Qué añade respecto a v1.2?**
 
 - Permite pasar un archivo de endpoints (`wordlist`) mediante `-w/--wordlist`.
     
@@ -138,7 +138,7 @@ if __name__ == '__main__':
 
 ---
 
-### Cuarta versión: fuzzer_v4.py — Descriptor de archivo y limpieza de líneas
+### Cuarta versión: fuzzer_v1.4.py — Descriptor de archivo y limpieza de líneas
 
 ```python
 #!/usr/bin/env python3
@@ -179,7 +179,7 @@ if __name__ == '__main__':
     main()
 ```
 
-**¿Qué añade respecto a v3?**
+**¿Qué añade respecto a v1.3?**
 
 - Usa `line.strip()` para eliminar saltos de línea y espacios al leer cada endpoint.
     
