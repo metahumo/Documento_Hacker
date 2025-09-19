@@ -36,13 +36,16 @@ Este script usa Python 3 y la librería `requests`.
 1. Clona el repositorio (o descarga el archivo `fuzzer.py`):
 
 ```bash
-# Si tienes un repositorio git:
-git clone https://github.com/metahumo/Documento_Hacker/Lenguajes/Python/Utilidades Ofensivas/Fuzzer/fuzzer.py
+git clone https://github.com/metahumo/Documento_Hacker.git
+cd Documento_Hacker/Lenguajes/Python/Utilidades\ Ofensivas/Fuzzer/Script/
 python3 fuzzer.py --help
 
-# O descarga el script directamente (ejemplo con curl):
-curl -O https://github.com/metahumo/Documento_Hacker/Lenguajes/Python/Utilidades Ofensivas/Fuzzer/fuzzer.py
-chmod +x fuzzer.py
+# con curl
+curl -L -o fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/fuzzer.py"
+
+# con wget
+wget -O fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/fuzzer.py"
+
 ````
 
 2. Instala dependencias:
