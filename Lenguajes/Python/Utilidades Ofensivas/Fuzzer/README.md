@@ -41,10 +41,10 @@ cd Documento_Hacker/Lenguajes/Python/Utilidades\ Ofensivas/Fuzzer/Script/
 python3 fuzzer.py --help
 
 # con curl
-curl -L -o fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/fuzzer.py"
+curl -L -o fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/Script/fuzzer.py"
 
 # con wget
-wget -O fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/fuzzer.py"
+wget -O fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/Script/fuzzer.py"
 
 ````
 
