@@ -1,7 +1,7 @@
 
 ---
 
-# Fuzzer Prototipo v3.2 – Explicación Completa y Script Final
+# Fuzzer Prototipo v3.2 – Explicación Completa
 
 Este documento describe el **script final de fuzzer prototipo v3.2**, explicando cómo funciona, qué añade respecto a versiones anteriores, y cómo usar cada parámetro.
 
