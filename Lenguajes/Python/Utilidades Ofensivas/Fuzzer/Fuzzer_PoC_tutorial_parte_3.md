@@ -388,7 +388,7 @@ python3 fuzzer_v3.2.py http://objetivo.com -e endpoints.txt -m GET HEAD POST
 Este script combina **robustez, recursividad y control de ruido**, siendo ideal para pentesting web avanzado, y permite a principiantes entender claramente la lógica de fuzzing de endpoints y subdominios.
 
 ---
-Resumen final de la evolución
+## Resumen final de la evolución
 - v2.3: Subdominios opcionales, impresión básica, Ctrl+C seguro.
 - v2.4: Añadido -t para retrasos entre requests y evitar detección.
 - v2.4-v3: Recursividad, wordlist combinada -w, filtrado de duplicados, resumen final ordenado, soporte completo de endpoints y subdominios.
