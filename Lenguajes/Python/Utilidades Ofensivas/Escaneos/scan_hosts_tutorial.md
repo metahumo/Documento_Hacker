@@ -13,7 +13,7 @@ A lo largo de la creación de un script pasamos por diferentes etapas, cada una 
 # arp_minimo.py
 from scapy.all import ARP, Ether, srp
 
-target = "192.168.1.0/24"
+target = "192.168.110.0/24"
 arp = ARP(pdst=target)
 eth = Ether(dst="ff:ff:ff:ff:ff:ff")
 pkt = eth/arp
@@ -52,7 +52,7 @@ def def_handler(sig, frame):
 signal.signal(signal.SIGINT, def_handler)
 
 parser = argparse.ArgumentParser(description="Escaner ARP de host")
-parser.add_argument("-t", "--target", dest="target", help="192.168.1.0/24")
+parser.add_argument("-t", "--target", dest="target", help="192.168.110.0/24")
 args = parser.parse_args()
 if not args.target:
     parser.print_help()
@@ -102,7 +102,7 @@ def expand_target(t):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-t","--target", dest="target", required=True,
-                    help="CIDR (192.168.1.0/24), rango (192.168.1.1-100) o lista (a,b,c)")
+                    help="CIDR (192.168.1.0/24), rango (192.168.110.1-100) o lista (a,b,c)")
 args = parser.parse_args()
 
 hosts = expand_target(args.target)
@@ -141,7 +141,7 @@ for r in results:
 """
 PoC final: escáner ARP con Scapy — entrada flexible, manejo de señales y salida limpia (tabla / JSON).
 Uso:
-    sudo python3 scan_hosts_final.py -t 192.168.1.0/24 [--json]
+    sudo python3 scan_hosts_final.py -t 192.168.110.0/24 [--json]
 """
 import argparse
 import scapy.all as scapy
@@ -159,7 +159,7 @@ signal.signal(signal.SIGINT, def_handler)
 def get_args():
     p = argparse.ArgumentParser(description='Escaner ARP de host')
     p.add_argument("-t", "--target", dest="target", required=True,
-                   help='CIDR (192.168.1.0/24), rango (192.168.1.1-100) o lista (a,b,c)')
+                   help='CIDR (192.168.1.0/24), rango (192.168.110.1-100) o lista (a,b,c)')
     p.add_argument("--json", dest="js", action="store_true", help="Salida en JSON")
     return p.parse_args()
 
