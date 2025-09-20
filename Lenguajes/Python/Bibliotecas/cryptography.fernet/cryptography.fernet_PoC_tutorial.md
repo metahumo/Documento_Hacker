@@ -1,6 +1,4 @@
-
----
-# PoC_tutorial: `cryptography.fernet`
+# PoC\_tutorial: `cryptography.fernet`
 
 Este documento es un **tutorial práctico paso a paso** sobre la librería `cryptography.fernet` de Python, mostrando cómo listar archivos, generar una clave, cifrar y descifrar ficheros, e incluso añadir un control de acceso mediante contraseña.
 
@@ -10,14 +8,11 @@ Este documento es un **tutorial práctico paso a paso** sobre la librería `cryp
 
 `cryptography.fernet` permite realizar cifrado simétrico seguro con autenticación de mensajes integrada. Sus principales características:
 
-- Generación de claves seguras (`Fernet.generate_key()`).
-    
-- Funciones de cifrado y descifrado (`encrypt()` y `decrypt()`) que manejan `bytes`.
-    
-- Protección de integridad y confidencialidad de los datos.
-    
+* Generación de claves seguras (`Fernet.generate_key()`).
+* Funciones de cifrado y descifrado (`encrypt()` y `decrypt()`) que manejan `bytes`.
+* Protección de integridad y confidencialidad de los datos.
 
-El tutorial muestra la evolución de scripts que usan Fernet desde operaciones básicas hasta un flujo completo de cifrado/descifrado. Podría decirse que esto es cómo funciona básicamente un ransomware
+El tutorial muestra la evolución de scripts que usan Fernet desde operaciones básicas hasta un flujo completo de cifrado/descifrado.
 
 ---
 
@@ -45,6 +40,16 @@ print(files)
 ['saludo.txt', 'enfado.txt', 'pwned.txt']
 ```
 
+**Qué se ha añadido:**
+
+* Creación de la lista de archivos a procesar.
+* Filtrado del propio script para no incluirlo.
+
+**Explicación:**
+Este script sirve como base para identificar qué archivos se van a procesar en etapas posteriores. Permite recorrer el directorio de trabajo y crear una lista que se usará para cifrar o descifrar.
+
+---
+
 ## Script 2 — `encrypt_v2.py`
 
 **Función:** Generar una clave Fernet.
@@ -65,6 +70,17 @@ print(key)
 
 **Salida:** Clave Fernet en bytes.
 
+**Qué se ha añadido:**
+
+* Importación de `Fernet` de la librería `cryptography`.
+* Generación de la clave simétrica con `Fernet.generate_key()`.
+* Impresión de la clave en consola.
+
+**Explicación:**
+Ahora contamos con una clave única que permitirá cifrar y descifrar los archivos. Esta clave es esencial para mantener la confidencialidad de los datos y servirá en los scripts posteriores.
+
+---
+
 ## Script 3 — `encrypt_v3.py`
 
 **Función:** Guardar la clave en un fichero.
@@ -84,6 +100,15 @@ key = Fernet.generate_key()
 with open("thekey.key", "wb") as k:
     k.write(key)
 ```
+
+**Qué se ha añadido:**
+
+* Guardado de la clave generada en un fichero `thekey.key` en modo binario (`wb`).
+
+**Explicación:**
+Almacenamos la clave en un archivo para poder reutilizarla más tarde y descifrar los archivos cifrados sin necesidad de generar una nueva clave cada vez.
+
+---
 
 ## Script 4 — `encrypt_v4.py` + `decrypt.py`
 
@@ -134,7 +159,16 @@ for file in files:
         f.write(contents_decrypted)
 ```
 
-**Salida:** Archivo cifrado y luego descifrado correctamente.
+**Qué se ha añadido:**
+
+* Cifrado de cada archivo usando `Fernet(key).encrypt(contents)`.
+* Descifrado de cada archivo usando `Fernet(secretkey).decrypt(contents)`.
+* Excepción de los archivos de scripts y de la clave para evitar cifrarlos accidentalmente.
+
+**Explicación:**
+Se logra un flujo completo de cifrado y descifrado de archivos, usando la misma clave Fernet para garantizar que los datos puedan ser recuperados íntegros y en texto claro.
+
+---
 
 ## Script 5 — `encrypt_v5.py` + `decrypt.py` con contraseña
 
@@ -166,30 +200,26 @@ else:
     print("\n[!!!] Ese no es el pase secreto, lo siento.")
 ```
 
-**Salida:**
+**Qué se ha añadido:**
 
-- Contraseña incorrecta → no descifra.
-    
-- Contraseña correcta (`pwned`) → archivos restaurados.
-    
+* Solicitud de contraseña al usuario antes del descifrado.
+* Validación de la contraseña con un valor predefinido (`secretPass`).
+* Descifrado solo si la contraseña es correcta.
+* Mensajes de éxito o error según el caso.
 
----
-
-**Resumen:**  
-Este tutorial muestra:
-
-1. Listar archivos.
-    
-2. Generar y guardar clave Fernet.
-    
-3. Cifrar archivos y sobrescribirlos.
-    
-4. Descifrar archivos correctamente.
-    
-5. Añadir control de acceso por contraseña antes del descifrado.
-    
-
-El flujo se puede extender con mejoras de seguridad, exclusión de archivos por patrones, manejo de errores y logging.
+**Explicación:**
+Este script incrementa la seguridad añadiendo un control de acceso. Aunque los archivos estén cifrados, solo un usuario con la contraseña correcta puede recuperar su contenido.
 
 ---
 
+**Resumen:**
+
+1. Listado de archivos para procesar.
+2. Generación y almacenamiento de clave Fernet.
+3. Cifrado de archivos y sobrescritura.
+4. Descifrado seguro de archivos.
+5. Control de acceso mediante contraseña.
+
+El flujo puede extenderse con exclusión dinámica de archivos, manejo de errores, logging y otras buenas prácticas de seguridad.
+
+---
