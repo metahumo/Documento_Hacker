@@ -70,6 +70,4 @@ cd Documento_Hacker/Técnicas/Proxy/
 * Mantener un control de las IPs y puertos para evitar conflictos en el sistema host.
 * Actualizar cualquier cambio en scripts o Dockerfiles para mantener consistencia con ajustes especificos de cada sistema y entorno.
 
-```
-
 ---
