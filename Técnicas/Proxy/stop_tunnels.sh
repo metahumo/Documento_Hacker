@@ -1,7 +1,3 @@
-
----
-
-```bash
 #!/usr/bin/env bash
 # stop_tunnels.sh
 # Cerrar túneles SOCKS
@@ -23,4 +19,3 @@ echo "=== Verificación final ==="
 for port in "${PORTS[@]}"; do
     lsof -i tcp:$port | grep LISTEN || echo "Puerto $port cerrado"
 done
-```
