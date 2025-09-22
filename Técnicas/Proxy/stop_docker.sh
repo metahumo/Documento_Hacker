@@ -1,7 +1,3 @@
-
----
-
-```bash
 #!/usr/bin/env bash
 # stop_docker.sh
 # Uso: ./stop_docker.sh
@@ -29,4 +25,3 @@ docker ps -a
 docker network ls
 docker images
 docker volume ls
-```
