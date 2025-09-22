@@ -1,6 +1,3 @@
-
----
-```bash
 #!/usr/bin/env bash
 # start_tunnels.sh
 # Uso: ./start_tunnels.sh <IP_VM> [ssh_user_vm]
@@ -67,4 +64,3 @@ for port in "${PORTS[@]}"; do
 done
 
 exit 0
-```
