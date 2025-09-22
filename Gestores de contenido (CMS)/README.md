@@ -21,7 +21,7 @@ Este directorio contiene scripts, herramientas y técnicas orientadas al anális
 
 ```bash
 git clone https://github.com/metahumo/Documento_Hacker.git
-cd Documento_Hacker/Gstores%20de%20contenido%20(CMS)/
+cd Documento_Hacker/Gstores de contenido (CMS)/
 ````
 
 * Instalar dependencias de Python:
