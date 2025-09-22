@@ -1,6 +1,3 @@
-
----
-```yaml
 services:
   socks1:
     image: socks-ssh:latest
@@ -28,4 +25,3 @@ networks:
     ipam:
       config:
         - subnet: 172.18.0.0/16
-```
