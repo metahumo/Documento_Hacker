@@ -71,6 +71,4 @@ python3 script.py
 * Revisar los scripts antes de ejecutarlos para evitar conflictos o problemas de permisos.
 * Documentar cualquier cambio o personalización de scripts para mantener consistencia y trazabilidad en el repositorio.
 
-```
-
 ---
