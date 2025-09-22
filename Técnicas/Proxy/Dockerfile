@@ -1,6 +1,3 @@
-
----
-```ini
 FROM alpine:latest
 
 RUN apk add --no-cache openssh sudo bash
@@ -17,4 +14,3 @@ RUN sed -i 's/#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/ss
 EXPOSE 22
 
 CMD ["/usr/sbin/sshd", "-D", "-E", "/var/log/sshd.log"]
-```
