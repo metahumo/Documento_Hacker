@@ -27,13 +27,13 @@ cd Documento_Hacker/Técnicas/Proxy/
 - Con curl
 
   ```bash
-  curl -L -o fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/Script/fuzzer.py"
+  curl -L -o fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/Técnicas/Proxy/Scripts"
   ```
 
 - Con wget
 
   ```bash
-  wget -O fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/Lenguajes/Python/Utilidades%20Ofensivas/Fuzzer/Script/fuzzer.py"
+  wget -O fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/Técnicas/Proxy/Scripts"
   ```
 
 ---
