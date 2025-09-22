@@ -1,5 +1,3 @@
-
-```bash
 #!/usr/bin/env bash
 # start_docker.sh
 # Reset total de Docker y levantar Proxy con imágenes locales
@@ -26,4 +24,3 @@ docker compose -f ${COMPOSE_FILE} up -d
 echo "=== Estado final ==="
 docker ps
 docker network ls | grep ${NET_NAME}
-```
