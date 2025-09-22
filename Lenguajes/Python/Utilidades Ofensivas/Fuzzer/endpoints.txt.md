@@ -1,6 +1,3 @@
-
----
-
 index.php
 login.php
 admin.php
