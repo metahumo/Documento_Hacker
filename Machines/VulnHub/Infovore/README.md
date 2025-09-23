@@ -79,7 +79,3 @@ python3 phpraceCondition.py <objetivo> <puerto>
 * Para pruebas sin reverse shell, elimina o modifica la parte peligrosa del payload.
 
 ---
-
-
-¿Lo dejamos así o me pasas tu `<USUARIO>/<REPO>` y rama y te lo devuelvo con la URL raw exacta ya puesta?
-```
