@@ -18,6 +18,7 @@ stty raw -echo; fg
 reset xterm
 stty rows 38 columns 183
 export TERM=xterm
+export SHELL=bash
 ```
 
 **Nota:** 
