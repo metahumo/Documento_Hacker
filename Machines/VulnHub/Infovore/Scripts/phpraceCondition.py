@@ -1,7 +1,3 @@
-
----
-
-```python
 #!/usr/bin/env python3
 # Original credits: https://github.com/diegoalbuquerque
 # https://www.insomniasec.com/downloads/publications/LFI%20With%20PHPInfo%20Assistance.pdf
@@ -238,4 +234,3 @@ def main():
 if __name__ == "__main__":
     print("Don't forget to modify the LFI URL")
     main()
-```
