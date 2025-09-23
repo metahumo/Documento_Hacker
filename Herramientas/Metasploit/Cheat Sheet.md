@@ -69,6 +69,8 @@ Cargamos el módulo, listamos y completamos opciones requeridas, ejecutamos. Gua
 
 ## Integración con Nmap y la DB
 
+[Ver repositorio nmap](../Red/Nmap/)
+
 **Acción**
 
 ```bash
