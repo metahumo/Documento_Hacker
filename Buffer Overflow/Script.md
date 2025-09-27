@@ -217,7 +217,7 @@ if __name__ == '__main__':
     exploit()
 ```
 
-![[ID_6.png]]
+![captura](./Imágenes/ID_6.png)
 
 ---
 # Conclusión sobre la sobreescritura del registro EIP con `41414141`
@@ -242,7 +242,7 @@ Este es precisamente el objetivo de un buffer overflow: **alcanzar el punto dond
 
 ---
 
-Dado que ahora sabemos que con una longitud de 5000 caracteres, el servicio se detiene. Vamos a usar una utilidad de [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Herramientas/Metaesploit/Metasploit|Metasploit]] para generar un payload de 5000 caracteres, especialmente diseñado para indicarnos la cifra exacta de caracteres a introducir hasta que el servicio se detiene. Este punto exacto se conoce como **offset**
+Dado que ahora sabemos que con una longitud de 5000 caracteres, el servicio se detiene. Vamos a usar una utilidad de [Metasploit](../Herramientas/Metaesploit/) para generar un payload de 5000 caracteres, especialmente diseñado para indicarnos la cifra exacta de caracteres a introducir hasta que el servicio se detiene. Este punto exacto se conoce como **offset**
 
 ```bash
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 5000
@@ -291,7 +291,7 @@ if __name__ == '__main__':
 
 Al enviar esto, lo que veremos en [Immunity Debugger](Immunity%20Debugger.md) es un **ENP** específico que nos indicará el offset
 
-![[ID_7.png]]
+![captura](./Imágenes/ID_7.png)
 
 Entonces con ese "código" podemos extraer el offset con otra herramienta de [Metasploit](../Herramientas/Metasploit/Metasploit.md)
 
@@ -346,7 +346,7 @@ if __name__ == '__main__':
 
 Confirmamos que las 4 B que hemos introducido salen en el **EIP**, 42 en ASCII corresponde a B
 
-![[ID_8.png]]
+![captura](./Imágenes/ID_8.png)
 
 ---
 
@@ -393,11 +393,11 @@ if __name__ == '__main__':
 
 Como vemos el EIP se mantiene mostrando los valores para 'B' `42424242` y ahora, además, modificamos el **ESP** que muestra `01A1A128` y en `ASCII "CCCCCC..."`
 
-![[ID_9.png]]
+![captura](./Imágenes/ID_9.png)
 
 Haciendo clip derecho en el valor del `ESP` podemos mostrar el `Follow Dump` y ver el espacio y las direcciones asignadas a nuestro payload
 
-![[ID_10.png]]
+![captura](./Imágenes/ID_10.png)
 
 ---
 1. **Observación de registros relevantes:** Documentar qué registros (EIP, ESP, EBP) cambian tras el envío de `after_eip`. Esto ayuda a entender el desplazamiento de la pila y a planificar la ubicación de la shellcode.
@@ -474,15 +474,15 @@ El resultado nos muestra lo siguiente:
 
 Podemos con `!mona compare -a 0257A128 -f "C:\Users\vbouser\Desktop\Analysis\bytearray.bin"` comparar el `Follow Dump` de este payload que se introducimos en **ESP** y ver los **Badchars**
 
-![[ID_14.png]]
+![captura](./Imágenes/ID_14.png)
 
 Ahora sabiendo que los caracteres `\x00` y `\x0a` no los admite podemos modificar el script sabiendo que caracteres no admite
 
-![[ID_15.png]]
+![captura](./Imágenes/ID_15.png)
 
 Repetimos el proceso ahora habiendo quitando del payload del script `\x0a` y lanzamos el script
 
-![[ID_16.png]]
+![captura](./Imágenes/ID_16.png)
 
 Volvimos a filtrar el resultado con el comando de **mona** y vimos que además de excluye el carácter `\x0d`. Por lo que toca volver a modificarlo del script
 
@@ -492,7 +492,7 @@ Volvimos a filtrar el resultado con el comando de **mona** y vimos que además d
 
 Si volvemos a lanzar el script otra vez modificado, vemos que al hacer `Follow Dump` en el **ESP** podemos comprobar fácilmente que ahora esta la secuencia completa, salvo los 3 que quitamos (`\x00\x0a\x0d)')
 
-![[ID_17.png]]
+![captura](./Imágenes/ID_17.png)
 
 ---
 
