@@ -242,7 +242,7 @@ Este es precisamente el objetivo de un buffer overflow: **alcanzar el punto dond
 
 ---
 
-Dado que ahora sabemos que con una longitud de 5000 caracteres, el servicio se detiene. Vamos a usar una utilidad de [Metasploit](../Herramientas/Metaesploit/) para generar un payload de 5000 caracteres, especialmente diseñado para indicarnos la cifra exacta de caracteres a introducir hasta que el servicio se detiene. Este punto exacto se conoce como **offset**
+Dado que ahora sabemos que con una longitud de 5000 caracteres, el servicio se detiene. Vamos a usar una utilidad de [Metasploit](../Herramientas/Metasploit/Metasploit.md) para generar un payload de 5000 caracteres, especialmente diseñado para indicarnos la cifra exacta de caracteres a introducir hasta que el servicio se detiene. Este punto exacto se conoce como **offset**
 
 ```bash
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 5000
