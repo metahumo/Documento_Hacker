@@ -495,6 +495,7 @@ Si volvemos a lanzar el script otra vez modificado, vemos que al hacer `Follow D
 ![[ID_17.png]]
 
 ---
+
 # Conclusión sobre Bytearrays y condición de posibilidad de Shellcode para RCE
 
 
@@ -607,8 +608,9 @@ Ahora necesitamos obtener el opcode que nos permite saltar al registro `ESP`, de
 
 1. **Ejecutamos la utilidad de Metasploit para ensamblar instrucciones**  
    Iniciamos el shell de NASM incluido en Metasploit:
-   ```bash
-   /usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
+
+```bash
+/usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
 ```
 
 Con esto abrimos un prompt donde podemos escribir instrucciones en ensamblador y ver su representación en bytes.
