@@ -237,7 +237,7 @@ Explicación: tratamos de confirmar que podemos derivar el SSFR a un RCE pero al
 
 Acción: usamos `joomscan` para enumerar correctamente la web
 
-[Ver cómo usar joomscan](../../Gestores%30de%20contenido%20(CMS)/Joomla/Joomscan.md)
+[Ver cómo usar joomscan](../../Gestores%20de%20contenido%20(CMS)/Joomla/Joomscan.md)
 
 ```bash
 proxychains perl joomscan.pl -u http://10.10.0.129/joomla/ 2>/dev/null
