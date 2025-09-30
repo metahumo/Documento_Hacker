@@ -2,6 +2,8 @@
 
 Este laboratorio simula un entorno empresarial donde realizaremos **pivoting** desde una máquina atacante hacia varias VMs internas, incluyendo Linux y Windows. Se incluyen redes internas, contenedores Docker y distintos niveles de acceso.
 
+[Para más información visitar el siguiente video de donde se ha extraido esta información. Eterno agradecimiento al maestro S4vitar](https://www.youtube.com/watch?v=Q7UeWILja-g&t=23544s&pp=ygUQczR2aXRhciBwaXZvdGluZw%3D%3D)
+
 ---
 
 ## VMs que se utilizarán:
