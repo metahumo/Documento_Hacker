@@ -149,6 +149,11 @@ You can enter into matrix as guest, with password k1ll0rXX
 Note: Actually, I forget last two characters so I have replaced with XX try your luck and find correct string of password.
 ```
 
+
+---
+
+## Explotación
+
 Explicación: tenemos al usuario `guest` y una contraseña que requiere descifrar los dos últimos caracteres `k1ll0rXX`
 
 Acción:
@@ -221,6 +226,11 @@ eth126: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 Explicación: vemos que esta máquina conecta con otra interfaz de red `172.18.0.130`
 
+
+---
+
+## Elevación de Privilegios
+
 Acción:
 
 ```bash
@@ -274,6 +284,11 @@ root
 ```
 
 Explicación: elevamos privilegios de forma sencilla al poder ejecutar como root cualquier comando con `sudo`
+
+
+---
+
+## Pivoting
 
 Acción:
 
