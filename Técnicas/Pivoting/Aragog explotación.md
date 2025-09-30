@@ -356,7 +356,7 @@ Resultado:
 1 row in set (0.000 sec)
 ```
 
-Explicación: encontramos las siguientes credenciales: `hagrid98:$P$BYdTic1NGSb8hJbpVEMiJaAiNJDHtc.`; vemos que esta hasheada por lo que trataremos de descifrarla con [Jhon The Ripper](../../Herramientas/Fuerza%20Bruta/John%20The%20Ripper.md)
+Explicación: encontramos las siguientes credenciales: `hagrid98:$P$BYdTic1NGSb8hJbpVEMiJaAiNJDHtc.`; vemos que esta hasheada por lo que trataremos de descifrarla con [Jhon The Ripper](../../Herramientas/Fuerza%20Bruta/Jhon%20The%20Ripper.md)
 
 Acción:
 
