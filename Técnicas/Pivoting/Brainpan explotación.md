@@ -345,7 +345,7 @@ Confirmamos que `NX` se encuentra desactivado, al tener el ejecutable `brainpan.
 bcdedit.exe /set {current} nx AlwaysOff
 ```
 
-[Ver Data Execution Prevention](../../Buffer%20Over%20Flow/Data%20Execution%20Prevention.md)
+[Ver Data Execution Prevention](../../Buffer%20Overflow/Data%20Execution%20Prevention.md)
 
 ![captura](./Imágenes/id_10.png)
 
