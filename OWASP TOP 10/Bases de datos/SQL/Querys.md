@@ -21,7 +21,7 @@ http://83.136.255.10:58278/search.php?port_code=
 
 **Acción:**
 
-Comprobamos que el parámetro `port_code` es vulnerable inyectando un [[UNION SELECT]].
+Comprobamos que el parámetro `port_code` es vulnerable inyectando un UNION SELECT.
 
 ```sql
 ' UNION SELECT 1,2,3,4-- -
