@@ -1,6 +1,9 @@
 # Ejemplos Prácticos de Inyección SQLi
 
 ## Listar contenido oculto
+
+Para seguir el laboratorio visitar [Portswigger](https://portswigger.net/web-security/all-labs)
+
 Una forma común de probar la [SQLi](SQLi.md) es modificar una URL para extraer datos que normalmente estarían ocultos.
 
 ```url
