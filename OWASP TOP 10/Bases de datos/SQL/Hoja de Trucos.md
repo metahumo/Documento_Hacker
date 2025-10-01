@@ -8,12 +8,12 @@ Esta hoja de trucos de [SQLi](SQLi.md) contiene ejemplos de sintaxis útil que p
 
 Puede concatenar varias cadenas para hacer una sola cadena.
 
-| Motor      | Sintaxis                                                                               |
-| ---------- | -------------------------------------------------------------------------------------- |
-| Oaracle    | `'foo'\|\|'bar'                                                                        |
-| Microsoft  | `'foo'+'bar'`                                                                          |
-| PostgreSQL | `'foo'\|\|'bar'                                                                        |
-| MySQL      | `'foo' 'bar'` (Tenga en cuenta el espacio entre las dos cadenas) `CONCAT('foo','bar')` |
+| Motor        | Sintaxis                                                                               |
+| ----------   | -------------------------------------------------------------------------------------- |
+| Oaracle      | `'foo'\|\|'bar'                                                                        |
+| Microsoft    | `'foo'+'bar'`                                                                          |
+| [PostgreSQL](PostgreSQL.md) | `'foo'\|\|'bar'                                                                        |
+| [MySQL](MySQL.md)        | `'foo' 'bar'` (Tenga en cuenta el espacio entre las dos cadenas) `CONCAT('foo','bar')` |
 
 ## Substring
 
