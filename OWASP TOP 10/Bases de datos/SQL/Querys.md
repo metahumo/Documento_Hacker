@@ -2,7 +2,7 @@
 
 ##  Introducción
 
-En este documento examinaremos de forma práctica y didáctica las vulnerabilidades en bases de datos SQL —conocidas como **inyecciones SQL (SQLi)**—. Las inyecciones SQL consisten en la inserción de consultas o comandos maliciosos en puntos de entrada de una aplicación web, aprovechando validaciones insuficientes para alterar la lógica de ejecución en sistemas de gestión de bases de datos como [Mariadb](../SQL/Mariadb) o [SQLite3](../SQL/Mariadb/SQLite3/). Cuando estas técnicas se aplican en entornos de producción web, pueden permitir desde la exfiltración de información sensible hasta la modificación no autorizada del comportamiento de la aplicación, afectando la confidencialidad, integridad y disponibilidad de los datos. Para ampliar el contexto teórico y práctico, consulta la sección general sobre [Bases de datos](../../Bases%20de%20datos/).
+En este documento examinaremos de forma práctica y didáctica las vulnerabilidades en bases de datos SQL —conocidas como **inyecciones SQL (SQLi)**—. Las inyecciones SQL consisten en la inserción de consultas o comandos maliciosos en puntos de entrada de una aplicación web, aprovechando validaciones insuficientes para alterar la lógica de ejecución en sistemas de gestión de bases de datos como [Mariadb](../SQL/Mariadb) o [SQLite3](../SQL/SQLite3/). Cuando estas técnicas se aplican en entornos de producción web, pueden permitir desde la exfiltración de información sensible hasta la modificación no autorizada del comportamiento de la aplicación, afectando la confidencialidad, integridad y disponibilidad de los datos. Para ampliar el contexto teórico y práctico, consulta la sección general sobre [Bases de datos](../../Bases%20de%20datos/).
 
 Objetivos de este capítulo:
 
