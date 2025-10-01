@@ -162,6 +162,14 @@ Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo a
 ' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
 ```
 
+**Query realizada**
+
+![Captura](./Imágenes/web_3.png)
+
+**Tablas existentes en la base de datos 'academy_labs'**
+
+![Captura](./Imágenes/web_4.png)
+
 ### Listar columnas de una tabla
 
 ```sql
