@@ -232,10 +232,10 @@ Si filtramos por `table_schema='public'` veremos nombres de tablas de la aplicac
 
 
 ---
-## Cadena hexadecimal
+## Cadena hex bytes
 
 
-En ocasiones, por seguridad de la página, puede ser que no podamos introducir ciertas cadenas como `'academy_labs`. Para estos casos podemos introducir la cadena en hexadecimal de la siguiente forma
+En ocasiones, por seguridad de la página, puede ser que no podamos introducir ciertas cadenas como `'public`. Para estos casos podemos introducir la cadena en hex byte (para PostgreSQL) de la siguiente forma: primero convertimos la cadena a hexadecimal
 
 ```shell
 echo -n "public" | xxd -p
