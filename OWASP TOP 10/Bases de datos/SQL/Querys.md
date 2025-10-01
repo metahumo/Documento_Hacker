@@ -146,6 +146,15 @@ Esto te permite conectarte directamente a la base de datos desde consola o herra
 ```sql
 ' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
 ```
+Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo así:
+
+**Query realizada**
+
+![Captura](./Imágenes/web_1.png)
+
+**Bases de datos existentes**
+
+![Captura](./Imágenes/web_2.png)
 
 ### Listar tablas de una base de datos
 
