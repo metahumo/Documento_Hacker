@@ -1,6 +1,6 @@
 # Creación del script para inyección SQL a ciegas
 
-En este documento, explicamos la construcción de un script en Python para realizar una [[SQLi]] a ciegas (sqli Blind injection) utilizando fuerza bruta para extraer información de una base de datos. Este ejercicio forma parte de una práctica de seguridad donde simulamos la explotación de una vulnerabilidad en un sitio web.
+En este documento, explicamos la construcción de un script en Python para realizar una [SQLi](SQLi.md) a ciegas (sqli Blind injection) utilizando fuerza bruta para extraer información de una base de datos. Este ejercicio forma parte de una práctica de seguridad donde simulamos la explotación de una vulnerabilidad en un sitio web.
 
 ## Script completo - users
 
