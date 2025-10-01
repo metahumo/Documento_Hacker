@@ -18,7 +18,7 @@ Objetivos de este capítulo:
 
 ## ¿Qué es la inyección SQL?
 
-> La inyección [SQLi](SQLi.md) es una vulnerabilidad que permite a un atacante manipular las consultas SQL de una aplicación para acceder, modificar o eliminar datos en una base de datos. Se produce cuando la entrada del usuario no se valida ni se sanitiza correctamente, permitiendo la ejecución de código SQL malicioso.
+> La inyección SQL (**SQLi**) es una vulnerabilidad que permite a un atacante manipular las consultas SQL de una aplicación para acceder, modificar o eliminar datos en una base de datos. Se produce cuando la entrada del usuario no se valida ni se sanitiza correctamente, permitiendo la ejecución de código SQL malicioso.
 
 
 ---
