@@ -20,7 +20,7 @@ Para ilustrar con ejemplos realistas vamos a seguir el laboratorio gratuito de [
 Todas las pruebas se realizaron en la URL:
 
 ```url
-https://web-security-academy.net/filter?category=Gifts)
+https://web-security-academy.net/filter?category=Gifts
 ```
 
 ---
@@ -72,6 +72,10 @@ Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo a
 En ocaciones, necesitaremos limitar la cantidad de información a mostrar. Para ello usaremos el parámetro `limit 0,1` para iterar entre las diferentes respuestas. Piense que hay casos que la información a extraer es extensa, y no es capaz de procesar toda la información de golpe. Por lo que limitar la informaicón mostrada iterarndo con `limit 0,1`, `limit 1,1`... es una buena alternativa
 
 **Nota:** para no tener que iterar por cada post que haya en la página podemos empezar la query SQLi de la URL a partir del `=` y no desde su valor `=Gifts`
+
+**Query habitual**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -`
+
+**Query sin post**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata limit 0,1-- -`
 
 ![Captura](./Imágenes/web_5.png)
 
