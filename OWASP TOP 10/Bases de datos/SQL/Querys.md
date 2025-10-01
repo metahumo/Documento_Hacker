@@ -2,7 +2,7 @@
 
 ##  Introducción
 
-Esta guía documenta el proceso de explotación de una **inyección SQL** ([[SQLi]]) para:
+Esta guía documenta el proceso de explotación de una **inyección SQL** [SQLi](./SQLi.md) para:
 
 - Confirmar la vulnerabilidad.
 - Enumerar permisos del usuario `root` en MySQL.
@@ -11,10 +11,8 @@ Esta guía documenta el proceso de explotación de una **inyección SQL** ([[SQL
 
 Todas las pruebas se realizaron en la URL:
 
-```
-
-[http://83.136.255.10:58278/search.php?port_code=](http://83.136.255.10:58278/search.php?port_code=)
-
+```url
+http://83.136.255.10:58278/search.php?port_code=
 ````
 
 ---
