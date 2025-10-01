@@ -116,7 +116,7 @@ PostgreSQL**no** soporta `LIMIT 0,1`. Debe usarse: `LIMIT <count> OFFSET <offset
 
 ## curl (PostgreSQL)
 
-En esta sección mostramos cómo adaptar los ejemplos de `curl` que usamos para MySQL a **PostgreSQL**, manteniendo la misma estructura pero corrigiendo la sintaxis (especialmente `LIMIT`). 
+En esta sección mostramos cómo adaptar los ejemplos de `curl` que usamos para [MySQL](MySQL.md) a **PostgreSQL**, manteniendo la misma estructura pero corrigiendo la sintaxis (especialmente `LIMIT`). 
 
 ### 1. Diferencia clave
 
