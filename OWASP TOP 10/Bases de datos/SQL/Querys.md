@@ -69,6 +69,8 @@ Al ejecutar esta query, en el laboratorio de ejemplo de Portswigger vemos algo a
 
 ![Captura](./Imágenes/web_2.png)
 
+### Limit
+
 En ocaciones, necesitaremos limitar la cantidad de información a mostrar. Para ello usaremos el parámetro `limit 0,1` para iterar entre las diferentes respuestas. Piense que hay casos que la información a extraer es extensa, y no es capaz de procesar toda la información de golpe. Por lo que limitar la informaicón mostrada iterarndo con `limit 0,1`, `limit 1,1`... es una buena alternativa
 
 **Nota:** para no tener que iterar por cada post que haya en la página podemos empezar la query SQLi de la URL a partir del `=` y no desde su valor `=Gifts`
@@ -78,6 +80,17 @@ En ocaciones, necesitaremos limitar la cantidad de información a mostrar. Para 
 **Query sin post**: `https://web-security-academy.net/filter?category=Gifts' UNION SELECT 1, schema_name FROM information_schema.schemata limit 0,1-- -`
 
 ![Captura](./Imágenes/web_5.png)
+
+### group_concat
+
+Más potente que limit, y siempre que las circunstancias lo permitan, podemos usar el parámetro `group_concat` para agrupar la información y que se nos muestre de seguido
+
+```bash
+' UNION SELECT 1,group_concat(schema_name) FROM information_schema.schemata-- -
+```
+
+![Captura](./Imágenes/web_6.png)
+
 
 ## Listar tablas de una base de datos
 
