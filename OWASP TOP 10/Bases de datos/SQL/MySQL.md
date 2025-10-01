@@ -1,4 +1,4 @@
-# Guía práctica: SQL Injection para enumeración y lectura de archivos
+# Guía práctica: SQL Injection para enumeración de MySQL
 
 ##  Introducción
 
