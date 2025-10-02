@@ -38,6 +38,14 @@ En este documento recogemos las principales consultas de enumeración y extracci
 ' UNION SELECT NULL, col FROM tabla LIMIT 10 OFFSET 0-- -
 ```
 
+## Concatenar valores
+
+MySQL → `CONCAT(username, '->', password)`
+
+PostgreSQL / Oracle → `username || '->' || password`
+
+MSSQL → `username + '->' + password`
+
 ---
 
 # PostgreSQL
