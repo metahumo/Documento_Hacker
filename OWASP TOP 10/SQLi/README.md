@@ -74,7 +74,7 @@ python -c "import requests; print('requests OK, versión:', requests.__version__
 
 Este script usa Python 3.
 
-Clona el repositorio (o descarga los scripts asociados --> [Scripts](./Scripts/): 
+Clona el repositorio (o descarga los scripts asociados --> [Scripts](./Scripts/)): 
 ```bash
 git clone https://github.com/metahumo/Documento_Hacker.git
 cd Documento_Hacker/OWASP TOP 10/SQLi/
