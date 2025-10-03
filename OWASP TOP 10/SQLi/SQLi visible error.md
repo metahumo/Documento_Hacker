@@ -1,7 +1,6 @@
 
 ---
-# Guía práctica: SQLi Blind — respuestas condicionales
-
+# Guía práctica: SQLi visual error
 ---
 
 ## Laboratorio PortSwigger
