@@ -50,7 +50,7 @@ pip install requests
 python -c "import requests; print('requests OK, versión:', requests.__version__)"
 ```
 
---
+---
 
 # Requisitos / Instalación
 
