@@ -82,15 +82,15 @@ Payload boolean-based (MySQL — primer carácter del password)
 
 Explicación: 
 
-- SUBSTRING(password, 1, 1) obtiene el primer carácter del campo password.
+- `SUBSTRING(password, 1, 1)` obtiene el primer carácter del campo password.
 
-- La subconsulta SELECT ... FROM users WHERE username = 'administrator' LIMIT 1 devuelve ese carácter para el usuario administrator.
+- La subconsulta `SELECT ... FROM users WHERE username = 'administrator' LIMIT 1` devuelve ese carácter para el usuario administrator.
 
-- Comparamos el resultado con 'a'. Si la condición es TRUE la respuesta del servidor permanecerá igual; si es FALSE la respuesta cambiará (por ejemplo desaparecerá o cambiará un texto).
+- Comparamos el resultado con `'a'`. Si la condición es TRUE la respuesta del servidor permanecerá igual; si es FALSE la respuesta cambiará (por ejemplo desaparecerá o cambiará un texto).
 
 - Repetimos la prueba con otros caracteres ('b', 'c', '0', etc.) hasta identificar el carácter correcto.
 
-- Para extraer la segunda letra usaríamos SUBSTRING(password, 2, 1), y así sucesivamente.
+- Para extraer la segunda letra usaríamos `SUBSTRING(password, 2, 1)`, y así sucesivamente.
 
 
 ---
