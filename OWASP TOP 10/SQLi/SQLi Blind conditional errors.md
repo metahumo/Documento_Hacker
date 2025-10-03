@@ -64,7 +64,7 @@ Algo que también vemos es que podemos hacer doble comilla ( `''`) y la query se
 
 ![BupSuite](./Imágenes/burp_16.png)
 
-Entonces podemos generar una condición `select case when (<condición>) then <error> else '' end` de tal modo que cuando la condición sea válida como en el primer ejemplo que es `when(1=1)` entraremos en el `then` y como su valor es erróneo, pues dividimos 1 entre 0 y loco convertimos a strings, se producirá el error con el código de estado `500`.
+Entonces podemos generar una condición `select case when (<condición>) then <error> else '' end` de tal modo que cuando la condición sea válida como en el primer ejemplo que es `when(1=1)` entraremos en el `then` y como su valor es erróneo, pues dividimos 1 entre 0 y lo convertimos a strings, se producirá el error con el código de estado `500`.
 
 ```SQL
 '||(select case when(1=1) then to_char(1/0) else '' end from dual)||'
