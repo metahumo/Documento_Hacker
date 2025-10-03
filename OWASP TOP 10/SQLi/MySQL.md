@@ -22,7 +22,7 @@ https://web-security-academy.net/filter?category=Gifts
 **Acción:**
 
 
-Comprobamos que el parámetro `Gifts'` es vulnerabl, inyectamos `ORDER BY 2-- -` para saber número de columnas e inyectamos con  `' UNION SELECT 1, 2-- -`.
+Comprobamos que el parámetro `Gifts'` es vulnerable, inyectamos `ORDER BY 2-- -` para saber número de columnas e inyectamos con  `' UNION SELECT 1, 2-- -`.
 
 ```sql
 '
