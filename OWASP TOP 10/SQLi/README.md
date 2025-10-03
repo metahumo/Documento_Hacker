@@ -5,7 +5,7 @@
 
 Este directorio contiene scripts, tutoriale y resolución de ejercios de Portswigger.
 
-Para obtener información y tutoriales sobre bases de datos visitar: [Bases de datos SQL](../OWASP%20TOP%2010/Bases%20de%20datos/SQL/)
+Para obtener información y tutoriales sobre bases de datos visitar: [Bases de datos SQL](../Bases%20de%20datos/SQL/)
 
 ## Contenido
 
