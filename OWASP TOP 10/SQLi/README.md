@@ -83,13 +83,13 @@ cd Documento_Hacker/OWASP TOP 10/SQLi/
 ## con curl
 
 ```bash
-curl -L -o fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/OWASP%20TOP%2010/SQLi/"
+curl -L -o SQLi.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/OWASP%20TOP%2010/SQLi/"
 ```
 
 ## con wget
 
 ```bash
-wget -O fuzzer.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/OWASP%20TOP%2010/SQLi/"
+wget -O SQLi.py "https://raw.githubusercontent.com/metahumo/Documento_Hacker/main/OWASP%20TOP%2010/SQLi/"
 ```
 
 ---
