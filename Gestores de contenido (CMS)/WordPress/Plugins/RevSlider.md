@@ -183,6 +183,6 @@ Las rutas y recursos probados por atacantes son numerosas; a modo de muestra, in
 /revslider.php
 ```
 
-Ver algunos endpoints y temas probados por los atacantes [SecLists](./SecLists)
+Ver algunos endpoints y temas probados por los atacantes [SecLists](../../SecLists)
 
 ---
