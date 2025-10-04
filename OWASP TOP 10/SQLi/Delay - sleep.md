@@ -2,7 +2,7 @@
 ---
 # Cheat‑sheet: Time‑based blind SQLi — Oracle, MSSQL, MySQL y PostgreSQL
 
-En este documento explicamos de forma pedagógica y ordenada las **variantes más usadas** para pruebas _time‑based blind SQL injection_ en los motores de bases de datos más comunes: **Oracle**, **Microsoft SQL Server (MSSQL)**, **MySQL** y **PostgreSQL**. Iremos de menos a más: primero la idea general, luego payloads de ejemplo adaptados a distintos contextos (cadena entre comillas, contexto numérico, imposibilidad de usar `;`, etc.), y por último notas sobre permisos y recomendaciones éticas.
+En este documento explicamos de forma pedagógica y ordenada las **variantes más usadas** para pruebas _time‑based blind SQL injection_ en los motores de bases de datos más comunes: [MySQL](MySQL.md), [PostgreSQL](.md), [Oracle](Documento%20Hacker/OWASP%20TOP%2010/Bases%20de%20datos%20db/Oracle.md) y [MSSQL](MSSQL.md) (Microsoft SQL Server ). Iremos de menos a más: primero la idea general, luego payloads de ejemplo adaptados a distintos contextos (cadena entre comillas, contexto numérico, imposibilidad de usar `;`, etc.), y por último notas sobre permisos y recomendaciones éticas.
 
 
 ---
