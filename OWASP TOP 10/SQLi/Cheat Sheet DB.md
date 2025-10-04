@@ -2,7 +2,7 @@
 ---
 # Cheatsheet de SQLi en Bases de Datos Comunes
 
-En este documento recogemos las principales consultas de enumeración y extracción de información mediante **inyecciones SQL (SQLi)** en las bases de datos más habituales: [MySQL](MySQL.md), [PostgreSQL](.md), [Oracle](Documento%20Hacker/OWASP%20TOP%2010/Bases%20de%20datos%20db/Oracle.md) y [MSSQL](MSSQL.md) (Microsoft SQL Server ).  
+En este documento recogemos las principales consultas de enumeración y extracción de información mediante **inyecciones SQL (SQLi)** en las bases de datos más habituales: [MySQL](MySQL.md), [PostgreSQL](PostgreSQL.md), [Oracle](Oracle.md) y [MSSQL](MSSQL.md) (Microsoft SQL Server ).  
 
 ---
 
