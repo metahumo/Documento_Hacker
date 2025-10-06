@@ -1,8 +1,10 @@
 
 ---
+
 # Payloads time-based SQLi para diferentes bases de datos
 
 A continuación presentamos ejemplos de payloads **time-based** para SQLi usando cuatro tipos de bases de datos: [MySQL](MySQL.md), [PostgreSQL](.md), [Oracle](Documento%20Hacker/OWASP%20TOP%2010/Bases%20de%20datos%20db/Oracle.md) y [MSSQL](MSSQL.md) (Microsoft SQL Server ). Incluimos un ejemplo concreto con `username='administrator'` y tabla `users`, y una plantilla general para adaptar a otras tablas o columnas.
+
 
 ---
 
@@ -21,6 +23,9 @@ A continuación presentamos ejemplos de payloads **time-based** para SQLi usando
 ```
 
 **Notas:** `IF(condition,true,false)` y `SLEEP(seconds)` son específicos de MySQL.
+
+
+---
 
 ### Variantes de MySQL
 
@@ -57,7 +62,27 @@ Puede comportarse de forma ambigua si la consulta devuelve varias filas; preferi
 - Si hay sensibilidad de mayúsculas usar `LOWER(...)` para comparar.
 
 - Si el driver no permite stacked queries, usar la opción 1 (subconsulta) es la más fiable.
-    
+
+
+---
+
+### Alternativa: uso de SUBSTRING con subconsulta
+
+**Consulta alternativa (MySQL):**
+
+```sql
+SUBSTRING((SELECT password FROM users WHERE username='administrator'), 1, 1)='a',sleep(5),sleep(0))-- -
+```
+
+**Explicación breve:**
+
+- Usamos una subconsulta que devuelve la contraseña completa del usuario objetivo y luego aplicamos `SUBSTRING(..., 1, 1)` sobre el resultado para obtener el primer carácter.
+
+- Es sintácticamente válida en MySQL y funcionalmente equivalente a aplicar `SUBSTRING` dentro de la subconsulta (`SELECT SUBSTRING(password,1,1) FROM users ...`).
+
+
+Usamos esta variante como alternativa por claridad cuando queremos envolver la subconsulta explícitamente dentro de la función de extracción.
+
 
 ---
 
@@ -77,6 +102,7 @@ Puede comportarse de forma ambigua si la consulta devuelve varias filas; preferi
 
 **Notas:** `pg_sleep(seconds)` es la función para retrasar la respuesta en PostgreSQL. `substring(col from pos for len)` extrae la subcadena.
 
+
 ---
 
 ## 3) Oracle
@@ -95,6 +121,7 @@ Puede comportarse de forma ambigua si la consulta devuelve varias filas; preferi
 
 **Notas:** `DBMS_LOCK.SLEEP(seconds)` es la función equivalente a sleep en Oracle. `SUBSTR(col,pos,len)` devuelve una subcadena.
 
+
 ---
 
 ## 4) Microsoft SQL Server (MSSQL)
@@ -112,6 +139,7 @@ Puede comportarse de forma ambigua si la consulta devuelve varias filas; preferi
 ```
 
 **Notas:** `WAITFOR DELAY 'hh:mm:ss'` induce un retraso en SQL Server. `SUBSTRING(col,pos,len)` devuelve la subcadena.
+
 
 ---
 
