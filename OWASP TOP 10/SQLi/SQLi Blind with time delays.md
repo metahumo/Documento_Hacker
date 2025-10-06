@@ -32,6 +32,8 @@ Todas las pruebas que se muestran a continuación se realizaron contra la URL pr
 
 [Ver Delay - sleep](Delay%20-%20sleep.md)
 
+[Ver Payloads time-based para diferentes bases de datos](Payloads%20time-based%20SQLi.md)
+
 
 > Observación práctica: cuando detectemos un retraso reproducible y controlado asociado a una modificación en la entrada (sin error visible en la página), tenemos evidencia consistente de _blind SQLi_ basada en tiempos.
 
