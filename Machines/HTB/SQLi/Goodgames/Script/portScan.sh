@@ -11,6 +11,6 @@ trap ctrl_c INT
 tput civis
 
 for port in $(seq 1 65536); do
-  timeout 1 bash -c "echo '' > /dev/tcp/172.19.0.1/$port" 2>/dev/null && echo "[+] Puerto abierto: $port" &
+  timeout 1 bash -c "echo '' > /dev/tcp/<IP_Objetivo>/$port" 2>/dev/null && echo "[+] Puerto abierto: $port" &
 done; wait
 tput cnorm
