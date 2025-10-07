@@ -172,7 +172,7 @@ Con el usuario `admin` y la contraseña `superadministrator` podemos loguearnos 
 
 ![Captura](./Imágenes/web_5.png)
 
-Desde este panel de administrador, tratamos de ver si reflejamos alguna entrada de teclado que hagamos. Vamos a la sección de cambiar nuestro nombre de perfil y vemos que es vulnerable a [SSTI](../../../OWASP%20TOP%2010/SSTI/Server-Side%20Template%20Injection%20-%20SSTI.md)
+Desde este panel de administrador, tratamos de ver si reflejamos alguna entrada de teclado que hagamos. Vamos a la sección de cambiar nuestro nombre de perfil y vemos que es vulnerable a [SSTI](../../../../OWASP%20TOP%2010/SSTI/Server-Side%20Template%20Injection%20-%20SSTI.md)
 
 **Nota:** probamos este tipo de vulnerabilidad ya que con `wappalyzer` vemos que se usa `Flask` la cual en versiones desactualizadas puede ser vulnerable a SSTI
 
