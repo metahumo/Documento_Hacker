@@ -2,6 +2,8 @@
 
 ## Información general
 
+> CVE-2018-15473 es una vulnerabilidad en versiones de OpenSSH hasta 7.7 que permite a un atacante remoto no autenticado enumerar nombres de usuario válidos en un servidor mediante un ataque de sincronización o de paquetes malformados.
+
 Este documento recoge la explotación de la vulnerabilidad **CVE-2018-15473**, que afecta al servicio SSH y permite enumerar usuarios válidos en un sistema remoto.  
 El fallo se debe a la manera en que el servidor responde de forma diferente cuando el usuario existe o no durante el proceso de autenticación.
 
