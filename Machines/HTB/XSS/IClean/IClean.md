@@ -36,7 +36,7 @@ Acción: escaneo a puertos abiertos
 nmap -p22,80 -Pn -sCV -oN targeted 10.10.11.12 -oN targeted
 ```
 
-Resultado: vemos que python esta por detrás, esto nos puede llevar a pensar en que este usando el Framework de Flask y esto nos podría llevar a un [SSTI](../../../OWASP%20TOP%2010/SSTI/Server-Side%20Template%20Injection%20-%20SSTI.md).
+Resultado: vemos que python esta por detrás, esto nos puede llevar a pensar en que este usando el Framework de Flask y esto nos podría llevar a un [SSTI](../../../../OWASP%20TOP%2010/SSTI/Server-Side%20Template%20Injection%20-%20SSTI.md).
 
 ```bash
 PORT   STATE SERVICE VERSION
@@ -52,13 +52,13 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-Acción: fuzzing de rutas ocultas con [gobuster](../../../Herramientas/Enumeración%20Web/Gobuster/Gobuster.md)
+Acción: fuzzing de rutas ocultas con [gobuster](../../../../Herramientas/Enumeración%20Web/Gobuster/Gobuster.md)
 
 ```bash
 gobuster dir -u http://capiclean.htb/ -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 40
 ```
 
-Resultado: varios endpoint descubiertos, como interesante el `dashboard` que dejaremos para más adelante por tener código `302` (necesitamos acceso autorizado), y `quote`. Este último lo capturaremos con [Burp Suite](../../../Herramientas/Burp%20Suite/BurpSuite.md) para su análisis.
+Resultado: varios endpoint descubiertos, como interesante el `dashboard` que dejaremos para más adelante por tener código `302` (necesitamos acceso autorizado), y `quote`. Este último lo capturaremos con [Burp Suite](../../../../Herramientas/Burp%20Suite/BurpSuite.md) para su análisis.
 
 ```bash
 ===============================================================
@@ -161,7 +161,7 @@ Acción: en 'Generate QR' podemos introducir el identificador anterior y obtener
 
 ![Captura](./Imágenes/burp_3.png)
 
-Acción: como la web es `Flask` lo vemos con `Wappalyzer` plugin de Firefox. Podemos tratar de probar un [SSTI](../../../OWASP%20TOP%2010/SSTI/Server-Side%20Template%20Injection%20-%20SSTI.md).
+Acción: como la web es `Flask` lo vemos con `Wappalyzer` plugin de Firefox. Podemos tratar de probar un [SSTI](../../../../OWASP%20TOP%2010/SSTI/Server-Side%20Template%20Injection%20-%20SSTI.md).
 
 ![Captura](./Imágenes/web_9.png)
 
