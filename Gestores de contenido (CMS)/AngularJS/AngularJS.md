@@ -6,8 +6,6 @@
 
 Fue uno de los primeros frameworks en introducir un enfoque declarativo para construir interfaces interactivas, y aunque hoy ha sido reemplazado por Angular (su versión reescrita en TypeScript), **AngularJS sigue siendo usado en muchos entornos heredados (legacy)**, lo que lo convierte en un objetivo interesante desde el punto de vista de la seguridad.
 
-Aquí tienes el documento en formato **Markdown (.md)** tal como pediste:
-
 ---
 
 # AngularJS: Perspectiva desde el Pentesting y el Bug Hunting
