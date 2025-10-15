@@ -136,9 +136,9 @@ Ejemplo de salida:
 
 Si vamos al endpoint encontrado y podemos visualizar el archivo `phpinfo.php`. Tenemos la posibilidad de que las cookies estén reflejadas en el apartado `HTTP Headers Information`.
 
-![Captura](phpinfo.png)
+![Captura](./Imágenes/phpinfo.png)
 
-![Captura](phpinfo_2.png)
+![Captura](./Imágenes/phpinfo_2.png)
 
 Ahora con el siguiente payload podemos extraer la información de la cookie de este archivo:
 
