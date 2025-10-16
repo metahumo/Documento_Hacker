@@ -1,18 +1,11 @@
 
 ---
-## ¿Qué es AngularJS?
-
-> AngularJS es un **framework de JavaScript** desarrollado originalmente por **Google** en 2010. Su objetivo principal es facilitar la creación de **aplicaciones web dinámicas** mediante el uso de **HTML extendido** con directivas personalizadas y **data binding bidireccional** (two-way data binding). Esto permite que los datos entre el modelo y la vista estén sincronizados automáticamente sin necesidad de manipular el DOM de forma manual.
-
-Fue uno de los primeros frameworks en introducir un enfoque declarativo para construir interfaces interactivas, y aunque hoy ha sido reemplazado por Angular (su versión reescrita en TypeScript), **AngularJS sigue siendo usado en muchos entornos heredados (legacy)**, lo que lo convierte en un objetivo interesante desde el punto de vista de la seguridad.
-
----
 
 # AngularJS: Perspectiva desde el Pentesting y el Bug Hunting
 
 ## ¿Qué es AngularJS?
 
-AngularJS es un **framework de JavaScript** desarrollado originalmente por **Google** en 2010. Su objetivo principal es facilitar la creación de **aplicaciones web dinámicas** mediante el uso de **HTML extendido** con directivas personalizadas y **data binding bidireccional** (two-way data binding). Esto permite que los datos entre el modelo y la vista estén sincronizados automáticamente sin necesidad de manipular el DOM de forma manual.
+> AngularJS es un **framework de JavaScript** desarrollado originalmente por **Google** en 2010. Su objetivo principal es facilitar la creación de **aplicaciones web dinámicas** mediante el uso de **HTML extendido** con directivas personalizadas y **data binding bidireccional** (two-way data binding). Esto permite que los datos entre el modelo y la vista estén sincronizados automáticamente sin necesidad de manipular el DOM de forma manual.
 
 Fue uno de los primeros frameworks en introducir un enfoque declarativo para construir interfaces interactivas, y aunque hoy ha sido reemplazado por Angular (su versión reescrita en TypeScript), **AngularJS sigue siendo usado en muchos entornos heredados (legacy)**, lo que lo convierte en un objetivo interesante desde el punto de vista de la seguridad.
 
