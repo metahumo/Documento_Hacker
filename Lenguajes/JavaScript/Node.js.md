@@ -1,6 +1,6 @@
 
 ---
-# Node.js — Guía práctica para pentesters
+# Node.js
 
 
 ## ¿Qué es Node.js?
