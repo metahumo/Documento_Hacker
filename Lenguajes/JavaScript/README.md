@@ -35,12 +35,12 @@ Este directorio agrupa recursos, notas y utilidades relacionadas con JavaScript 
 - Ejecutar un ejemplo local (ejemplo genérico):
   1. Clonar el repositorio o navegar al directorio deseado.
   2. Instalar dependencias (si la carpeta del ejemplo tiene package.json):
-     - npm install
-     - o
-     - yarn
+     - `npm install`
+       o
+     - `yarn`
   3. Ejecutar:
-     - node ejemplo.js
-     - o usar npm scripts: npm run start
+     - `node ejemplo.js`
+     - o usar npm scripts: `npm run start`
 
 Consulta Node.js.md para instrucciones y comandos concretos relacionados con los ejemplos incluidos en este directorio.
 
