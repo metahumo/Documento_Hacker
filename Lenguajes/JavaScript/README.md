@@ -8,15 +8,15 @@ Este directorio agrupa recursos, notas y utilidades relacionadas con JavaScript 
 
 - Bibliotecas/  
   - Colección de librerías, snippets y ejemplos organizados por propósito.  
-  - Ver: https://github.com/metahumo/Documento_Hacker/tree/main/Lenguajes/JavaScript/Bibliotecas
+  - Ver: [Bibliotecas](https://github.com/metahumo/Documento_Hacker/tree/main/Lenguajes/JavaScript/Bibliotecas)
 
 - Node.js.md  
   - Guía y notas sobre Node.js: instalación, entorno, uso básico y ejemplos prácticos.  
-  - Ver: https://github.com/metahumo/Documento_Hacker/blob/main/Lenguajes/JavaScript/Node.js.md
+  - Ver: [Node.js](https://github.com/metahumo/Documento_Hacker/blob/main/Lenguajes/JavaScript/Node.js.md)
 
 - Utilidades ofensivas/  
   - Scripts y utilidades con enfoque ofensivo (pentesting, explotación, payloads, etc.).  
-  - Ver: https://github.com/metahumo/Documento_Hacker/tree/main/Lenguajes/JavaScript/Utilidades%20ofensivas
+  - Ver: [Utilidades Ofensivas](https://github.com/metahumo/Documento_Hacker/tree/main/Lenguajes/JavaScript/Utilidades%20ofensivas)
 
 ## Contenido destacado
 
