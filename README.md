@@ -3,7 +3,7 @@
 En este repositorio recopilamos, organizamos y documentamos todo lo que estamos aprendiendo sobre hacking y seguridad ofensiva. Nuestro objetivo es crear una guía práctica, reproducible y pedagógica que nos permita estudiar de forma intensiva y aplicar técnicas en laboratorios (HTB, VulnHub, PentesterLab) manteniendo siempre un enfoque ético y legal.
 
 ## Cómo usar este README
-- Usamos este índice para navegar por las seis carpetas principales del repositorio.
+- Usamos este índice para navegar por las ocho carpetas principales del repositorio.
 - Cada carpeta contiene guías, ejemplos y recursos (scripts, capturas, ejercicios).
 - Antes de ejecutar cualquier exploit o script, revisamos la sección de **Advertencias y ética**.
 
