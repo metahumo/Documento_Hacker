@@ -2,6 +2,8 @@
 
 En este repositorio recopilamos, organizamos y documentamos todo lo que estamos aprendiendo sobre hacking y seguridad ofensiva. Nuestro objetivo es crear una guía práctica, reproducible y pedagógica que nos permita estudiar de forma intensiva y aplicar técnicas en laboratorios (HTB, VulnHub, PentesterLab) manteniendo siempre un enfoque ético y legal.
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/metahumo/Documento_Hacker)
+
 ## Cómo usar este README
 - Usamos este índice para navegar por las ocho carpetas principales del repositorio.
 - Cada carpeta contiene guías, ejemplos y recursos (scripts, capturas, ejercicios).
