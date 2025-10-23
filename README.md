@@ -1,8 +1,11 @@
 # Documento Hacker — Índice maestro
 
-En este repositorio recopilamos, organizamos y documentamos todo lo que estamos aprendiendo sobre hacking y seguridad ofensiva. Nuestro objetivo es crear una guía práctica, reproducible y pedagógica que nos permita estudiar de forma intensiva y aplicar técnicas en laboratorios (HTB, VulnHub, PentesterLab) manteniendo siempre un enfoque ético y legal.
-
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/metahumo/Documento_Hacker)
+
+En este repositorio recopilamos, organizamos y documentamos todo lo que estamos aprendiendo sobre hacking y seguridad ofensiva. Nuestro objetivo es crear una guía práctica, reproducible y pedagógica para el aprendizaje responsable del pentesting y la investigación de seguridad.
+
+
+---
 
 ## Cómo usar este README
 - Usamos este índice para navegar por las ocho carpetas principales del repositorio.
@@ -14,14 +17,14 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
 ## Estructura principal (carpetas)
 
 1. **Buffer Overflow**  
-   Contiene materiales sobre explotación de desbordamientos de pila/heap, ejemplos paso a paso, PoC en C/Python y técnicas de mitigación (ASLR, NX, PIE). Ideal para practicar con máquinas de laboratorio y ejercicios de reversing.
+   Contiene materiales sobre explotación de desbordamientos de pila/heap, ejemplos paso a paso, PoC en C/Python y técnicas de mitigación (ASLR, NX, PIE). Ideal para practicar con máquinas de laboratorio en entornos controlados.
 
 2. **CVE**
 
-   Contiene documentación de vulnerabilidades conocidas (Common Vulnerabilities and Exposures), con su identificación oficial, explicación pedagógica y exploits asociados. Cada CVE incluye descripción del fallo, impacto, PoC adaptada a Python 3 cuando sea necesario, y pasos de explotación. Es un apartado clave para practicar con exploits públicos y comprender cómo aprovechar vulnerabilidades reportadas en entornos reales.
+   Contiene documentación de vulnerabilidades conocidas (Common Vulnerabilities and Exposures), con su identificación oficial, explicación pedagógica y exploits asociados. Cada CVE incluye descripción, impacto y mitigaciones recomendadas.
 
 3. **Gestores de contenido (CMS)**  
-   Guías y casos prácticos sobre explotación en CMS populares (WordPress, Joomla, Drupal...), incluyendo enumeración, plugins vulnerables, escalada y hardening. Recomendado para entender vectores web reales.
+   Guías y casos prácticos sobre explotación en CMS populares (WordPress, Joomla, Drupal...), incluyendo enumeración, plugins vulnerables, escalada y hardening. Recomendado para entender vectores reales.
 
 4. **Herramientas**  
    Documentación y tutoriales sobre las herramientas que utilizamos: Burp Suite, Nmap, Gobuster, ffuf, ffprobe, Hashcat, Metasploit, etc. Incluye configuraciones, ejemplos de uso y capturas de pantalla.
@@ -30,7 +33,7 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
    Resoluciones y guías paso a paso de máquinas que hemos resuelto en plataformas como Hack The Box, VulnHub y PentesterLab. Cada máquina suele incluir enumeración, explotación y post-explotación.
 
 6. **Lenguajes**  
-   Recopilación de vulnerabilidades, funciones peligrosas y malas prácticas específicas de distintos lenguajes de programación. Cada subapartado se centra en un lenguaje (PHP, Python, C, etc.) y documenta ejemplos de explotación reales, fragmentos de código vulnerable y su análisis. También incluye PoCs, payloads y notas sobre mitigación. El objetivo es entender cómo ciertas construcciones de código pueden derivar en fallos de seguridad y cómo se pueden aprovechar en un contexto ofensivo.
+   Recopilación de vulnerabilidades, funciones peligrosas y malas prácticas específicas de distintos lenguajes de programación. Cada subapartado se centra en un lenguaje (PHP, Python, C, etc.) y detalla peligros y recomendaciones.
 
 7. **OWASP TOP 10**  
    Explicaciones, payloads y ejercicios relacionados con las categorías del OWASP Top 10 y vulnerabilidades web frecuentes (SQLi, XSS, RCE, SSRF, etc.). Incluye ejemplos prácticos y scripts de prueba.
@@ -82,11 +85,10 @@ Este repositorio no pretende apropiarse del trabajo de terceros, sino centraliza
   - Pruebas o capturas si aplica.
 - Revisiones: asignamos etiquetas `needs-review`, `approved`.
 
-
 ---
 
 ## Advertencias legales y éticas
-Nos comprometemos a usar este repositorio con fines educativos. No usamos técnicas aquí descritas contra sistemas sin autorización expresa. Si dudas sobre si un ejercicio o script puede ser ilegal en tu jurisdicción, consultamos antes.
+
+Nos comprometemos a usar este repositorio con fines educativos. No usamos técnicas aquí descritas contra sistemas sin autorización expresa. Si dudas sobre si un ejercicio o script puede ser ilegal consulta a un responsable o evita su ejecución.
 
 ---
-
