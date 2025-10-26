@@ -31,7 +31,7 @@ pip install requests
 ## Script: `requests_get.py`
 
 ```python
-#!/usr/env/bin python3
+#!/usr/bin/env python3
 
 import requests
 
@@ -43,7 +43,6 @@ print(f"\n[+] URL final: {response.url}\n")
 print(response.text)
 ```
 
-> Nota: la línea **shebang** del fichero (`#!/usr/env/bin python3`) tiene un orden inusual; el shebang correcto y más habitual es `#!/usr/bin/env python3`. No es obligatorio para ejecutar con `python3 requests_get.py`, pero es buena práctica corregirlo si piensas ejecutar el script directamente.
 
 ---
 
