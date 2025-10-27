@@ -1,5 +1,3 @@
-
----
 var req = new XMLHttpRequest();
 req.open('GET', '<URL_OBJETIVO>', false);
 req.send();
