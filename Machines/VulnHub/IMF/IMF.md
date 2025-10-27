@@ -152,7 +152,7 @@ Resultado:
 Warning: mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/imfadministrator/cms.php on line 29
 ```
 
-Explicación: tan solo poniendo una comilla al final de la URL vemos que se nos muestra un mensaje de error, el cual nos sugiere que puede ser vulnerable a [[SQLi)
+Explicación: tan solo poniendo una comilla al final de la URL vemos que se nos muestra un mensaje de error, el cual nos sugiere que puede ser vulnerable a SQLi
 
 
 Acción:
@@ -167,7 +167,7 @@ Resultado:
  Under Construction. 
 ```
 
-Explicación: al concatenar una [SQLi](../../Bases de datos db/SQLi) vemos que ahora la página cambia y muestra otro mensaje. Esta interacción con la página nos puede hacer extraer datos de la base de datos [SQL](../../Bases de datos db/SQL) que hay por detrás
+Explicación: al concatenar una [SQLi](../../Bases%20de%20datos%20db/SQLi) vemos que ahora la página cambia y muestra otro mensaje. Esta interacción con la página nos puede hacer extraer datos de la base de datos [SQL](../../Bases%20de%20datos%20db/SQL) que hay por detrás
 
 
 Acción:
@@ -194,7 +194,7 @@ Resultado:
  Welcome to the IMF Administration. 
 ```
 
-Explicación: vemos que podemos dumpear información de la base de datos, por ejemplo tiene pinta de que exista una base de datos cuyo nombre empieza por 'a' quizás de 'admin'. Vemos que la página si es un valor Booleano falso muestra 'Welcome...' y si es true muestra 'Under...' con esto podemos hacer un [[iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Machines/VulnHub/IMF/Script|Script) en python que nos permita extraer la información de la base de datos. Para ello necesitaremos arrastrar la cookie de sesión que vimos anteriormente con Burpsuite
+Explicación: vemos que podemos dumpear información de la base de datos, por ejemplo tiene pinta de que exista una base de datos cuyo nombre empieza por 'a' quizás de 'admin'. Vemos que la página si es un valor Booleano falso muestra 'Welcome...' y si es true muestra 'Under...' con esto podemos hacer un [Script](Script.md) en python que nos permita extraer la información de la base de datos. Para ello necesitaremos arrastrar la cookie de sesión que vimos anteriormente con Burpsuite
 
 ---
 
@@ -220,7 +220,7 @@ sleep 2; flameshot gui
 
 Tras recortar visitamos la esta web que ofrece un recurso online para decodear un código qr: https://zxing.org/w/decode.jspx
 
-![Captura](./Imágenes/iCloudDrive/iCloud~md~obsidian/Git/Setting_Github/Documento Hacker/Machines/VulnHub/IMF/Imágenes/web_7.png)
+![Captura](./Imágenes/web_7.png)
 
 Obtenemos otra pista
 
