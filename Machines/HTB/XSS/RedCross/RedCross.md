@@ -770,8 +770,10 @@ if __name__ == '__main__':
         log.failure("  2. El servicio socat está corriendo en la máquina objetivo")
         log.failure("  3. Comando en objetivo: socat TCP-LISTEN:9002 EXEC:\"/opt/iptctl/iptctl -i\"")
         sys.exit(1)```
+```
 
 Desde la máquina objetivo ejecutamos: nos quedamos en escucha por el puerto que indiquemos (debe coincidir al del script)
+
 ```bash
 socat TCP-LISTEN:9002 EXEC:"/opt/iptctl/iptctl -i"
 ```
