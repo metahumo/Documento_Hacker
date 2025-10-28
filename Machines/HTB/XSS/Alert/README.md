@@ -27,7 +27,7 @@ La explotación de Alert se desarrolla en **tres fases principales**:
 
 ---
 
-## 📂 Contenido del directorio
+## Contenido del directorio
 ```
 Alert/
 ├── README.md                    # Este archivo
