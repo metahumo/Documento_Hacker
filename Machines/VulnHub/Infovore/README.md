@@ -17,7 +17,7 @@
 
 ## Resumen ejecutivo
 
-**Infovore** es una máquina enfocada en vulnerabilidades web y escalada de privilegios.
+__Infovore__ es una máquina enfocada en vulnerabilidades web y escalada de privilegios.
 
 > Contenido: este directorio contiene la guía de explotación paso a paso y un script de apoyo localizado en `Scripts/phpraceCondition.py`.  
 
