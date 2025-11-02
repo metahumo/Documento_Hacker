@@ -1,11 +1,30 @@
+# Infovore - VulnHub
+
+![Dificultad](https://img.shields.io/badge/Dificultad-Medium-yellow)
+![SO](https://img.shields.io/badge/SO-Linux-blue)
+![Técnicas](https://img.shields.io/badge/Técnicas-LFI%20%7C%20Directory%20Traversal-red)
 
 ---
 
-# Infovore — Machine / Scripts (README)
+## Información de la máquina
 
-**Infovore** — guía y herramientas relacionadas con la máquina VulnHub *Infovore*.
+- **Nombre:** Infovore
+- **Plataforma:** VulnHub
+- **SO:** Linux (Debian)
+- **Dificultad:** Medium (Beginner to Intermediate)
+
+---
+
+## Resumen ejecutivo
+
+__Infovore__ es una máquina enfocada en vulnerabilidades web y escalada de privilegios.
 
 > Contenido: este directorio contiene la guía de explotación paso a paso y un script de apoyo localizado en `Scripts/phpraceCondition.py`.  
+
+La explotación involucra:
+1. **Directory Traversal** → Explotación de path traversal para lectura de archivos
+2. **LFI (Local File Inclusion)** → Inclusión de archivos locales mediante parámetros vulnerables  
+3. **Privilege Escalation** → Escalada mediante SUID binaries o kernel exploits
 
 ---
 
