@@ -4,7 +4,7 @@
 
 ## ¿Qué es CORS?
 
-El Intercambio de Recursos de Origen Cruzado (CORS) es un mecanismo que permite que un servidor web restrinja el acceso a recursos desde diferentes orígenes, es decir, desde dominios o protocolos distintos. Esto se hace para proteger la privacidad y seguridad de los usuarios, evitando que sitios web no autorizados accedan a información confidencial sin permiso.
+> El Intercambio de Recursos de Origen Cruzado (CORS) es un mecanismo que permite que un servidor web restrinja el acceso a recursos desde diferentes orígenes, es decir, desde dominios o protocolos distintos. Esto se hace para proteger la privacidad y seguridad de los usuarios, evitando que sitios web no autorizados accedan a información confidencial sin permiso.
 
 ## Cómo funciona CORS
 
