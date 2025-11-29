@@ -7,6 +7,8 @@ En este documento vemos una vulnerabilidad de **XSS reflejado** en una aplicaci�
 
 La técnica aprovecha propiedades y métodos nativos de JavaScript (como `constructor`, `toString()` y `fromCharCode`) y una pequeña interferencia en prototipos para formar la cadena objetivo indirectamente. Con esto, se genera la secuencia de caracteres `x=alert(1)` en tiempo de ejecución y se utiliza en un contexto donde Angular normalmente rechazará cadenas o `eval`. El laboratorio demuestra que restricciones aparentemente fuertes en el sandbox pueden burlarse mediante manipulación de comportamiento de objetos y construcción indirecta de cadenas.
 
+[Ver laboratorio Portswigger](https://portswigger.net/web-security/cross-site-scripting/contexts/client-side-template-injection/lab-angular-sandbox-escape-without-strings)
+
 ---
 
 ## ¿Qué es sandbox en AngularJS y para qué sirve?
