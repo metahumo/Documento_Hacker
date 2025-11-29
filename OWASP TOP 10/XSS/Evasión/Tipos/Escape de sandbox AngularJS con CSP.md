@@ -17,7 +17,7 @@ Esta política impide la ejecución de scripts externos y bloquea la mayor parte
 
 Para superar estas barreras combinamos técnicas específicas de **Client-Side Template Injection (CSTI)** en AngularJS con la manipulación de eventos del propio framework.
 
-[Ver laboratorio Portswigger]([https://portswigger.net/web-security/cross-site-scripting/contexts/client-side-template-injection/lab-angular-sandbox-escape-without-strings](https://portswigger.net/web-security/cross-site-scripting/contexts/client-side-template-injection/lab-angular-sandbox-escape-and-csp))
+[Ver laboratorio Portswigger](https://portswigger.net/web-security/cross-site-scripting/contexts/client-side-template-injection/lab-angular-sandbox-escape-and-csp)
 
 ---
 
