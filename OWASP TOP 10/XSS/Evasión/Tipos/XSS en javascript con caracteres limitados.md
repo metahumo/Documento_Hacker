@@ -6,6 +6,8 @@ En este laboratorio analizamos una vulnerabilidad de XSS que se produce dentro d
 
 El objetivo del laboratorio es ejecutar `alert` incluyendo el número **1337** dentro del mensaje, respetando todas las limitaciones impuestas.
 
+[Ver laboratorio Portswigger](https://portswigger.net/web-security/cross-site-scripting/contexts/lab-javascript-url-some-characters-blocked)
+
 ---
 
 ## Entorno del laboratorio
