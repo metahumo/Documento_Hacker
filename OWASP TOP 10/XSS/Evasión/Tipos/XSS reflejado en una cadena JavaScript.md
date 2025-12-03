@@ -5,7 +5,7 @@
 
 ## Contexto del laboratorio
 
-- Laboratorio: Reflected XSS into a JavaScript string with angle brackets HTML encoded.
+- Laboratorio: XSS reflejado en una cadena JavaScript con corchetes angulares codificados en HTML.
     
 - Descripción: existe una vulnerabilidad de Cross-Site Scripting reflejado en la funcionalidad de seguimiento de consultas de búsqueda. Los caracteres `<` y `>` aparecen codificados en la salida HTML, y la reflexión ocurre dentro de una cadena JavaScript. El objetivo es romper la cadena JavaScript y ejecutar `alert(0)`.
     
