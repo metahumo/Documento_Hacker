@@ -2,7 +2,7 @@
 
 ## ¿Qué es CSRF?
 
-El **Cross-Site Request Forgery (CSRF)** es una vulnerabilidad en la que un atacante engaña a un usuario legítimo para que realice una **acción no deseada** en una aplicación web donde ya está autenticado.  
+> El **Cross-Site Request Forgery (CSRF)** es una vulnerabilidad en la que un atacante engaña a un usuario legítimo para que realice una **acción no deseada** en una aplicación web donde ya está autenticado.  
 El ataque aprovecha que el navegador del usuario **automáticamente envía las cookies** de sesión a la aplicación web, sin que el usuario se dé cuenta.
 
 ## ¿Cómo ocurre?
