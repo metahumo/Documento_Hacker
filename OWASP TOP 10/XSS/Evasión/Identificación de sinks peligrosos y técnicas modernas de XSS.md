@@ -3,7 +3,7 @@
 
 # Qué es un sink en el contexto de XSS
 
-Cuando trabajamos con XSS, llamamos _sink_ a cualquier función, API o mecanismo del navegador que **toma valores dinámicos y los inserta en el DOM interpretándolos como HTML o JavaScript**.  
+> Cuando trabajamos con XSS, llamamos _sink_ a cualquier función, API o mecanismo del navegador que **toma valores dinámicos y los inserta en el DOM interpretándolos como HTML o JavaScript**.  
 
 En otras palabras, un sink es el punto donde **nuestros datos dejan de ser texto inofensivo y pasan a ser código ejecutable**.
 
