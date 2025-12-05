@@ -33,7 +33,7 @@ En este repositorio recopilamos, organizamos y documentamos todo lo que estamos 
    Resoluciones y guías paso a paso de máquinas que hemos resuelto en plataformas como Hack The Box, VulnHub y PentesterLab. Cada máquina suele incluir enumeración, explotación y post-explotación.
 
 6. **Lenguajes**  
-   Recopilación de vulnerabilidades, funciones peligrosas y malas prácticas específicas de distintos lenguajes de programación. Cada subapartado se centra en un lenguaje (PHP, Python, C, etc.) y detalla peligros y recomendaciones.
+   Recopilación de vulnerabilidades, funciones peligrosas y malas prácticas específicas de distintos lenguajes de programación. Cada subapartado se centra en un lenguaje (PHP, Python, JavaScript, etc.) y detalla peligros y recomendaciones.
 
 7. **OWASP TOP 10**  
    Explicaciones, payloads y ejercicios relacionados con las categorías del OWASP Top 10 y vulnerabilidades web frecuentes (SQLi, XSS, RCE, SSRF, etc.). Incluye ejemplos prácticos y scripts de prueba.
