@@ -1,6 +1,7 @@
 # Documento Hacker — Índice maestro
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/metahumo/Documento_Hacker) <meta name="google-site-verification" content="cI5NiOdrYBccQGydwZpwWHZ5n58hg6sdDGyL8X8Z7Uk" />
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/metahumo/Documento_Hacker) [![LinkedIn](https://img.shields.io/badge/LinkedIn-MiPerfil-blue?logo=linkedin)](https://www.linkedin.com/in/danielmoisescastro/)
+
 
 En este repositorio recopilamos, organizamos y documentamos todo lo que estamos aprendiendo sobre hacking y seguridad ofensiva. Nuestro objetivo es crear una guía práctica, reproducible y pedagógica para el aprendizaje responsable del pentesting y la investigación de seguridad.
 
