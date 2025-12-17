@@ -1,0 +1,152 @@
+
+---
+
+# DOM XSS usando Web Messages
+
+## Introducción
+
+En este laboratorio analizamos una vulnerabilidad de **DOM-based XSS** provocada por el uso inseguro de **Web Messages** (`postMessage`). Veremos cómo una página que escucha mensajes entrantes sin validarlos puede terminar ejecutando código JavaScript controlado por un atacante.
+
+El objetivo es comprender por qué `postMessage`, aunque diseñado como un mecanismo seguro, puede convertirse en un vector crítico de ataque si el contenido recibido se inserta directamente en el DOM.
+
+[Ver laboratorio PortSwigger](https://portswigger.net/web-security/dom-based/controlling-the-web-message-source/lab-dom-xss-using-web-messages)
+
+## ¿En qué consiste esta vulnerabilidad?
+
+La vulnerabilidad aparece cuando se combinan los siguientes factores:
+
+1. La página vulnerable escucha mensajes mediante `window.addEventListener('message', ...)`.
+    
+2. El contenido del mensaje (`e.data`) se considera confiable sin comprobar su origen.
+    
+3. Ese contenido se inserta directamente en el DOM usando propiedades peligrosas como `innerHTML`.
+    
+
+Esto permite que un atacante envíe HTML o JavaScript malicioso desde otro origen y que este se ejecute en el contexto de la página víctima.
+
+## Código vulnerable identificado
+
+El propio laboratorio nos proporciona el fragmento clave del código vulnerable:
+
+```html
+<script>
+window.addEventListener('message', function(e) {
+    document.getElementById('ads').innerHTML = e.data;
+})
+</script>
+```
+
+Aquí observamos el problema central:
+
+- No se valida `e.origin`.
+    
+- No se sanea `e.data`.
+    
+- Se usa `innerHTML`, permitiendo interpretación de HTML arbitrario.
+    
+
+## ¿Cómo ocurre el ataque?
+
+1. La víctima visita una página controlada por el atacante (servidor de explotación).
+    
+2. Esa página carga la web vulnerable dentro de un **iframe**.
+    
+3. Al cargarse el iframe, se ejecuta `postMessage()` enviando un payload malicioso.
+    
+4. La página vulnerable recibe el mensaje.
+    
+5. El contenido del mensaje se inserta directamente en el DOM.
+    
+6. El navegador interpreta el HTML inyectado y ejecuta el JavaScript.
+    
+
+El ataque se produce **sin interacción adicional del usuario**.
+
+## Payload utilizado
+
+Este es el payload exacto utilizado en el laboratorio:
+
+```html
+<iframe src="https://YOUR-LAB-ID.web-security-academy.net/"
+        onload="this.contentWindow.postMessage('<img src=1 onerror=print()>','*')">
+</iframe>
+```
+
+Desglose del payload:
+
+- El `iframe` carga la página vulnerable.
+    
+- El evento `onload` se ejecuta cuando la página termina de cargar.
+    
+- `postMessage()` envía un mensaje con una etiqueta `<img>` maliciosa.
+    
+- El `src` inválido provoca un error.
+    
+- El manejador `onerror` ejecuta `print()`.
+    
+
+## ¿Qué es postMessage?
+
+`window.postMessage()` es un mecanismo que permite la comunicación entre ventanas o iframes **incluso entre diferentes orígenes**, algo que normalmente está prohibido por la política del mismo origen.
+
+Su uso correcto requiere:
+
+- Definir explícitamente el `targetOrigin`.
+    
+- Validar siempre `event.origin` en el receptor.
+    
+- Tratar los datos recibidos como no confiables.
+    
+
+En este laboratorio, ninguno de estos controles está presente.
+
+## ¿Por qué es efectivo?
+
+El ataque funciona porque:
+
+- El navegador **confía en el DOM**, no en la intención del desarrollador.
+    
+- `innerHTML` interpreta etiquetas y atributos activos.
+    
+- `postMessage` permite cruzar orígenes por diseño.
+    
+- No existe ningún filtro, validación ni comprobación del origen del mensaje.
+    
+
+No se rompe ninguna política del navegador: el comportamiento es el esperado, pero inseguro.
+
+## Riesgos asociados
+
+Una vulnerabilidad de este tipo puede permitir:
+
+- Ejecución de JavaScript arbitrario.
+    
+- Robo de cookies (si no son `HttpOnly`).
+    
+- Keylogging.
+    
+- Redirecciones maliciosas.
+    
+- Encadenamiento con clickjacking u otras vulnerabilidades DOM.
+    
+
+En aplicaciones reales, este tipo de fallo suele tener **alto impacto**.
+
+## Mitigaciones recomendadas
+
+Para prevenir este tipo de vulnerabilidades, se recomienda:
+
+- Validar siempre `event.origin` antes de procesar un mensaje.
+    
+- Evitar el uso de `innerHTML` con datos externos.
+    
+- Usar `textContent` cuando sea posible.
+    
+- Definir un `targetOrigin` estricto en `postMessage()`.
+    
+- Implementar una `Content-Security-Policy` restrictiva.
+    
+
+El uso de Web Messages no es inseguro por sí mismo; lo inseguro es **confiar ciegamente en los datos recibidos**.
+
+---
